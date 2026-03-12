@@ -11,7 +11,7 @@
           <p
             class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100"
           >
-            Développeur web full-stack passionné par l'optimisation des performances et la création d'interfaces utilisateur intuitives, disponible pour contribuer à des projets innovants dans un environnement collaboratif."
+            Développeur web full-stack passionné par l'optimisation des performances et la création d'interfaces utilisateur intuitives, disponible pour contribuer à des projets innovants dans un environnement collaboratif.
           </p>
           <div class="flex justify-center space-x-4 fade-in delay-200">
             <UButton to="/projects" color="blue" size="lg">
