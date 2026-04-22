@@ -1,63 +1,84 @@
 <template>
   <div>
-    <section class="py-20 bg-gray-50 dark:bg-gray-900">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-5xl font-bold mb-6 fade-in">
-            Salut,
-            je suis
-            <span class="text-primary-500">Dona Chirac MICHOAGAN</span>
-          </h1>
-          <p
-            class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100"
-          >
-            Développeur web full-stack passionné par l'optimisation des performances et la création d'interfaces utilisateur intuitives, disponible pour contribuer à des projets innovants dans un environnement collaboratif.
-          </p>
-          <div class="flex justify-center space-x-4 fade-in delay-200">
-            <UButton to="/projects" color="blue" size="lg">
-              Voir mes projets ->
-            </UButton>
-            <UButton to="/contact" color="primary" variant="outline" size="lg">
-              Me contacter
-            </UButton>
+
+
+
+    <section class=" mb-8 bg-gray-50 dark:bg-gray-900">
+
+
+      <div class="container ">
+
+
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+
+          <!-- partie texte -->
+          <div class="md:w-1/2 flex flex-col items-start justify-start">
+            <h1 class="text-5xl font-bold mb-8 fade-in">
+              Salut,
+              je suis
+              <span class="text-primary-500">Dona Chirac MICHOAGAN</span>
+            </h1>
+            <p class="text-xl text-gray-600 dark:text-gray-400  fade-in delay-100">
+              Développeur web full-stack passionné par l'optimisation des performances et la création d'interfaces
+              utilisateur intuitives, disponible pour contribuer à des projets innovants dans un environnement
+              collaborate.
+            </p>
           </div>
+
+          <!-- partie image -->
+          <div class="">
+            <img src="/assets/photo-chirac-dona-michoagan.png" alt="Dona Chirac MICHOAGAN"
+              class="w-500 h-500  fade-in delay-200 object-cover no-repeat" />
+          </div>
+
+
+
+
         </div>
+
+
+
+      </div>
+
+
+      <div class="flex justify-center space-x-4 mb-8 fade-in delay-200">
+        <UButton to="/projects" color="blue" size="lg">
+          Voir mes projets ->
+        </UButton>
+        <UButton to="/contact" color="primary" variant="outline" size="lg">
+          Me contacter
+        </UButton>
       </div>
     </section>
 
-    <section class="py-16">
+    <section class="py-16 mt-7 ">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-3xl font-bold mb-8 text-center fade-in">
-           Mes compétences
+            Mes compétences
           </h2>
           <div class="grid md:grid-cols-3 gap-8">
             <UCard class="fade-in delay-100">
               <template #header>
                 <div class="p-4 flex justify-center">
-                  <UIcon
-                    name="i-heroicons-code-bracket"
-                    class="text-5xl text-primary-500"
-                  />
+                  <UIcon name="i-heroicons-code-bracket" class="text-5xl text-primary-500" />
                 </div>
               </template>
               <h3 class="text-xl font-semibold mb-2">Développement Web</h3>
               <p class="text-gray-600 dark:text-gray-400">
-              Création d'interfaces utilisateur intuitives, dynamiques et professionnelles avec les technologies modernes.
+                Création d'interfaces utilisateur intuitives, dynamiques et professionnelles avec les technologies
+                modernes.
               </p>
             </UCard>
 
             <UCard class="fade-in delay-200">
               <template #header>
                 <div class="p-4 flex justify-center">
-                  <UIcon
-                    name="i-heroicons-shield-check"
-                    class="text-5xl text-primary-500"
-                  />
+                  <UIcon name="i-heroicons-shield-check" class="text-5xl text-primary-500" />
                 </div>
               </template>
               <h3 class="text-xl font-semibold mb-2">
-               Analyse et gestion de sécurité des systèmes
+                Analyse et gestion de sécurité des systèmes
               </h3>
               <p class="text-gray-600 dark:text-gray-400">
                 Sécurisation des systèmes informatiques et optimisation des performances réseau !
@@ -67,15 +88,12 @@
             <UCard class="fade-in delay-300">
               <template #header>
                 <div class="p-4 flex justify-center">
-                  <UIcon
-                    name="i-heroicons-device-phone-mobile"
-                    class="text-5xl text-primary-500"
-                  />
+                  <UIcon name="i-heroicons-device-phone-mobile" class="text-5xl text-primary-500" />
                 </div>
               </template>
               <h3 class="text-xl font-semibold mb-2">Développement Mobile</h3>
               <p class="text-gray-600 dark:text-gray-400">
-               Création d'applications mobiles multiplateformes fonctionnant sur tous les appareils.
+                Création d'applications mobiles multiplateformes fonctionnant sur tous les appareils.
               </p>
             </UCard>
           </div>
@@ -83,33 +101,25 @@
       </div>
     </section>
 
+
+
+
     <section class="py-16 bg-gray-50 dark:bg-gray-900">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl font-bold mb-8 fade-in">Projets à la une</h2>
           <div class="grid md:grid-cols-2 gap-8">
-            <UCard
-              class="fade-in delay-100"
-              v-for="(project, index) in featuredProjects"
-              :key="index"
-            >
+            <UCard class="fade-in delay-100" v-for="(project, index) in featuredProjects" :key="index">
               <template #header>
-                <img
-                  :src="`http://localhost:3000/${project.image}`"
-                  :alt="project.title"
-                  class="w-full h-48 object-cover"
-                />
+                <img :src="`http://localhost:3000/${project.image}`" :alt="project.title"
+                  class="w-full h-48 object-cover" />
               </template>
               <h3 class="text-xl font-semibold mb-2">{{ project.title }}</h3>
               <p class="text-gray-600 dark:text-gray-400 mb-4">
                 {{ project.description }}
               </p>
               <template #footer>
-                <UButton
-                  :to="`/projects/${index}`"
-                  color="primary"
-                  variant="ghost"
-                >
+                <UButton :to="`/projects/${index}`" color="primary" variant="ghost">
                   Voir les détails
                 </UButton>
               </template>
@@ -117,18 +127,22 @@
           </div>
           <div class="mt-8 fade-in delay-300">
             <UButton to="/projects" color="blue">
-             Voir tous les projets
+              Voir tous les projets
             </UButton>
           </div>
         </div>
       </div>
     </section>
+
+
+
+
   </div>
 </template>
 
 <script setup>
 const featuredProjects = [
- {
+  {
     title: "📋 Application Quiz",
     description:
       "📋 Application Quiz — questions à choix multiples avec suivi des scores",

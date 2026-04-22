@@ -1,0 +1,5 @@
+une librairie , un magasin , un programme information qu'on installe pour ajouter plus de fonctionnalité ou modifier celles existant  à afin de créer ou personnaliser son site web
+
+un thème c'est un ensembles de fichier qui définit le design , l'apparence et la  la mise en page de votre site interne
+
+wordpress un système de gestion de contenu cms qui permet de créer des site web nocode 

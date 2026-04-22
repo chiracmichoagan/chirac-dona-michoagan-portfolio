@@ -15,24 +15,76 @@
             <div class="hidden md:flex items-center space-x-6">
               <NuxtLink to="/" class="hover:text-blue-600 transition-colors flex items-center gap-2"
                 active-class="text-blue-600 font-semibold">
-               Accueil
+                Accueil
               </NuxtLink>
-              <NuxtLink class="hover:text-blue-600 transition-colors flex items-center gap-2"
-                active-class="text-blue-600 font-semibold">
+              <ul class="flex space-x-6 text-white">
+                <!-- Élément parent avec la classe 'group' -->
+                <li class="relative group  space-x-6 text-gray-900">
+                  <button class="flex items-center hover:text-blue-400 focus:outline-none">
+                    Services
+                    <!-- Icône flèche (optionnelle) -->
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
 
+                  <!-- Sous-menu : masqué par défaut, affiché au survol du groupe -->
+                  <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg 
+                 invisible group-hover:visible opacity-0 group-hover:opacity-100 
+                 transition-all duration-300 z-50">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Design Web</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Développement</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Marketing SEO</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+
+
+
+              <NuxtLink to="/services" class="hover:text-blue-600 transition-colors flex items-center gap-2"
+                active-class="text-blue-600 font-semibold">
+                Mes services
               </NuxtLink>
               <NuxtLink to="/about" class="hover:text-blue-600 transition-colors flex items-center gap-2"
                 active-class="text-blue-600 font-semibold">
-               À propos
+                À propos
               </NuxtLink>
               <NuxtLink to="/projects" class="hover:text-blue-600 transition-colors flex items-center gap-2"
                 active-class="text-blue-600 font-semibold">
-               Projets
+                Projets
               </NuxtLink>
               <NuxtLink to="/contact" class="hover:text-blue-600 transition-colors flex items-center gap-2"
                 active-class="text-blue-600 font-semibold">
-               Contact
+                Contact
               </NuxtLink>
+              <!-- <NuxtLink to="/blog" class="hover:text-blue-600 transition-colors flex items-center gap-2"
+                active-class="text-blue-600 font-semibold">
+                Le Blog
+              </NuxtLink> -->
+
+               <ul class="flex space-x-6 text-white">
+                <!-- Élément parent avec la classe 'group' -->
+                <li class="relative group  space-x-6 text-gray-900">
+                  <button class="flex items-center hover:text-blue-400 focus:outline-none">
+                    Le Blog
+                    <!-- Icône flèche (optionnelle) -->
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </button>
+
+                  <!-- Sous-menu : masqué par défaut, affiché au survol du groupe -->
+                  <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg 
+                 invisible group-hover:visible opacity-0 group-hover:opacity-100 
+                 transition-all duration-300 z-50">
+                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Articles</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Tutoriels</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Actualités</a></li>
+                  </ul>
+                </li>
+
+              </ul>
             </div>
 
             <!-- Icône de menu  ( uniquement sur mobile) -->
@@ -92,7 +144,7 @@
                 DONA Portfolio
               </h3>
               <p class="text-sm text-gray-600 dark:text-gray-400 max-w-xs mx-auto md:mx-0">
-               Développeur Full Stack passionné par la création d'applications web modernes
+                Développeur Full Stack passionné par la création d'applications web modernes
               </p>
             </div>
 
@@ -112,7 +164,7 @@
             <!-- Section Réseaux sociaux -->
             <div class="text-center md:text-left">
               <h4 class="font-semibold text-lg text-gray-900 dark:text-white mb-3">
-               Réseaux sociaux
+                Réseaux sociaux
               </h4>
               <div class="flex justify-center space-x-4 md:justify-start">
                 <a href="https://github.com/chiracmichoagan" target="_blank" rel="noopener noreferrer"
