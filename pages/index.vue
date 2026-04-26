@@ -9,7 +9,7 @@
         <div class="flex justify-around items-center flex-col md:flex-row gap-8">
           <!-- partie texte -->
           <div class="md:w-1/2 flex flex-col items-start justify-start">
-            <h1 class="text-5xl mb-8 fade-in font-monst font-extrabold text-[49px] leading-[64px] text-black dark:text-white">
+            <h1 class="text-5xl mb-8 font-montserrat fade-in font-monst font-extrabold text-[49px] leading-[64px] text-black dark:text-white">
               Je suis,
               <span class="text-primary-500">Dona Chirac MICHOAGAN</span>
             </h1>
