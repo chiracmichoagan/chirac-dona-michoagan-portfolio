@@ -1,34 +1,53 @@
 <template>
   <div>
+    <section class="mb-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+
+<h1 class="font-montserrat text-2xl">Hello world!</h1>
+      <div class="">
 
 
-
-    <section class=" mb-8 bg-gray-50 dark:bg-gray-900">
-
-
-      <div class="container ">
-
-
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
-
+        <div class="flex justify-around items-center flex-col md:flex-row gap-8">
           <!-- partie texte -->
           <div class="md:w-1/2 flex flex-col items-start justify-start">
-            <h1 class="text-5xl font-bold mb-8 fade-in">
-              Salut,
-              je suis
+            <h1 class="text-5xl mb-8 fade-in font-monst font-extrabold text-[49px] leading-[64px] text-black dark:text-white">
+              Je suis,
               <span class="text-primary-500">Dona Chirac MICHOAGAN</span>
             </h1>
             <p class="text-xl text-gray-600 dark:text-gray-400  fade-in delay-100">
-              Développeur web full-stack passionné par l'optimisation des performances et la création d'interfaces
-              utilisateur intuitives, disponible pour contribuer à des projets innovants dans un environnement
-              collaborate.
+              développeur dynamique full-stack et Consultant SEO freelance.
+              j’optimise ta présence locale pour générer du chiffre, pas juste des clics.
+            </p>
+            <p class="text-xl text-gray-600 dark:text-gray-400  fade-in delay-100">
+              Tu veux des appels, des rendez-vous, des ventes. <br>
+              Pas juste être bien positionné.
+            </p>
+            <p class="text-xl text-gray-600 dark:text-gray-400  fade-in delay-100">
+              En tant que consultant SEO dans le Var et développeur full-stack, je t’aide à créer tes applications
+              mobiles et sites web qui respectent ton entreprise puis à transformer ta visibilité en clients réels grâce
+              à une stratégie SEO local + IA.
+
+            </p>
+            <p class="text-xl text-gray-600 dark:text-gray-400  fade-in delay-100">
+              Mon approche ? Actionnable, locale, orientée ROI. Pas de promesse floue : on parle d’appels clients,
+              réservations et chiffre d’affaires.
+
+            </p>
+            <p class="text-xl text-gray-600 dark:text-gray-400  fade-in delay-100">
+              Tu es entrepreneur, commerçant, restaurateur , indépendant ou autres au Bénin ou à l'étranger ? Tu es au
+              bon endroit.
             </p>
           </div>
 
+
+
+
+
           <!-- partie image -->
           <div class="">
-            <img src="/assets/photo-chirac-dona-michoagan.png" alt="Dona Chirac MICHOAGAN"
-              class="w-500 h-500  fade-in delay-200 object-cover no-repeat" />
+            <!-- <img src="/assets/photo-chirac-dona-michoagan.png" alt="Dona Chirac MICHOAGAN"
+              class="w-500 h-500  fade-in delay-200 object-cover no-repeat" /> -->
+            <img src="/public/assets/photo-chirac-dona.jpg" alt="Dona Chirac MICHOAGAN"
+              class="w-2000 h-80  fade-in delay-200 object-cover no-repeat" />
           </div>
 
 
@@ -41,7 +60,10 @@
       </div>
 
 
-      <div class="flex justify-center space-x-4 mb-8 fade-in delay-200">
+     
+    </section>
+
+     <div class="flex justify-center space-x-4 mb-8 fade-in delay-200">
         <UButton to="/projects" color="blue" size="lg">
           Voir mes projets ->
         </UButton>
@@ -49,7 +71,6 @@
           Me contacter
         </UButton>
       </div>
-    </section>
 
     <section class="py-16 mt-7 ">
       <div class="container mx-auto px-4">
