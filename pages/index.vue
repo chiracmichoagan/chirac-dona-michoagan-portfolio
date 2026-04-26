@@ -2,7 +2,7 @@
   <div>
     <section class="mb-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
 
-<h1 class="font-montserrat text-2xl">Hello world!</h1>
+<!-- <h1 class="font-montserrat text-2xl">Hello world!</h1> -->
       <div class="">
 
 
