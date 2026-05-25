@@ -1,5 +1,14 @@
-une librairie , un magasin , un programme information qu'on installe pour ajouter plus de fonctionnalité ou modifier celles existant  à afin de créer ou personnaliser son site web
+une extension est une librairie , un magasin , un programme informatique qu'on installe pour ajouter plus de fonctionnalité ou modifier celles existantes  à afin de créer ou personnaliser son site web
 
 un thème c'est un ensembles de fichier qui définit le design , l'apparence et la  la mise en page de votre site interne
 
-wordpress un système de gestion de contenu cms qui permet de créer des site web nocode 
+wordpress un système de gestion de contenu cms(content management system) qui permet de créer des site web nosodes
+
+
+Un hébergement web est un serveur connecter à internet h24 qui stock les données d'un site ou d'une application pour avoir accès  à un ébergement web il faut prendre pas les entreprise qui louent leur serveur. On les appels les hébergeur. 
+
+hostinger, ovh, o2swicth, lws, namecheap 
+
+Un certificat ssl est un système de sécurité qui permet de protéger les donnés entre les utilisateurs et le site web. 
+
+Un nom de domaine est l'address personnelle qu'on loue à un site  web. IL est unique et n'est attribuer à un seul site 

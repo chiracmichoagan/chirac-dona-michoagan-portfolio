@@ -182,6 +182,123 @@ const projects = [
     demo: "https://app-music-build-avec-vue-js.vercel.app/",
     github: "https://github.com/chiracmichoagan/app-music-build-avec-vue.js.git",
   },
+  {
+    title: "Logiciel generateur de facture",
+    description:
+      "Application web de generateur de facture",
+    image: "assets/image-generateur-de-reçu.png",
+    technologies: [
+      "react js",
+      "material ui",
+      "vite"
+    ],
+    demo: "https://facture-generator-web-ewgy.vercel.app/",
+    github: "https://github.com/chiracmichoagan/facture-generator.git",
+  },
+  {
+    title: "Landings page pour une agence de santé médicale",
+    description:
+      "Page d'accueil pour une agence de santé médicale",
+    image: "assets/landing-page-sante.png",
+    technologies: [
+      "html",
+      "css",
+      "javascript",
+      "tailwinds css"
+    ],
+    demo: "https://landing-page-medical.vercel.app/",
+    github: "https://github.com/chiracmichoagan/landing-page-medical.git",
+  },
+  {
+    title: "App menu restaurant",
+    description:
+      "Application web de menu restaurant",
+    image: "assets/app-menu-restaurant.png",
+    technologies: [
+      "html",
+      "css",
+      "javascript",
+      "tailwinds css"
+    ],
+    demo: "https://app-menu-zeta.vercel.app/",
+    github: "https://github.com/chiracmichoagan/app-menu-2.git",
+  },
+  {
+    title: "Site web e-commerce pour une boutique de vente des objets electroniques",
+    description:
+      "Site web e-commerce pour une boutique de vente des objets electroniques.",
+    image: "assets/e-commerce-site.png",
+    technologies: [
+      "html",
+      "css",
+      "javascript",
+      "tailwinds css"
+    ],
+    demo: "https://ecommerce-website-lovat-beta.vercel.app/",
+    github: "https://github.com/chiracmichoagan/E-Commerce-Website.git",
+  },
+  {
+    title: "Application web super Mario",
+    description:
+      "Page d'accueil pour le super Mario",
+    image: "assets/super-mario-site.png",
+    technologies: [
+      "html",
+      "css",
+      "tailwinds css",
+      'JavaScript Vanilla (ES6)'
+    ],
+    demo: "https://super-mario-theta-seven.vercel.app/",
+    github: "https://github.com/chiracmichoagan/super-mario.git",
+  },
+  {
+    title: "Site web pour un restaurant BonAppetit",
+    description:
+      "Page d'accueil pour le restaurant BonAppetit",
+    image: "assets/bonappetit-site.png",
+    technologies: [
+      "tailwinds css",
+      'vues js'
+    ],
+    demo: "https://food-ecommerce-eta.vercel.app/",
+    github: "https://github.com/chiracmichoagan/food-ecommerce.git",
+  },
+  {
+    title: "Mon portfolio personnel",
+    description:
+      "Page d'accueil pour mon portfolio personnel",
+    image: "assets/portfolio-site.png",
+    technologies: [
+      "nuxt js",
+      'tailwinds css'
+    ],
+    demo: "https://portfolio-nuxt-tau.vercel.app/",
+    github: "https://github.com/chiracmichoagan/portfolio-nuxt.git",
+  },
+  {
+    title: "Site blog Astro",
+    description:
+      "Blog personnel construit avec Astro, un générateur de site statique moderne qui permet de créer des sites rapides et performants en utilisant les technologies web les plus récentes.",
+    image: "assets/blog-astro-site.png",
+    technologies: [
+      "astro js",
+      'tailwinds css'
+    ],
+    demo: "https://site-blog-astro.netlify.app/",
+    github: "https://github.com/chiracmichoagan/blogAstro.git",
+  },
+  {
+    title: "Site web pour restaurant fast food",
+    description:
+      "Landing page pour un restaurant fast food",
+    image: "assets/restaurant-site.png",
+    technologies: [
+      "vues js",
+      'tailwinds css'
+    ],
+    demo: "https://fast-food-saveur.netlify.app/",
+    github: "https://github.com/chiracmichoagan/Fast-Food.git",
+  },
 ];
 
 const filteredProjects = computed(() => {
