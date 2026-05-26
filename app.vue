@@ -42,10 +42,10 @@
 
 
 
-              <NuxtLink to="/services" class="hover:text-blue-600 transition-colors flex items-center gap-2"
+              <!-- <NuxtLink to="/services" class="hover:text-blue-600 transition-colors flex items-center gap-2"
                 active-class="text-blue-600 font-semibold">
                 Mes services
-              </NuxtLink>
+              </NuxtLink> -->
               <NuxtLink to="/about" class="hover:text-blue-600 transition-colors flex items-center gap-2"
                 active-class="text-blue-600 font-semibold">
                 À propos
