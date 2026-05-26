@@ -12,3 +12,4 @@ hostinger, ovh, o2swicth, lws, namecheap
 Un certificat ssl est un système de sécurité qui permet de protéger les donnés entre les utilisateurs et le site web. 
 
 Un nom de domaine est l'address personnelle qu'on loue à un site  web. IL est unique et n'est attribuer à un seul site 
+

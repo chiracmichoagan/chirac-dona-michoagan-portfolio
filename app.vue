@@ -1,9 +1,13 @@
 <template>
   <ClientOnly>
+
     <div
-      class="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors flex flex-col">
-      <header class="p-4 bg-white dark:bg-gray-800 shadow-2xl sticky top-0 z-50">
+      class="min-h-screen bg-[#FFFCF5] dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors flex flex-col">
+
+      <header class="p-4 bg-[#FFFCF5] dark:bg-gray-800 shadow-2xl sticky top-0 z-50">
+
         <div class="container mx-auto flex justify-between items-center">
+
           <NuxtLink to="/" class="text-xl font-bold flex items-center justify-center gap-2">
             <!-- drapeau Cap-Vert -->
             <img src="./public/assets/image_dona.png" class="w-10 h-10 rounded-full" />
@@ -11,16 +15,20 @@
 
           <!-- Navigation  -->
           <nav class="flex items-center space-x-6 relative">
+
             <!-- Menu desktop (affiché uniquement sur les écrans larges) -->
-            <div class="hidden md:flex items-center space-x-6">
-              <NuxtLink to="/" class="hover:text-blue-600 transition-colors flex items-center gap-2"
-                active-class="text-blue-600 font-semibold">
+            <div class="hidden md:flex items-center flex justify-center gap-6">
+              <NuxtLink to="/" class="text-gray-500 hover:text-black size-16 leading-5 font-bold transition-colors flex items-center gap-2"
+                active-class="!text-[#E78318] font-semibold">
                 Accueil
               </NuxtLink>
-              <ul class="flex space-x-6 text-white">
+
+
+              
+              <ul class="flex space-x-6 ">
                 <!-- Élément parent avec la classe 'group' -->
-                <li class="relative group  space-x-6 text-gray-900">
-                  <button class="flex items-center hover:text-blue-400 focus:outline-none">
+                <li class="relative group  space-x-6 text-gray-500">
+                  <button class="flex items-center size-16 leading-5 font-bold hover:text-black focus:outline-none">
                     Services
                     <!-- Icône flèche (optionnelle) -->
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,9 +40,9 @@
                   <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg 
                  invisible group-hover:visible opacity-0 group-hover:opacity-100 
                  transition-all duration-300 z-50">
-                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Design Web</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Développement</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Marketing SEO</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">Design Web</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">Développement</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">Marketing SEO</a></li>
                   </ul>
                 </li>
 
@@ -42,32 +50,31 @@
 
 
 
-              <!-- <NuxtLink to="/services" class="hover:text-blue-600 transition-colors flex items-center gap-2"
-                active-class="text-blue-600 font-semibold">
-                Mes services
-              </NuxtLink> -->
-              <NuxtLink to="/about" class="hover:text-blue-600 transition-colors flex items-center gap-2"
-                active-class="text-blue-600 font-semibold">
-                À propos
+           
+              <NuxtLink to="/about" class="text-gray-500  size-16 leading-5 font-bold hover:text-black transition-colors flex items-center gap-2"
+                active-class="!text-[#E78318] font-semibold">
+                About
               </NuxtLink>
-              <NuxtLink to="/projects" class="hover:text-blue-600 transition-colors flex items-center gap-2"
-                active-class="text-blue-600 font-semibold">
+
+
+              <NuxtLink to="/projects" class="text-gray-500 size-16 leading-5 font-bold hover:text-black transition-colors flex items-center gap-2"
+                active-class="!text-[#E78318] font-semibold">
                 Projets
               </NuxtLink>
-              <NuxtLink to="/contact" class="hover:text-blue-600 transition-colors flex items-center gap-2"
-                active-class="text-blue-600 font-semibold">
-                Contact
-              </NuxtLink>
-              <!-- <NuxtLink to="/blog" class="hover:text-blue-600 transition-colors flex items-center gap-2"
-                active-class="text-blue-600 font-semibold">
-                Le Blog
-              </NuxtLink> -->
 
-               <ul class="flex space-x-6 text-white">
+
+              <NuxtLink to="/contact" class="text-gray-500 size-16 leading-5 font-bold hover:text-black transition-colors flex items-center gap-2"
+                active-class="!text-[#E78318] font-semibold">
+                Contacts
+              </NuxtLink>
+
+              
+
+              <ul class="flex space-x-6">
                 <!-- Élément parent avec la classe 'group' -->
-                <li class="relative group  space-x-6 text-gray-900">
-                  <button class="flex items-center hover:text-blue-400 focus:outline-none">
-                    Le Blog
+                <li class="relative group  space-x-6 text-gray-500">
+                  <button class="flex items-center size-16 leading-5 font-bold hover:text-black focus:outline-none">
+                    Blog
                     <!-- Icône flèche (optionnelle) -->
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path d="M19 9l-7 7-7-7"></path>
@@ -78,9 +85,9 @@
                   <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg 
                  invisible group-hover:visible opacity-0 group-hover:opacity-100 
                  transition-all duration-300 z-50">
-                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Articles</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Tutoriels</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-blue-500 hover:text-white">Actualités</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">Articles</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">Tutoriels</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">Actualités</a></li>
                   </ul>
                 </li>
 
@@ -126,6 +133,8 @@
               </select>
             </div>
           </div>
+
+
         </div>
       </header>
 
@@ -135,7 +144,7 @@
 
 
       <!-- Pied de page -->
-      <footer class="bg-white dark:bg-gray-800 shadow-md py-12 mt-auto">
+      <footer class="bg-[#F9F6ED] dark:bg-gray-800 shadow-md py-12 mt-auto">
         <div class="container mx-auto px-4">
           <div class="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
             <!-- Section Présentation -->
