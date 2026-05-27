@@ -38,7 +38,7 @@
                 v-if="project.demo"
                 :to="project.demo"
                 target="_blank"
-                color="primary"
+               class="bg-[#E78318] hover:bg-[#cf7314] focus:ring-[#E78318] text-white border-transparent"
               >
                 Voir la démo
               </UButton>

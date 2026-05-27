@@ -1,15 +1,16 @@
 <template>
-  <div>
-    <section class="py-20 bg-gray-50 dark:bg-gray-900">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-3xl font-bold mb-4 fade-in text-primary">
+    <section class="py-2 text-center">
+      <div class="container mx-auto px-4 text-center">
+        
+          <h1 class="border w-40 mx-auto text-center mb-4 font-bold bg-gray-100 dark:bg-gray-800 rounded-full p-1 text-[#E88200]">
             Mes Projets
           </h1>
-          <p class="text-lg text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100">
+
+
+          <p class="text-lg text-black dark:text-white mb-8 fade-in delay-100">
             Une collection de mes travaux et projets personnels
           </p>
-        </div>
+      
       </div>
     </section>
 
@@ -66,8 +67,8 @@
                 </div>
                 <template #footer>
                   <div class="flex justify-between">
-                    <UButton v-if="project.demo" :to="project.demo" target="_blank" color="blue">
-                      Démo
+                    <UButton v-if="project.demo" :to="project.demo" target="_blank" class="bg-[#E78318] hover:bg-[#cf7314] focus:ring-[#E78318] text-white border-transparent">
+                      Dmo
                     </UButton>
                     <UButton v-if="project.github" :to="project.github" target="_blank" color="gray" variant="ghost">
                       <UIcon name="i-simple-icons-github" class="mr-1" /> GitHub
@@ -80,7 +81,6 @@
         </div>
       </div>
     </section>
-  </div>
 </template>
 
 <script setup>
