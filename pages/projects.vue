@@ -381,7 +381,7 @@ const projects = [
     title: "site web de location des chambres et maison",
     description:
       "c'est un site web de location des chambres et maison, qui présente les chambres et maisons disponibles à la location, les tarifs et les informations de contact.",
-    image: "assets/site-web-solution-zorzor.png",
+    image: "assets/Macbook-Air-booki-hebergement-web.netlify.app.png",
     technologies: [
       "HTML 5", "CSS", "JavaScript", "Bootstrap 5"
     ],
