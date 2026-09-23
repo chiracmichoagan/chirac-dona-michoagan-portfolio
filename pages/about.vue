@@ -32,10 +32,10 @@
                   </template>
                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                     Bonjour, je suis un développeur web full-stack passionné,
-                    fort d'une expérience de près d'un ans dans la création de
+                    fort d'une expérience de près de 3ans dans la création de
                     sites web et d'applications. Mon expertise réside
-                    principalement dans le développement backend, avec une
-                    maîtrise des technologies telles que Node.js et SpringBoot.
+                    principalement dans le développement full-stack, avec une
+                    maîtrise des technologies telles que html, css, javascript, php, laravel, mysql, Node.js et SpringBoot.
                   </p>
                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                     Mon domaine d'intérêt s'étend également à la cybersécurité,
