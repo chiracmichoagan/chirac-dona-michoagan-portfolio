@@ -68,7 +68,7 @@
                 <template #footer>
                   <div class="flex justify-between">
                     <UButton v-if="project.demo" :to="project.demo" target="_blank" class="bg-[#E78318] hover:bg-[#cf7314] focus:ring-[#E78318] text-white border-transparent">
-                      Dmo
+                      voir la demo
                     </UButton>
                     <UButton v-if="project.github" :to="project.github" target="_blank" color="gray" variant="ghost">
                       <UIcon name="i-simple-icons-github" class="mr-1" /> GitHub
@@ -89,8 +89,7 @@ import { ref, computed, onMounted } from "vue";
 const search = ref("");
 const selectedProject = ref("");
 
-const projects = [
-  
+const projects = [ 
   {
     title: "Calculatrice scientifique demo",
     description:
@@ -298,6 +297,17 @@ const projects = [
     ],
     demo: "https://fast-food-saveur.netlify.app/",
     github: "https://github.com/chiracmichoagan/Fast-Food.git",
+  },
+  {
+    title: "Site web E-commerce pour une boutique de vente.",
+    description:
+      "Site web E-commerce pour une boutique de vente.",
+    image: "assets/e-commerce-siteweb.png",
+    technologies: [
+      "HTML 5", "CSS", "JavaScript", "Bootstrap 5", "PHP", "MySQL"
+    ],
+    demo: "https://e-commerce-b2b.free.nf",
+    github: "https://github.com/chiracmichoagan/E-Commerce-main.git",
   },
 ];
 
