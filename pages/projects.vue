@@ -90,6 +90,30 @@ const search = ref("");
 const selectedProject = ref("");
 
 const projects = [ 
+   {
+    title: "Site web E-commerce pour une boutique de vente.",
+    description:
+      "Site web E-commerce pour une boutique de vente.",
+    image: "assets/e-commerce-siteweb.png",
+    technologies: [
+      "HTML 5", "CSS", "JavaScript", "Bootstrap 5", "PHP", "MySQL"
+    ],
+    demo: "https://e-commerce-b2b.free.nf",
+    github: "https://github.com/chiracmichoagan/E-Commerce-main.git",
+  },
+  
+   {
+    title: "Application web de télechargement des vidéos pinterest sans logo",
+    description:
+      "Utiliser cette application web pour télécharger des vidéos pinterest sans logo, vous pouvez télécharger des vidéos pinterest en ligne sans filigrane.",
+    image: "assets/application_web_videos_pinterest_sans_logo.png",
+    technologies: [
+      "React js", "tailwinds css", "vite"
+    ],
+    demo: "https://pinsave-main.vercel.app",
+    github: "https://github.com/chiracmichoagan",
+  },
+
   {
     title: "Calculatrice scientifique demo",
     description:
@@ -297,18 +321,7 @@ const projects = [
     ],
     demo: "https://fast-food-saveur.netlify.app/",
     github: "https://github.com/chiracmichoagan/Fast-Food.git",
-  },
-  {
-    title: "Site web E-commerce pour une boutique de vente.",
-    description:
-      "Site web E-commerce pour une boutique de vente.",
-    image: "assets/e-commerce-siteweb.png",
-    technologies: [
-      "HTML 5", "CSS", "JavaScript", "Bootstrap 5", "PHP", "MySQL"
-    ],
-    demo: "https://e-commerce-b2b.free.nf",
-    github: "https://github.com/chiracmichoagan/E-Commerce-main.git",
-  },
+  }
 ];
 
 const filteredProjects = computed(() => {
