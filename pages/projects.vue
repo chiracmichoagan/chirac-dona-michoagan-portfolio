@@ -101,6 +101,17 @@ const projects = [
     demo: "https://e-commerce-b2b.free.nf",
     github: "https://github.com/chiracmichoagan/E-Commerce-main.git",
   },
+   {
+    title: "Site vitrine Nickel cosmetique 229",
+    description:
+      "Site web vitrine pour une boutique de vente de cosmetique.",
+    image: "assets/Macbook-Air-nickel-cosmetique-229.netlify.app.png",
+    technologies: [
+      "React", "tailwinds css", "JavaScript",
+    ],
+    demo: "https://nickel-cosmetique-229.netlify.app/",
+    github: "https://github.com/chiracmichoagan",
+  },
   
    {
     title: "Application web de télechargement des vidéos pinterest sans logo",
@@ -111,6 +122,17 @@ const projects = [
       "React js", "tailwinds css", "vite"
     ],
     demo: "https://pinsave-main.vercel.app",
+    github: "https://github.com/chiracmichoagan",
+  },
+   {
+    title: "Site web vitrine pour le commerce",
+    description:
+      "C'est un site web vitrine pour le commerce, qui présente les produits et services proposés par le commerce.",
+    image: "assets/site_de_vente_vitrine.png",
+    technologies: [
+      "React js", "tailwinds css", "vite"
+    ],
+    demo: "https://luminous-begonia-ee76d7.netlify.app/",
     github: "https://github.com/chiracmichoagan",
   },
 
@@ -321,6 +343,50 @@ const projects = [
     ],
     demo: "https://fast-food-saveur.netlify.app/",
     github: "https://github.com/chiracmichoagan/Fast-Food.git",
+  },
+  {
+    title: "Site web vitrine pour restaurant fast food",
+    description:
+      "C'est un site web vitrine pour un restaurant fast food, qui présente les menus, les promotions et les informations de contact du restaurant.",
+    image: "assets/site-web-fastfood-ecom.netlify.app.png",
+    technologies: [
+      "HTML 5", "CSS", "JavaScript",
+    ],
+    demo: "https://fastfood-ecom.netlify.app/",
+    github: "https://github.com/chiracmichoagan/Fast-Food.git",
+  },
+  {
+    title: "Portfolio pour un Designer",
+    description:
+      "C'est un portfolio pour un designer, qui présente ses travaux, ses compétences et ses informations de contact.",
+    image: "assets/site-web-vitrine-portfolio-dona-chirac.netlify.app.png",
+    technologies: [
+      "HTML 5", "CSS", "JavaScript", "Bootstrap 5"
+    ],
+    demo: "https://fastfood-ecom.netlify.app/",
+    github: "https://github.com/chiracmichoagan/Fast-Food.git",
+  },
+  {
+    title: "Site web solution zozor",
+    description:
+      "Un landing page pour une solution zozor, qui présente les fonctionnalités et les avantages de la solution.",
+    image: "assets/site-web-solution-zorzor.png",
+    technologies: [
+      "HTML 5", "CSS", "JavaScript", "Bootstrap 5"
+    ],
+    demo: "https://solution-zorzor.netlify.app/",
+    github: "https://github.com/chiracmichoagan/TP_solution-zozor.git",
+  },
+  {
+    title: "site web de location des chambres et maison",
+    description:
+      "c'est un site web de location des chambres et maison, qui présente les chambres et maisons disponibles à la location, les tarifs et les informations de contact.",
+    image: "assets/site-web-solution-zorzor.png",
+    technologies: [
+      "HTML 5", "CSS", "JavaScript", "Bootstrap 5"
+    ],
+    demo: "https://booki-hebergement-web.netlify.app/",
+    github: "https://github.com/chiracmichoagan/TP_Booki.git",
   }
 ];
 
