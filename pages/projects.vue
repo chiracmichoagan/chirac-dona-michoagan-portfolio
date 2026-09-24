@@ -135,6 +135,17 @@ const projects = [
     demo: "https://luminous-begonia-ee76d7.netlify.app/",
     github: "https://github.com/chiracmichoagan",
   },
+   {
+    title: "Registre des ventes fiche quotidien",
+    description:
+      "Un logiciel de registre des ventes qui permet de suivre les ventes quotidiennes et de générer des rapports.",
+    image: "assets/registre-des-ventes-fiche-quotidien.png",
+    technologies: [
+      "React js", "tailwinds css", "vite"
+    ],
+    demo: "https://registre-des-ventes-fiche-quotidien-chi.vercel.app/",
+    github: "https://github.com/chiracmichoagan",
+  },
 
   {
     title: "Calculatrice scientifique demo",
