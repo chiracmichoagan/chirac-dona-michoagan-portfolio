@@ -1,14 +1,27 @@
 <template>
+
+  <nav class="flex items-center gap-2 text-sm text-black mb-12" aria-label="Fil d'Ariane">
+    <a class="hover:text-white/60 transition-colors" href="/">
+      Accueil
+    </a>
+    <span>/</span>
+    <span class="text-black font-medium">Contact</span>
+
+  </nav>
+
   <div>
     <UContainer>
       <section class="py-20 bg-gray-50 dark:bg-gray-900 rounded-xl mb-8">
         <div class="container mx-auto px-4">
           <div class="max-w-4xl mx-auto text-center">
-            <p
-              class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100"
-            >
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100">
               Vous avez un projet en tête ou souhaitez discuter d'une
               opportunité ? N'hésitez pas à me contacter !
+            </p>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100">
+              Je réponds sous 24h.            </p>
+            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100">
+             Une idée de projet ? Une question sur mes tarifs ? Envoyez-moi un message, je reviens vers vous rapidement.
             </p>
           </div>
         </div>
@@ -22,10 +35,7 @@
                 <UCard class="h-full">
                   <template #header>
                     <div class="flex items-center gap-2 mb-2">
-                      <UIcon
-                        name="i-heroicons-information-circle"
-                        class="text-2xl text-primary-500"
-                      />
+                      <UIcon name="i-heroicons-information-circle" class="text-2xl text-primary-500" />
                       <h2 class="text-2xl font-bold">
                         Informations de contact
                       </h2>
@@ -34,68 +44,45 @@
 
                   <div class="space-y-6 py-4">
                     <div
-                      class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                    >
-                      <UAvatar
-                        icon="i-heroicons-envelope"
-                        color="primary"
-                        variant="solid"
-                        size="lg"
-                        class="mr-4"
-                      />
+                      class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                      <UAvatar icon="i-heroicons-envelope" color="primary" variant="solid" size="lg" class="mr-4" />
                       <div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
                           Email
                         </div>
-                        <a
-                          href="mailto:michoaganchiracdona@gmail.com"
-                          class="text-gray-800 text-xs dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 font-medium"
-                        >
+                        <NuxtLink to="mailto:michoaganchiracdona@gmail.com"
+                          class="text-gray-800 text-xs dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 font-medium">
                           michoaganchiracdona@gmail.com
-                        </a>
+                        </NuxtLink>
                       </div>
                     </div>
 
                     <div
-                      class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                    >
-                      <UAvatar
-                        icon="i-heroicons-phone"
-                        color="primary"
-                        variant="solid"
-                        size="lg"
-                        class="mr-4"
-                      />
+                      class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                      <UAvatar icon="i-heroicons-phone" color="primary" variant="solid" size="lg" class="mr-4" />
                       <div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
                           Téléphone
                         </div>
-                        <a
-                          href="tel:+1234567890"
-                          class="text-gray-800 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 font-medium"
-                        >
-                          +229 (015) 3947916 ou +229 (016) 1299161
-                        </a>
+                        <NuxtLink to="tel:+2290153947916"
+                          class="text-gray-800 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 font-medium">
+                          +229 (015) 3947916
+                        </NuxtLink>
+                        <NuxtLink to="tel:+2290161299161"
+                          class="text-gray-800 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 font-medium">
+                          +229 (016) 1299161
+                        </NuxtLink>
                       </div>
                     </div>
 
                     <div
-                      class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-                    >
-                      <UAvatar
-                        icon="i-heroicons-map-pin"
-                        color="primary"
-                        variant="solid"
-                        size="lg"
-                        class="mr-4"
-                      />
+                      class="flex items-center p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                      <UAvatar icon="i-heroicons-map-pin" color="primary" variant="solid" size="lg" class="mr-4" />
                       <div>
                         <div class="text-sm text-gray-500 dark:text-gray-400">
                           Localisation
                         </div>
-                        <span
-                          class="text-gray-800 dark:text-gray-200 font-medium"
-                        >
+                        <span class="text-gray-800 dark:text-gray-200 font-medium">
                           Cotonou-littoral, Bénin
                         </span>
                       </div>
@@ -109,69 +96,35 @@
                       </h3>
                       <div class="flex space-x-3">
                         <UTooltip text="Twitter">
-                          <UButton
-                            color="primary"
-                            variant="ghost"
-                            to="https://x.com/chinoisnois"
-                            target="_blank"
-                            class="hover:scale-110 transition-transform"
-                          />
-                          <img
-                            src="public/assets/x.png"
-                            alt="Logo X de Twitter"
-                            class="h-4 mt-2 w-5"
-                          />
+                          <UButton color="primary" variant="ghost" to="https://x.com/chinoisnois" target="_blank"
+                            class="hover:scale-110 transition-transform" />
+                          <img src="public/assets/x.png" alt="Logo X de Twitter" class="h-4 mt-2 w-5" />
                         </UTooltip>
                         <UTooltip text="GitHub">
-                          <UButton
-                            color="black"
-                            variant="ghost"
-                            icon="i-simple-icons-github"
-                            to="https://github.com/chiracmichoagan"
-                            target="_blank"
-                            class="hover:scale-110 transition-transform"
-                          />
+                          <UButton color="black" variant="ghost" icon="i-simple-icons-github"
+                            to="https://github.com/chiracmichoagan" target="_blank"
+                            class="hover:scale-110 transition-transform" />
                         </UTooltip>
                         <UTooltip text="LinkedIn">
-                          <UButton
-                            color="blue"
-                            variant="ghost"
-                            icon="i-simple-icons-linkedin"
-                            to="https://linkedin.com/in/chiracmichoagan"
-                            target="_blank"
-                            class="hover:scale-110 transition-transform"
-                          />
+                          <UButton color="blue" variant="ghost" icon="i-simple-icons-linkedin"
+                            to="https://linkedin.com/in/chiracmichoagan" target="_blank"
+                            class="hover:scale-110 transition-transform" />
                         </UTooltip>
 
                         <UTooltip text="Instagram">
-                          <UButton
-                            color="red"
-                            variant="ghost"
-                            icon="i-simple-icons-instagram"
-                            to="https://instagram.com/yourusername"
-                            target="_blank"
-                            class="hover:scale-110 transition-transform"
-                          />
+                          <UButton color="red" variant="ghost" icon="i-simple-icons-instagram"
+                            to="https://instagram.com/chiracdonamichoagan" target="_blank"
+                            class="hover:scale-110 transition-transform" />
                         </UTooltip>
                         <UTooltip text="facebook">
-                          <UButton
-                            color="blue"
-                            variant="ghost"
-                            icon="i-simple-icons-facebook"
-                            to="https://instagram.com/yourusername"
-                            target="_blank"
-                            class="hover:scale-110 transition-transform"
-                          />
+                          <UButton color="blue" variant="ghost" icon="i-simple-icons-facebook"
+                            to="https://facebook.com/chiracdonamichoagan" target="_blank"
+                            class="hover:scale-110 transition-transform" />
                         </UTooltip>
                         <UTooltip text="TikTok">
-                          <UButton
-                            color="black"
-                            variant="ghost"
-                            icon="i-simple-icons-tiktok"
-                            to="https://instagram.com/yourusername"
-                            target="_blank"
-                            class="hover:scale-110 transition-transform"
-                          />
+                          <UButton color="black" variant="ghost" icon="i-simple-icons-tiktok"
+                            to="https://tiktok.com/@chiracdonamichoagan" target="_blank"
+                            class="hover:scale-110 transition-transform" />
                         </UTooltip>
                       </div>
                     </div>
@@ -183,74 +136,42 @@
                 <UCard>
                   <template #header>
                     <div class="flex items-center gap-2 mb-2">
-                      <UIcon
-                        name="i-heroicons-chat-bubble-left-right"
-                        class="text-2xl text-primary-500"
-                      />
+                      <UIcon name="i-heroicons-chat-bubble-left-right" class="text-2xl text-primary-500" />
                       <h2 class="text-2xl font-bold">Envoyez-moi un message</h2>
                     </div>
                   </template>
 
                   <form @submit.prevent="submitForm" class="space-y-4">
                     <UFormGroup label="Nom" name="name" required>
-                      <UInput
-                        v-model="form.name"
-                        placeholder="Votre nom"
-                        icon="i-heroicons-user"
-                        :ui="{ icon: { trailing: { pointer: '' } } }"
-                      />
+                      <UInput v-model="form.name" placeholder="Votre nom" icon="i-heroicons-user"
+                        :ui="{ icon: { trailing: { pointer: '' } } }" />
                     </UFormGroup>
 
                     <UFormGroup label="Email" name="email" required>
-                      <UInput
-                        v-model="form.email"
-                        placeholder="Votre email"
-                        type="email"
-                        icon="i-heroicons-envelope"
-                        :ui="{ icon: { trailing: { pointer: '' } } }"
-                      />
+                      <UInput v-model="form.email" placeholder="Votre email" type="email" icon="i-heroicons-envelope"
+                        :ui="{ icon: { trailing: { pointer: '' } } }" />
                     </UFormGroup>
 
                     <UFormGroup label="Sujet" name="subject" required>
-                      <UInput
-                        v-model="form.subject"
-                        placeholder="Sujet de votre message"
+                      <UInput v-model="form.subject" placeholder="Sujet de votre message"
                         icon="i-heroicons-chat-bubble-bottom-center-text"
-                        :ui="{ icon: { trailing: { pointer: '' } } }"
-                      />
+                        :ui="{ icon: { trailing: { pointer: '' } } }" />
                     </UFormGroup>
 
                     <UFormGroup label="Message" name="message" required>
-                      <UTextarea
-                        v-model="form.message"
-                        placeholder="Détaillez votre demande ici..."
-                        rows="5"
-                      />
+                      <UTextarea v-model="form.message" placeholder="Détaillez votre demande ici..." rows="5" />
                     </UFormGroup>
 
                     <div class="flex justify-end">
-                      <UButton
-                        type="submit"
-                        color="primary"
-                        :loading="loading"
-                        :disabled="loading"
-                        size="lg"
-                        icon="i-heroicons-paper-airplane"
-                        class="w-full md:w-auto"
-                      >
+                      <UButton type="submit" color="primary" :loading="loading" :disabled="loading" size="lg"
+                        icon="i-heroicons-paper-airplane" class="w-full md:w-auto">
                         Envoyer le message
                       </UButton>
                     </div>
                   </form>
 
-                  <UAlert
-                    v-if="formStatus.show"
-                    :type="formStatus.type"
-                    :title="formStatus.title"
-                    :description="formStatus.message"
-                    class="mt-4"
-                    icon="i-heroicons-check-circle"
-                  />
+                  <UAlert v-if="formStatus.show" :type="formStatus.type" :title="formStatus.title"
+                    :description="formStatus.message" class="mt-4" icon="i-heroicons-check-circle" />
                 </UCard>
               </div>
             </div>

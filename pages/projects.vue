@@ -449,7 +449,7 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style scoped>
 .project-card {
   transition: transform 0.3s ease-in-out;
 }

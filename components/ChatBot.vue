@@ -107,7 +107,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, watch, nextTick } from "vue";
+import { ref, watch, nextTick } from "vue";
 
 const isChatOpen = ref(false);
 const userInput = ref("");
