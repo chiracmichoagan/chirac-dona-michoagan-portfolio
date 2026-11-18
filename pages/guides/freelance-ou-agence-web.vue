@@ -1,6 +1,6 @@
 <template>
     <main>
-        <header
+        <!-- <header
             class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white/80 backdrop-blur-md border-b border-black/6">
             <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16"><a class="relative"
                     aria-label="Antoine Gueguen" href="/"><span class="md:hidden relative block h-8 w-8"><img
@@ -34,7 +34,7 @@
                         class="block w-6 h-[2px] transition-all duration-500  bg-gray-900"></span><span
                         class="block w-6 h-[2px] transition-all duration-500 origin-center  bg-gray-900"></span></button>
             </div>
-        </header>
+        </header> -->
         <section class="pt-28 md:pt-40 pb-20 bg-[#0A0A0A] relative overflow-hidden">
             <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0d1117] to-[#0A0A0A]"></div>
             <div
@@ -250,7 +250,7 @@
                         href="/tarifs">Voir les tarifs indicatifs</a></div>
             </div>
         </section>
-        <footer class="bg-[#0A0A0A] border-t border-white/8">
+        <!-- <footer class="bg-[#0A0A0A] border-t border-white/8">
             <div class="max-w-6xl mx-auto px-6 pt-12 pb-8">
                 <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-10">
                     <div>
@@ -322,6 +322,6 @@
                             </svg></a></div>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </main>
 </template>
