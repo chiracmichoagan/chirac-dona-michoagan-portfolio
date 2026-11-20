@@ -72,7 +72,7 @@
     </div>
 
 
-  <section class="py-16 bg-[#F9F6ED] dark:bg-gray-900">
+    <section class="py-16 bg-[#F9F6ED] dark:bg-gray-900">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
           <h2 class="text-3xl font-bold mb-8 fade-in">Projets à la une</h2>
@@ -158,16 +158,17 @@
       </div>
     </section>
 
-    <section id="contact" class="py-24 md:py-32 bg-[#0A0A0A]">
+    <section id="contact" class="py-24 md:py-32 bg-[#FBF2E3]">
       <div class="max-w-6xl mx-auto px-6">
         <div style="opacity: 1; transform: none;">
-          <p class="text-sm font-bold text-[#0066FF] tracking-widest uppercase mb-3">Contact</p>
-          <h2 class="font-black text-white mb-4" style="font-size: clamp(2rem, 5vw, 4rem);">Parlons de votre projet</h2>
-          <p class="text-lg text-white/45 mb-16">Je réponds sous 24h.</p>
+          <p class="text-sm font-bold text-[#E88200] tracking-widest uppercase mb-3">Contact</p>
+          <h2 class="font-black text-black  mb-4" style="font-size: clamp(2rem, 5vw, 4rem);">Parlons de votre projet
+          </h2>
+          <p class="text-lg  text-gray-600  mb-16">Je réponds sous 24h.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-10 md:gap-16">
           <div style="opacity: 1; transform: none;">
-            <p class="text-white/55 text-lg leading-relaxed mb-10">Une idée de projet ? Une question sur mes tarifs ?
+            <p class=" text-gray-600  text-lg leading-relaxed mb-10">Une idée de projet ? Une question sur mes tarifs ?
               Envoyez-moi un message, je reviens vers vous rapidement.</p>
             <div class="space-y-5">
               <div class="flex items-center gap-4">
@@ -175,9 +176,10 @@
                   class="w-10 h-10 rounded-xl bg-white/5 border-white/8 border flex items-center justify-center text-lg flex-shrink-0">
                   ✉️</div>
                 <div>
-                  <div class="text-xs text-white/30 uppercase tracking-wider font-medium mb-0.5">Email</div><a
-                    href="mailto:michoaganchiracdona@gmail.com" rel="noopener noreferrer"
-                    class="text-white/75 hover:text-white font-medium transition-colors text-sm">michoaganchiracdona@gmail.com</a>
+                  <div class="text-xs  text-gray-600  uppercase tracking-wider font-medium mb-0.5">Email</div>
+                  <NuxtLink to="mailto:michoaganchiracdona@gmail.com" rel="noopener noreferrer"
+                    class=" text-black  hover:text-white font-medium transition-colors text-sm">
+                    michoaganchiracdona@gmail.com</NuxtLink>
                 </div>
               </div>
               <div class="flex items-center gap-4">
@@ -185,8 +187,8 @@
                   class="w-10 h-10 rounded-xl bg-white/5 border-white/8 border flex items-center justify-center text-lg flex-shrink-0">
                   📍</div>
                 <div>
-                  <div class="text-xs text-white/30 uppercase tracking-wider font-medium mb-0.5">Localisation</div><span
-                    class="text-white/75 font-medium text-sm">Cotonou-littoral, Bénin & Distanciel</span>
+                  <div class="text-xs  text-gray-600  uppercase tracking-wider font-medium mb-0.5">Localisation</div>
+                  <span class="text-black font-medium text-sm">Cotonou-littoral, Bénin & Distanciel</span>
                 </div>
               </div>
               <div class="flex items-center gap-4">
@@ -194,31 +196,53 @@
                   class="w-10 h-10 rounded-xl bg-white/5 border-white/8 border flex items-center justify-center text-lg flex-shrink-0">
                   🔗</div>
                 <div>
-                  <div class="text-xs text-white/30 uppercase tracking-wider font-medium mb-0.5">LinkedIn</div><a
-                    href="https://linkedin.com/chiracmichoagan" target="_blank" rel="noopener noreferrer"
-                    class="text-white/75 hover:text-white font-medium transition-colors text-sm">linkedin.com/chiracmichoagan</a>
+                  <div class="text-xs text-gray-600 uppercase tracking-wider font-medium mb-0.5">LinkedIn</div>
+                  <NuxtLink to="https://linkedin.com/chiracmichoagan" target="_blank" rel="noopener noreferrer"
+                    class="text-black hover:text-white font-medium transition-colors text-sm">
+                    linkedin.com/chiracmichoagan
+                  </NuxtLink>
                 </div>
               </div>
             </div>
           </div>
           <div style="opacity: 1; transform: none;">
-            <form class="space-y-4">
-              <div class="absolute opacity-0 pointer-events-none" aria-hidden="true"><input tabindex="-1"
-                  autocomplete="off" type="text" name="_honey"></div>
-              <div><label class="block text-sm font-medium text-white/65 mb-1.5">Prénom et Nom *</label><input
-                  class="w-full px-4 py-3 rounded-xl bg-white/5 border-white/10 text-white placeholder:text-white/25 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="Jean Dupont" name="name"></div>
-              <div><label class="block text-sm font-medium text-white/65 mb-1.5">Email <span
-                    class="text-white/30">(optionnel si téléphone renseigné)</span></label><input
-                  class="w-full px-4 py-3 rounded-xl bg-white/5 border-white/10 text-white placeholder:text-white/25 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="jean@exemple.fr" type="email" name="email"></div>
-              <div><label class="block text-sm font-medium text-white/65 mb-1.5">Téléphone <span
-                    class="text-white/30">(optionnel si email renseigné)</span></label><input
-                  class="w-full px-4 py-3 rounded-xl bg-white/5 border-white/10 text-white placeholder:text-white/25 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="06 12 34 56 78" type="tel" name="phone"></div>
-              <div><label for="contact-secteur" class="block text-sm font-medium text-white/65 mb-1.5">Secteur
-                  d'activité</label><select id="contact-secteur" name="secteur"
-                  class="w-full px-4 py-3 rounded-xl bg-[#1A1A1A] border-white/10 text-white/75 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm">
+            <form class="space-y-4 border-2 border-[#E88200] rounded-xl p-6">
+
+              <div class="absolute opacity-0 pointer-events-none" aria-hidden="true">
+                <input tabindex="-1" autocomplete="off" type="text" name="_honey">
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-black mb-1.5">Prénom et Nom *</label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
+                  placeholder="Jean Dupont" name="name">
+              </div>
+
+
+              <div>
+                <label class="block text-sm font-medium text-black mb-1.5">Email <span class="text-gray-400">(optionnel
+                    si
+                    téléphone renseigné)</span></label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
+                  placeholder="jean@exemple.fr" type="email" name="email">
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-black mb-1.5">Téléphone <span
+                    class="text-gray-400">(optionnel
+                    si email renseigné)</span></label>
+                <input
+                  class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
+                  placeholder="06 12 34 56 78" type="tel" name="phone">
+              </div>
+
+              <div>
+                <label for="contact-secteur" class="block text-sm font-medium text-black mb-1.5">Secteur
+                  d'activité</label>
+                <select id="contact-secteur" name="secteur"
+                  class="w-full px-4 py-3 rounded-xl bg-[#1A1A1A] border border-[#E88200] text-white/75 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm">
                   <option value="">Sélectionner...</option>
                   <option value="Restaurant">Restaurant</option>
                   <option value="Garage / Mécanicien">Garage / Mécanicien</option>
@@ -228,13 +252,20 @@
                   <option value="Concessionnaire">Concessionnaire</option>
                   <option value="Fleuriste">Fleuriste</option>
                   <option value="Autre">Autre</option>
-                </select></div>
-              <div><label class="block text-sm font-medium text-white/65 mb-1.5">Message *</label><textarea
-                  name="message" rows="5"
-                  class="w-full px-4 py-3 rounded-xl bg-white/5 border-white/10 text-white placeholder:text-white/25 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm resize-none"
-                  placeholder="Décrivez votre projet en quelques mots..."></textarea></div><button type="submit"
-                class="w-full bg-[#0066FF] text-white font-semibold py-4 rounded-xl hover:bg-blue-500 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">Envoyer
-                mon message</button>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-sm font-medium text-black mb-1.5">Message *</label>
+                <textarea name="message" rows="5"
+                  class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm resize-none"
+                  placeholder="Décrivez votre projet en quelques mots..."></textarea>
+              </div>
+              <UButton class="flex items-center justify-center " to="/contact" color="primary" variant="outline"
+                size="lg">
+                Envoyer mon message
+              </UButton>
+              <!-- <button type="submit" class="w-full bg-[#0066FF] text-white font-semibold py-4 rounded-xl hover:bg-blue-500 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">Envoyer mon message</button> -->
             </form>
           </div>
         </div>
@@ -249,9 +280,10 @@
           <p class="text-lg text-[#6B6B6B] mb-16">Des conseils concrets pour bien choisir votre prestataire web.</p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div style="opacity: 1; transform: none;"><a
+          <div style="opacity: 1; transform: none;">
+            <NuxtLink
               class="group relative block bg-[#F9F9F9] border border-gray-100 rounded-2xl p-7 h-full hover:border-gray-200 transition-all duration-300 overflow-hidden"
-              href="/guides/freelance-ou-agence-web">
+              to="/guides/freelance-ou-agence-web">
               <div class="absolute top-0 left-0 right-0 h-[3px] rounded-t-2xl" style="background: rgb(0, 102, 255);">
               </div>
               <span class="text-xs font-bold px-2.5 py-1 rounded-full inline-block mb-4"
@@ -266,7 +298,8 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
                   </path>
                 </svg></span>
-            </a></div>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </section>

@@ -1,9 +1,9 @@
 <template>
 
   <nav class="flex items-center gap-2 text-sm text-black mb-12" aria-label="Fil d'Ariane">
-    <a class="hover:text-white/60 transition-colors" href="/">
+   <NuxtLink class="hover:text-white/60 transition-colors" to="/">
       Accueil
-    </a>
+    </NuxtLink>
     <span>/</span>
     <span class="text-black font-medium">Services</span>
 
@@ -39,9 +39,9 @@
           <div class="text-3xl font-black text-white">100%</div>
           <div class="text-sm text-white/40 mt-1">remote au Bénin et à l'international</div>
         </div>
-      </div><a
+      </div>   <NuxtLink 
         class="inline-flex items-center gap-2 bg-[#0066FF] text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-500 transition-all hover:shadow-lg hover:shadow-blue-500/25"
-        href="/contact">Demander un devis gratuit →</a>
+        to="/contact">Demander un devis gratuit →</NuxtLink>
     </div>
   </section>
   <section class="pb-24 bg-[#0A0A0A]">
@@ -58,9 +58,9 @@
         <p class="text-white/45 text-lg">Chaque secteur a ses codes. Je les connais. Cliquez pour voir un exemple réel.
         </p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"><a
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"><NuxtLink
           class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          href="/notaire"><img alt="Site web Notaire — exemple réalisé par Antoine Gueguen" loading="lazy"
+          to="/notaire"><img alt="Site web Notaire — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -78,8 +78,8 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Notaire</h3>
             <p class="text-white/55 text-sm leading-snug">Actes authentiques, prise de RDV, image institutionnelle</p>
           </div>
-        </a><a class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          href="/restaurant"><img alt="Site web Restaurant — exemple réalisé par Antoine Gueguen" loading="lazy"
+           </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/restaurant"><img alt="Site web Restaurant — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -97,8 +97,8 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Restaurant</h3>
             <p class="text-white/55 text-sm leading-snug">Réservations en ligne, menu digital, SEO local</p>
           </div>
-        </a><a class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          href="/medecin"><img alt="Site web Médecin — exemple réalisé par Antoine Gueguen" loading="lazy"
+        </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/medecin"><img alt="Site web Médecin — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -116,8 +116,8 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Médecin</h3>
             <p class="text-white/55 text-sm leading-snug">Prise de RDV en ligne, confiance patients, SEO local</p>
           </div>
-        </a><a class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          href="/avocat"><img alt="Site web Avocat — exemple réalisé par Antoine Gueguen" loading="lazy"
+        </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/avocat"><img alt="Site web Avocat — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -135,8 +135,8 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Avocat</h3>
             <p class="text-white/55 text-sm leading-snug">Image professionnelle, prise de contact, référencement</p>
           </div>
-        </a><a class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          href="/mecanicien"><img alt="Site web Mécanicien — exemple réalisé par Antoine Gueguen" loading="lazy"
+           </NuxtLink>   <NuxtLink  class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/mecanicien"><img alt="Site web Mécanicien — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -154,8 +154,8 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Mécanicien</h3>
             <p class="text-white/55 text-sm leading-snug">Devis en ligne, avis clients, référencement local</p>
           </div>
-        </a><a class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          href="/fleuriste"><img alt="Site web Fleuriste — exemple réalisé par Antoine Gueguen" loading="lazy"
+           </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/fleuriste"><img alt="Site web Fleuriste — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -173,8 +173,8 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Fleuriste</h3>
             <p class="text-white/55 text-sm leading-snug">Commande en ligne, galerie produits, SEO local</p>
           </div>
-        </a><a class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          href="/concessionnaire"><img alt="Site web Concessionnaire — exemple réalisé par Antoine Gueguen"
+           </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/concessionnaire"><img alt="Site web Concessionnaire — exemple réalisé par Antoine Gueguen"
             loading="lazy" decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -192,8 +192,8 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Concessionnaire</h3>
             <p class="text-white/55 text-sm leading-snug">Catalogue véhicules en ligne, leads qualifiés</p>
           </div>
-        </a><a class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          href="/permis-bateaux"><img alt="Site web Permis bateaux — exemple réalisé par Antoine Gueguen" loading="lazy"
+        </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/permis-bateaux"><img alt="Site web Permis bateaux — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -211,7 +211,7 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Permis bateaux</h3>
             <p class="text-white/55 text-sm leading-snug">Inscriptions en ligne, calendrier formations, SEO</p>
           </div>
-        </a></div>
+        </NuxtLink></div>
     </div>
   </section>
   <section class="py-28 bg-[#F9F9F9]">
@@ -280,8 +280,8 @@
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg></span>Hébergement &amp; mise en ligne</li>
-          </ul><a class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
-            style="color:#0066FF;background-color:#0066FF10" href="/contact">Demander un devis →</a>
+          </ul><NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
+            style="color:#0066FF;background-color:#0066FF10" to="/contact">Demander un devis →</NuxtLink>
         </div>
         <div
           class="relative bg-white border border-gray-100 rounded-2xl p-8 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
@@ -341,8 +341,8 @@
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg></span>Dashboard de gestion</li>
-          </ul><a class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
-            style="color:#7C3AED;background-color:#7C3AED10" href="/contact">Demander un devis →</a>
+          </ul><NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
+            style="color:#7C3AED;background-color:#7C3AED10" to="/contact">Demander un devis →</NuxtLink>
         </div>
         <div
           class="relative bg-white border border-gray-100 rounded-2xl p-8 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
@@ -401,8 +401,8 @@
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg></span>Conservation du référencement (301)</li>
-          </ul><a class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
-            style="color:#059669;background-color:#05966910" href="/contact">Demander un devis →</a>
+          </ul><NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
+            style="color:#059669;background-color:#05966910" to="/contact">Demander un devis →</NuxtLink>
         </div>
         <div
           class="relative bg-white border border-gray-100 rounded-2xl p-8 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
@@ -461,8 +461,8 @@
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg></span>Tests &amp; documentation</li>
-          </ul><a class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
-            style="color:#D97706;background-color:#D9770610" href="/contact">Demander un devis →</a>
+          </ul><NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
+            style="color:#D97706;background-color:#D9770610" to="/contact">Demander un devis →</NuxtLink>
         </div>
       </div>
     </div>
@@ -573,11 +573,11 @@
       <h2 class="font-black text-white mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Prêt à lancer votre projet ?
       </h2>
       <p class="text-white/75 mb-10 text-lg">Devis gratuit sous 48h. Sans engagement.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center"><a
+      <div class="flex flex-col sm:flex-row gap-4 justify-center"><NuxtLink
           class="bg-white text-[#0066FF] font-bold px-8 py-4 rounded-xl hover:bg-white/90 transition-colors shadow-lg"
-          href="/contact">Me contacter</a><a
+          to="/contact">Me contacter</NuxtLink><NuxtLink
           class="border border-white/30 text-white font-medium px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
-          href="/tarifs">Voir les tarifs indicatifs</a></div>
+          to="/tarifs">Voir les tarifs indicatifs</NuxtLink></div>
     </div>
   </section>
 </template>

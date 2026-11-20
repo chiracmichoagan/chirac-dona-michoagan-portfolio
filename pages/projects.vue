@@ -1,4 +1,12 @@
 <template>
+   <nav class="flex items-center gap-2 text-sm text-black mb-12" aria-label="Fil d'Ariane">
+   <NuxtLink class="hover:text-white/60 transition-colors" to="/">
+      Accueil
+    </NuxtLink>
+    <span>/</span>
+    <span class="text-black font-medium">Projets</span>
+
+  </nav>
     <section class="py-2 text-center">
       <div class="container mx-auto px-4 text-center">
         

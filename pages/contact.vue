@@ -1,9 +1,9 @@
 <template>
 
   <nav class="flex items-center gap-2 text-sm text-black mb-12" aria-label="Fil d'Ariane">
-    <a class="hover:text-white/60 transition-colors" href="/">
+      <NuxtLink class="hover:text-white/60 transition-colors" to="/">
       Accueil
-    </a>
+    </NuxtLink>
     <span>/</span>
     <span class="text-black font-medium">Contact</span>
 
