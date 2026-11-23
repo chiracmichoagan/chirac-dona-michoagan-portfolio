@@ -1,7 +1,8 @@
 <template>
 
-  <nav class="flex items-center gap-2 text-sm text-black mb-12" aria-label="Fil d'Ariane">
-   <NuxtLink class="hover:text-white/60 transition-colors" to="/">
+  <nav class="container my-12 p-4 max-w-6xl mx-auto flex items-center gap-2 text-sm text-gray-600 mb-12"
+    aria-label="Fil d'Ariane">
+    <NuxtLink class="hover:text-black transition-colors" to="/">
       Accueil
     </NuxtLink>
     <span>/</span>
@@ -9,212 +10,46 @@
 
   </nav>
 
-  <section class="pt-28 md:pt-40 pb-24 bg-[#0A0A0A] relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0d1117] to-[#0A0A0A]"></div>
-    <div
+  <section class="py-28  md:pt-40 pb-24 bg-[#FBF2E3] relative overflow-hidden">
+    <!-- <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0d1117] to-[#0A0A0A]"></div> -->
+    <!-- <div
       class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#0066FF]/8 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none">
-    </div>
-    <div
+    </div> -->
+    <!-- <div
       class="absolute bottom-0 left-0 w-80 h-80 bg-purple-600/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none">
-    </div>
+    </div> -->
     <div class="max-w-6xl mx-auto px-6 relative">
 
-      <p class="text-sm font-semibold text-[#0066FF] tracking-widest uppercase mb-5">Ce que je fais</p>
-      <h1 class="font-black text-white mb-6 leading-tight" style="font-size:clamp(2.2rem, 5.5vw, 4rem)">Création de
-        sites web<br><span class="text-[#0066FF]">sur-mesure</span> au Bénin et à l'international.</h1>
-      <p class="text-lg text-white/55 max-w-2xl leading-relaxed mb-10">Développeur web freelance disponible partout au
+      <p class="text-sm font-semibold text-[#E88200] tracking-widest uppercase mb-5">Ce que je fais</p>
+      <h1 class="font-black text-black mb-6 leading-tight" style="font-size:clamp(2.2rem, 5.5vw, 4rem)">Création de
+        sites web<br><span class="text-[#E88200]">sur-mesure</span> au Bénin et à l'international.</h1>
+      <p class="text-lg text-gray-600 max-w-2xl leading-relaxed mb-10">Développeur web freelance disponible partout au
         Bénin en remote, je conçois et développe des sites web professionnels adaptés à votre secteur. De la maquette à
         la mise en ligne, je gère tous sites web adaptés à vos besoins, optimisés pour le référencement et compatibles
         avec tous les appareils.</p>
       <div class="flex flex-wrap gap-10 mb-12">
         <div>
-          <div class="text-3xl font-black text-white">5+</div>
-          <div class="text-sm text-white/40 mt-1">ans d'expérience</div>
+          <div class="text-3xl font-black text-black">5+</div>
+          <div class="text-sm text-gray-600 mt-1">ans d'expérience</div>
         </div>
         <div>
-          <div class="text-3xl font-black text-white">48h</div>
-          <div class="text-sm text-white/40 mt-1">délai de réponse</div>
+          <div class="text-3xl font-black text-black">48h</div>
+          <div class="text-sm text-gray-600 mt-1">délai de réponse</div>
         </div>
         <div>
-          <div class="text-3xl font-black text-white">100%</div>
-          <div class="text-sm text-white/40 mt-1">remote au Bénin et à l'international</div>
+          <div class="text-3xl font-black text-black">100%</div>
+          <div class="text-sm text-gray-600 mt-1">remote au Bénin et à l'international</div>
         </div>
-      </div>   <NuxtLink 
-        class="inline-flex items-center gap-2 bg-[#0066FF] text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-500 transition-all hover:shadow-lg hover:shadow-blue-500/25"
-        to="/contact">Demander un devis gratuit →</NuxtLink>
-    </div>
-  </section>
-  <section class="pb-24 bg-[#0A0A0A]">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="mb-10">
-        <p class="text-sm font-semibold text-[#0066FF] tracking-widest uppercase mb-3">Par métier</p>
-        <h2 class="font-black text-white mb-3" style="font-size:clamp(1.8rem, 4vw, 2.8rem)">Des sites pour chaque métier
-        </h2>
-        <p class="text-white/45 text-lg">Quelque que soit votre activité, votre place est sur internet.
-        </p>
-        <p class="text-white/45 text-lg">Petite ou grande structure: le site qui vous ressemble et qui vous permettra de
-          développer votre activité.
-        </p>
-        <p class="text-white/45 text-lg">Chaque secteur a ses codes. Je les connais. Cliquez pour voir un exemple réel.
-        </p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"><NuxtLink
-          class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/notaire"><img alt="Site web Notaire — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">⚖️</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Notaire</h3>
-            <p class="text-white/55 text-sm leading-snug">Actes authentiques, prise de RDV, image institutionnelle</p>
-          </div>
-           </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/restaurant"><img alt="Site web Restaurant — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🍽️</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Restaurant</h3>
-            <p class="text-white/55 text-sm leading-snug">Réservations en ligne, menu digital, SEO local</p>
-          </div>
-        </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/medecin"><img alt="Site web Médecin — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🩺</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Médecin</h3>
-            <p class="text-white/55 text-sm leading-snug">Prise de RDV en ligne, confiance patients, SEO local</p>
-          </div>
-        </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/avocat"><img alt="Site web Avocat — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">⚖️</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Avocat</h3>
-            <p class="text-white/55 text-sm leading-snug">Image professionnelle, prise de contact, référencement</p>
-          </div>
-           </NuxtLink>   <NuxtLink  class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/mecanicien"><img alt="Site web Mécanicien — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🔧</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Mécanicien</h3>
-            <p class="text-white/55 text-sm leading-snug">Devis en ligne, avis clients, référencement local</p>
-          </div>
-           </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/fleuriste"><img alt="Site web Fleuriste — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🌸</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Fleuriste</h3>
-            <p class="text-white/55 text-sm leading-snug">Commande en ligne, galerie produits, SEO local</p>
-          </div>
-           </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/concessionnaire"><img alt="Site web Concessionnaire — exemple réalisé par Antoine Gueguen"
-            loading="lazy" decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🚗</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Concessionnaire</h3>
-            <p class="text-white/55 text-sm leading-snug">Catalogue véhicules en ligne, leads qualifiés</p>
-          </div>
-        </NuxtLink><NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/permis-bateaux"><img alt="Site web Permis bateaux — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">⚓</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Permis bateaux</h3>
-            <p class="text-white/55 text-sm leading-snug">Inscriptions en ligne, calendrier formations, SEO</p>
-          </div>
-        </NuxtLink></div>
+      <NuxtLink
+        class="inline-flex items-center gap-2 bg-[#0066FF] text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-500 transition-all hover:shadow-lg hover:shadow-blue-500/25"
+        to="/contact">
+        Demander un devis gratuit →
+      </NuxtLink>
     </div>
   </section>
-  <section class="py-28 bg-[#F9F9F9]">
+
+  <section class="py-28 my-24 bg-[#F9F9F9]">
     <div class="max-w-6xl mx-auto px-6">
       <div class="mb-16">
         <p class="text-sm font-semibold text-[#0066FF] tracking-widest uppercase mb-3">Prestations de services</p>
@@ -280,7 +115,8 @@
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg></span>Hébergement &amp; mise en ligne</li>
-          </ul><NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
+          </ul>
+          <NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
             style="color:#0066FF;background-color:#0066FF10" to="/contact">Demander un devis →</NuxtLink>
         </div>
         <div
@@ -341,7 +177,8 @@
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg></span>Dashboard de gestion</li>
-          </ul><NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
+          </ul>
+          <NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
             style="color:#7C3AED;background-color:#7C3AED10" to="/contact">Demander un devis →</NuxtLink>
         </div>
         <div
@@ -401,7 +238,8 @@
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg></span>Conservation du référencement (301)</li>
-          </ul><NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
+          </ul>
+          <NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
             style="color:#059669;background-color:#05966910" to="/contact">Demander un devis →</NuxtLink>
         </div>
         <div
@@ -461,47 +299,234 @@
                     d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                     clip-rule="evenodd"></path>
                 </svg></span>Tests &amp; documentation</li>
-          </ul><NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
+          </ul>
+          <NuxtLink class="inline-flex items-center gap-2 text-sm font-bold py-2.5 px-5 rounded-xl transition-all"
             style="color:#D97706;background-color:#D9770610" to="/contact">Demander un devis →</NuxtLink>
         </div>
       </div>
     </div>
   </section>
-  <section class="py-28 bg-[#0A0A0A]">
+
+  <section class="py-28 my-24 bg-[#FBF2E3] overflow-hidden relative">
     <div class="max-w-6xl mx-auto px-6">
-      <p class="text-sm font-bold text-[#0066FF] tracking-widest uppercase mb-4">Simple &amp; rapide</p>
-      <h2 class="font-black text-white mb-16" style="font-size: clamp(1.8rem, 4vw, 3rem);">Comment ça se passe ?</h2>
+      <div class="mb-10">
+        <p class="text-sm font-semibold text-[#E88200] tracking-widest uppercase mb-3">Par métier</p>
+        <h2 class="font-black text-black mb-3" style="font-size:clamp(1.8rem, 4vw, 2.8rem)">Des sites pour chaque métier
+        </h2>
+        <p class=" text-gray-600 text-lg">Quelque que soit votre activité, votre place est sur internet.
+        </p>
+        <p class=" text-gray-600 text-lg">Petite ou grande structure: le site qui vous ressemble et qui vous permettra
+          de
+          développer votre activité.
+        </p>
+        <p class=" text-gray-600 text-lg">Chaque secteur a ses codes. Je les connais. Cliquez pour voir un exemple réel.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/notaire"><img alt="Site web Notaire — exemple réalisé par Antoine Gueguen" loading="lazy"
+            decoding="async" data-nimg="fill"
+            class="object-cover transition-transform duration-700 group-hover:scale-105"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+          </div>
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <div class="flex items-start justify-between mb-3"><span class="text-3xl">⚖️</span><span
+                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
+                l'exemple →</span></div>
+            <h3 class="text-white font-bold text-xl leading-tight mb-1">Notaire</h3>
+            <p class="text-white/55 text-sm leading-snug">Actes authentiques, prise de RDV, image institutionnelle</p>
+          </div>
+        </NuxtLink> -->
+        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/restaurant"><img alt="Site web Restaurant — exemple réalisé par Antoine Gueguen" loading="lazy"
+            decoding="async" data-nimg="fill"
+            class="object-cover transition-transform duration-700 group-hover:scale-105"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+          </div>
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🍽️</span><span
+                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
+                l'exemple →</span></div>
+            <h3 class="text-white font-bold text-xl leading-tight mb-1">Restaurant</h3>
+            <p class="text-white/55 text-sm leading-snug">Réservations en ligne, menu digital, SEO local</p>
+          </div>
+        </NuxtLink>
+        <!-- <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/medecin"><img alt="Site web Médecin — exemple réalisé par Antoine Gueguen" loading="lazy"
+            decoding="async" data-nimg="fill"
+            class="object-cover transition-transform duration-700 group-hover:scale-105"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+          </div>
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🩺</span><span
+                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
+                l'exemple →</span></div>
+            <h3 class="text-white font-bold text-xl leading-tight mb-1">Médecin</h3>
+            <p class="text-white/55 text-sm leading-snug">Prise de RDV en ligne, confiance patients, SEO local</p>
+          </div>
+        </NuxtLink>
+        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/avocat"><img alt="Site web Avocat — exemple réalisé par Antoine Gueguen" loading="lazy" decoding="async"
+            data-nimg="fill" class="object-cover transition-transform duration-700 group-hover:scale-105"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+          </div>
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <div class="flex items-start justify-between mb-3"><span class="text-3xl">⚖️</span><span
+                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
+                l'exemple →</span></div>
+            <h3 class="text-white font-bold text-xl leading-tight mb-1">Avocat</h3>
+            <p class="text-white/55 text-sm leading-snug">Image professionnelle, prise de contact, référencement</p>
+          </div>
+        </NuxtLink>
+        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/mecanicien"><img alt="Site web Mécanicien — exemple réalisé par Antoine Gueguen" loading="lazy"
+            decoding="async" data-nimg="fill"
+            class="object-cover transition-transform duration-700 group-hover:scale-105"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+          </div>
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🔧</span><span
+                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
+                l'exemple →</span></div>
+            <h3 class="text-white font-bold text-xl leading-tight mb-1">Mécanicien</h3>
+            <p class="text-white/55 text-sm leading-snug">Devis en ligne, avis clients, référencement local</p>
+          </div>
+        </NuxtLink>
+        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/fleuriste"><img alt="Site web Fleuriste — exemple réalisé par Antoine Gueguen" loading="lazy"
+            decoding="async" data-nimg="fill"
+            class="object-cover transition-transform duration-700 group-hover:scale-105"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+          </div>
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🌸</span><span
+                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
+                l'exemple →</span></div>
+            <h3 class="text-white font-bold text-xl leading-tight mb-1">Fleuriste</h3>
+            <p class="text-white/55 text-sm leading-snug">Commande en ligne, galerie produits, SEO local</p>
+          </div>
+        </NuxtLink>
+        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/concessionnaire"><img alt="Site web Concessionnaire — exemple réalisé par Antoine Gueguen" loading="lazy"
+            decoding="async" data-nimg="fill"
+            class="object-cover transition-transform duration-700 group-hover:scale-105"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+          </div>
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <div class="flex items-start justify-between mb-3"><span class="text-3xl">🚗</span><span
+                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
+                l'exemple →</span></div>
+            <h3 class="text-white font-bold text-xl leading-tight mb-1">Concessionnaire</h3>
+            <p class="text-white/55 text-sm leading-snug">Catalogue véhicules en ligne, leads qualifiés</p>
+          </div>
+        </NuxtLink>
+        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/permis-bateaux"><img alt="Site web Permis bateaux — exemple réalisé par Antoine Gueguen" loading="lazy"
+            decoding="async" data-nimg="fill"
+            class="object-cover transition-transform duration-700 group-hover:scale-105"
+            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+          </div>
+          <div
+            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          </div>
+          <div class="absolute inset-0 flex flex-col justify-end p-6">
+            <div class="flex items-start justify-between mb-3"><span class="text-3xl">⚓</span><span
+                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
+                l'exemple →</span></div>
+            <h3 class="text-white font-bold text-xl leading-tight mb-1">Permis bateaux</h3>
+            <p class="text-white/55 text-sm leading-snug">Inscriptions en ligne, calendrier formations, SEO</p>
+          </div>
+        </NuxtLink> -->
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="py-28 my-24 bg-[#F9F9F9]">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-sm font-bold text-[#0066FF] tracking-widest uppercase mb-4">Simple & rapide</p>
+      <h2 class="font-black text-black mb-16" style="font-size: clamp(1.8rem, 4vw, 3rem);">Comment ça se passe ?</h2>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="relative bg-white/[0.04] border border-white/[0.07] rounded-2xl p-8 overflow-hidden">
-          <div class="absolute top-6 right-6 text-6xl font-black text-white/5 select-none leading-none">01</div>
+        <div class="relative bg-white border-2 shadow-lg border-white rounded-2xl p-8 overflow-hidden">
+          <!-- <div class="absolute top-6 right-6 text-6xl font-black text-black select-none leading-none">01</div> -->
           <div class="w-10 h-10 rounded-xl bg-[#0066FF]/15 flex items-center justify-center mb-6"><span
               class="text-[#0066FF] font-black text-sm">01</span></div>
-          <h3 class="font-bold text-white text-lg mb-3">Échange &amp; devis</h3>
-          <p class="text-white/50 text-sm leading-relaxed">On discute de votre projet par téléphone ou email. Je vous
+          <h3 class="font-bold text-black text-lg mb-3">Échange & devis</h3>
+          <p class="text-black text-sm leading-relaxed">On discute de votre projet par téléphone, whatsapp ou email. Je vous
             envoie un devis gratuit, clair et détaillé sous 48h.</p>
         </div>
-        <div class="relative bg-white/[0.04] border border-white/[0.07] rounded-2xl p-8 overflow-hidden">
-          <div class="absolute top-6 right-6 text-6xl font-black text-white/5 select-none leading-none">02</div>
+        <div class="relative bg-white border-2 shadow-lg border-white rounded-2xl p-8 overflow-hidden">
+          <!-- <div class="absolute top-6 right-6 text-6xl font-black text-black select-none leading-none">02</div> -->
           <div class="w-10 h-10 rounded-xl bg-[#0066FF]/15 flex items-center justify-center mb-6"><span
               class="text-[#0066FF] font-black text-sm">02</span></div>
-          <h3 class="font-bold text-white text-lg mb-3">Conception &amp; développement</h3>
-          <p class="text-white/50 text-sm leading-relaxed">Je conçois la maquette Figma puis développe votre site. Vous
+          <h3 class="font-bold text-black text-lg mb-3">Conception & développement</h3>
+          <p class="text-black text-sm leading-relaxed">Je recherche une maquette adaptée à votre besoin puis développe votre site, ou vous allez me mettre en contacte direct avec votre propre designer figma et je développe la maquette. Vous
             validez chaque étape avec des retours illimités.</p>
         </div>
-        <div class="relative bg-white/[0.04] border border-white/[0.07] rounded-2xl p-8 overflow-hidden">
-          <div class="absolute top-6 right-6 text-6xl font-black text-white/5 select-none leading-none">03</div>
+        <div class="relative bg-white border-2 shadow-lg border-white rounded-2xl p-8 overflow-hidden">
+          <!-- <div class="absolute top-6 right-6 text-6xl font-black text-black select-none leading-none">03</div> -->
           <div class="w-10 h-10 rounded-xl bg-[#0066FF]/15 flex items-center justify-center mb-6"><span
               class="text-[#0066FF] font-black text-sm">03</span></div>
-          <h3 class="font-bold text-white text-lg mb-3">Mise en ligne &amp; formation</h3>
-          <p class="text-white/50 text-sm leading-relaxed">Le site est déployé sur votre domaine. Je vous forme à la
+          <h3 class="font-bold text-black text-lg mb-3">Mise en ligne & formation</h3>
+          <p class="text-black text-sm leading-relaxed">Le site est déployé sur votre domaine. Je vous forme à la
             prise en main et reste disponible après livraison.</p>
         </div>
       </div>
     </div>
   </section>
-  <section class="py-28 bg-[#F9F9F9]">
+
+
+  <section class="py-28 my-24 bg-[#FBF2E3]">
     <div class="max-w-4xl mx-auto px-6">
-      <p class="text-sm font-semibold text-[#0066FF] tracking-widest uppercase mb-4">FAQ</p>
+      <p class="text-sm font-semibold text-[#E88200] tracking-widest uppercase mb-4">FAQ</p>
       <h2 class="font-black text-[#0A0A0A] mb-14" style="font-size: clamp(1.8rem, 4vw, 3rem);">Questions fréquentes</h2>
       <div class="space-y-4">
         <div class="bg-white border border-gray-100 rounded-2xl p-7 shadow-sm">
@@ -564,20 +589,27 @@
       </div>
     </div>
   </section>
-  <section class="py-24 bg-[#0066FF] relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-[#0066FF] via-[#0055dd] to-[#0044bb]"></div>
-    <div
+
+
+
+  <section class="py-28 my-24 bg-[#F9F9F9] relative overflow-hidden">
+    <!-- <div class="absolute inset-0 bg-gradient-to-br from-[#0066FF] via-[#0055dd] to-[#0044bb]"></div> -->
+    <!-- <div
       class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none">
-    </div>
+    </div> -->
     <div class="max-w-4xl mx-auto px-6 text-center relative">
-      <h2 class="font-black text-white mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Prêt à lancer votre projet ?
+      <h2 class="font-black text-black mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Prêt à lancer votre projet ?
       </h2>
-      <p class="text-white/75 mb-10 text-lg">Devis gratuit sous 48h. Sans engagement.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center"><NuxtLink
-          class="bg-white text-[#0066FF] font-bold px-8 py-4 rounded-xl hover:bg-white/90 transition-colors shadow-lg"
-          to="/contact">Me contacter</NuxtLink><NuxtLink
-          class="border border-white/30 text-white font-medium px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
-          to="/tarifs">Voir les tarifs indicatifs</NuxtLink></div>
+      <p class="text-gray-600 mb-10 text-lg">Devis gratuit sous 48h. Sans engagement.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <UButton to="/contact" color="primary" variant="outline" size="lg">
+          Me contacter
+        </UButton>
+        <UButton to="/tarifs"
+          class="bg-[#E78318] hover:bg-[#cf7314] focus:ring-[#E78318] text-white border-transparent">
+          Voir les tarifs indicatifs ->
+        </UButton>
+      </div>
     </div>
   </section>
 </template>

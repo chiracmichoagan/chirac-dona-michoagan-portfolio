@@ -1,7 +1,6 @@
 <template>
-
-  <nav class="flex items-center gap-2 text-sm text-black mb-12" aria-label="Fil d'Ariane">
-      <NuxtLink class="hover:text-white/60 transition-colors" to="/">
+   <nav class="container my-12 p-4 max-w-6xl mx-auto flex items-center gap-2 text-sm text-gray-600 mb-12" aria-label="Fil d'Ariane">
+      <NuxtLink class="hover:text-black transition-colors" to="/">
       Accueil
     </NuxtLink>
     <span>/</span>

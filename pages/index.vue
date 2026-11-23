@@ -4,8 +4,6 @@
 
       <!-- <h1 class="font-montserrat text-2xl">Hello world!</h1> -->
       <div class="">
-
-
         <div class="flex justify-around items-center flex-col md:flex-row gap-8">
           <!-- partie texte -->
           <div class="md:w-1/2 flex flex-col items-start justify-start">

@@ -197,7 +197,7 @@
 
 
           <NuxtLink to="/about"
-            class="text-gray-500 size-16 leading-5 font-bold hover:text-black transition-colors flex items-center gap-2"
+            class="text-gray-500 size-16 whitespace-nowrap  leading-5 font-bold hover:text-black transition-colors flex items-center gap-2"
             active-class="!text-[#E78318] font-semibold">
             A propos
           </NuxtLink>

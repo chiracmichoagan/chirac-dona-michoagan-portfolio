@@ -1,7 +1,7 @@
 <template>
-
-   <nav class="flex items-center gap-2 text-sm text-black mb-12" aria-label="Fil d'Ariane">
-   <NuxtLink class="hover:text-white/60 transition-colors" to="/">
+  <nav class="container my-12 p-4 max-w-6xl mx-auto flex items-center gap-2 text-sm text-gray-600 mb-12"
+    aria-label="Fil d'Ariane">
+    <NuxtLink class="hover:text-black transition-colors" to="/">
       Accueil
     </NuxtLink>
     <span>/</span>
@@ -19,24 +19,16 @@
             </h1> -->
             <div class="flex flex-col md:flex-row gap-8 items-center">
               <div class="md:w-1/3 fade-in delay-100 m-3">
-                <div
-                  class="w-[250px] h-[250px] relative overflow-hidden rounded-full"
-                >
-                  <img
-                    src="/assets/image_dona.png"
-                    alt="Profile Picture"
-                    class="w-full h-full object-cover border-4 border-primary-500 shadow-2xl hover:scale-105 transition-transform duration-500 rounded-xl"
-                  />
+                <div class="w-[250px] h-[250px] relative overflow-hidden rounded-full">
+                  <img src="/assets/image_dona.png" alt="Profile Picture"
+                    class="w-full h-full object-cover border-4 border-primary-500 shadow-2xl hover:scale-105 transition-transform duration-500 rounded-xl" />
                 </div>
               </div>
               <div class="md:w-2/3 fade-in delay-200">
                 <UCard>
                   <template #header>
                     <div class="flex items-center gap-2">
-                      <UIcon
-                        name="i-heroicons-user-circle"
-                        class="text-2xl text-primary-500"
-                      />
+                      <UIcon name="i-heroicons-user-circle" class="text-2xl text-primary-500" />
                       <h3 class="text-xl font-semibold">Présentation</h3>
                     </div>
                   </template>
@@ -45,7 +37,8 @@
                     fort d'une expérience de près de 3ans dans la création de
                     sites web et d'applications. Mon expertise réside
                     principalement dans le développement full-stack, avec une
-                    maîtrise des technologies telles que html, css, javascript, php, laravel, mysql, Node.js et SpringBoot.
+                    maîtrise des technologies telles que html, css, javascript, php, laravel, mysql, Node.js et
+                    SpringBoot.
                   </p>
                   <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">
                     Mon domaine d'intérêt s'étend également à la cybersécurité,
@@ -69,24 +62,14 @@
         <UCard class="mb-8">
           <template #header>
             <div class="flex items-center gap-2 mb-4">
-              <UIcon
-                name="i-heroicons-briefcase"
-                class="text-2xl text-primary-500"
-              />
+              <UIcon name="i-heroicons-briefcase" class="text-2xl text-primary-500" />
               <h2 class="text-3xl font-bold">Mon Parcours</h2>
             </div>
           </template>
 
           <div class="space-y-6">
-            <div
-              v-for="(item, index) in journey"
-              :key="index"
-              class="fade-in"
-              :class="`delay-${index * 100}`"
-            >
-              <div
-                class="flex flex-col md:flex-row border-l-4 border-primary-500 pl-4 pb-6"
-              >
+            <div v-for="(item, index) in journey" :key="index" class="fade-in" :class="`delay-${index * 100}`">
+              <div class="flex flex-col md:flex-row border-l-4 border-primary-500 pl-4 pb-6">
                 <div class="md:w-1/4 mb-2 md:mb-0">
                   <UBadge color="primary" variant="soft" size="lg">{{
                     item.period
@@ -94,17 +77,11 @@
                 </div>
                 <div class="md:w-3/4">
                   <div class="flex items-center gap-2 mb-2">
-                    <UIcon
-                      name="i-heroicons-academic-cap"
-                      class="text-primary-500"
-                    />
+                    <UIcon name="i-heroicons-academic-cap" class="text-primary-500" />
                     <h4 class="text-lg font-semibold">{{ item.title }}</h4>
                   </div>
                   <p class="text-gray-600 dark:text-gray-400 mb-2">
-                    <UIcon
-                      name="i-heroicons-building-office"
-                      class="inline mr-2"
-                    />
+                    <UIcon name="i-heroicons-building-office" class="inline mr-2" />
                     {{ item.company }}
                   </p>
                   <p class="text-gray-600 dark:text-gray-400">
@@ -121,22 +98,14 @@
         <div class="container mx-auto px-4">
           <div class="max-w-4xl mx-auto">
             <div class="flex items-center gap-2 mb-8">
-              <UIcon
-                name="i-heroicons-code-bracket"
-                class="text-2xl text-primary-500"
-              />
+              <UIcon name="i-heroicons-code-bracket" class="text-2xl text-primary-500" />
               <h2 class="text-3xl font-bold">Compétences</h2>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
               <UHover v-for="(skill, index) in skills" :key="index">
-                <UCard
-                  class="text-center transition-all duration-300 hover:shadow-xl"
-                  :ui="{ body: { padding: 'p-4' } }"
-                >
-                  <UIcon
-                    :name="skill.icon"
-                    class="text-4xl text-primary-500 mb-2"
-                  />
+                <UCard class="text-center transition-all duration-300 hover:shadow-xl"
+                  :ui="{ body: { padding: 'p-4' } }">
+                  <UIcon :name="skill.icon" class="text-4xl text-primary-500 mb-2" />
                   <h3 class="font-semibold">{{ skill.name }}</h3>
                   <UProgress :value="skill.level || 80" class="mt-2" />
                 </UCard>
@@ -150,20 +119,12 @@
         <UCard>
           <template #header>
             <div class="flex items-center gap-2 mb-4">
-              <UIcon
-                name="i-heroicons-academic-cap"
-                class="text-2xl text-primary-500"
-              />
+              <UIcon name="i-heroicons-academic-cap" class="text-2xl text-primary-500" />
               <h2 class="text-3xl font-bold">Formation</h2>
             </div>
           </template>
           <div class="space-y-6">
-            <UCard
-              v-for="(edu, index) in education"
-              :key="index"
-              class="fade-in"
-              :class="`delay-${index * 100}`"
-            >
+            <UCard v-for="(edu, index) in education" :key="index" class="fade-in" :class="`delay-${index * 100}`">
               <div class="flex flex-col md:flex-row gap-4">
                 <div class="md:w-1/4">
                   <UBadge color="primary" variant="soft" size="lg">{{
@@ -173,10 +134,7 @@
                 <div class="md:w-3/4">
                   <h4 class="text-lg font-semibold mb-2">{{ edu.degree }}</h4>
                   <p class="text-gray-600 dark:text-gray-400 mb-2">
-                    <UIcon
-                      name="i-heroicons-building-office"
-                      class="inline mr-2"
-                    />
+                    <UIcon name="i-heroicons-building-office" class="inline mr-2" />
                     {{ edu.institution }}
                   </p>
                   <p class="text-gray-600 dark:text-gray-400">
