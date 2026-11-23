@@ -614,6 +614,10 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Création & Design Web sur-mesure', // Affichera : "Création & Design Web sur-mesure | Chirac Dona Michoagan"
+  description: 'Conception de site web modernes et performants, interfaces UI/UX et sites vitrines responsives pour entreprises et indépendants au Bénin et à l\'international.',
+})
 import { ref, computed, onMounted } from "vue";
 
 const search = ref("");

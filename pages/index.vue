@@ -305,6 +305,16 @@
 </template>
 
 <script setup>
+
+useSeoMeta({
+  title: 'Développeur Web Freelance au Bénin', // Affichera : "Développeur Web Freelance au Bénin | Chirac Dona Michoagan"
+  description: 'Développeur web freelance (Laravel, React, Vue.js) au Bénin et à l\'international. Création de sites web modernes et sur-mesure. Devis gratuit sous 48h.',
+  ogTitle: 'Chirac Dona Michoagan - Développeur Web Freelance au Bénin',
+  ogDescription: 'Création de sites web modernes et sur-mesure (Laravel, React, Vue.js). Devis gratuit sous 48h.',
+  ogImage: 'https://chirac-dona-michoagan.netlify.app/', // Image affichée lors du partage sur LinkedIn/WhatsApp
+  twitterCard: 'summary_large_image'
+})
+
 const featuredProjects = [
   // {
   //   title: "📋 Application Quiz",

@@ -1,3 +1,5 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
@@ -51,6 +53,22 @@ export default defineNuxtConfig({
   },
 
   app: {
+    head: {
+      title: 'Chirac Dona Michoagan | Développeur Web Freelance au Bénin',
+      htmlAttrs: {
+        lang: 'fr',
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
+      charset: 'utf-8',
+      // viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+      meta: [
+        { name: 'description', content: 'Développeur web freelance (Laravel, React, Vue.js) au Bénin et à l\'international. Création de sites web modernes et sur-mesure. Devis gratuit sous 48h.' },
+        { name: 'keywords', content: 'Chirac Dona Michoagan, développeur web freelance, création de site web, développement web, Bénin, devis gratuit, site internet professionnel, meilleurs services, meilleurs tarifs' },
+        { name: 'author', content: 'Chirac Dona Michoagan' },
+      ],
+    },
     pageTransition: { name: 'page', mode: 'out-in' }
   },
 
