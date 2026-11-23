@@ -42,19 +42,19 @@
     <span>/</span>
     <span class="text-black font-medium">Tarifs</span>
   </nav>
-    <section class="pt-28 md:pt-40 pb-24 bg-[#0A0A0A] relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0d1117] to-[#0A0A0A]"></div>
-      <div
+    <section class="pt-28 md:pt-40 pb-24 bg-[#FBF2E3] relative overflow-hidden">
+      <!-- <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0d1117] to-[#0A0A0A]"></div> -->
+      <!-- <div
         class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0066FF]/8 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none">
-      </div>
+      </div> -->
       <div class="max-w-6xl mx-auto px-6 relative">
         <!-- <nav class="flex items-center gap-2 text-sm text-white/30 mb-12" aria-label="Fil d'Ariane"><a
             class="hover:text-white/60 transition-colors" href="/">Accueil</a><span>/</span><span
             class="text-white/60 font-medium">Tarifs</span></nav> -->
-        <p class="text-sm font-semibold text-[#0066FF] tracking-widest uppercase mb-5">Tarifs indicatifs</p>
-        <h1 class="font-black text-white mb-6 leading-tight" style="font-size: clamp(2.2rem, 5.5vw, 4rem);">Combien
-          coûte un site web<br><span class="text-[#0066FF]">freelance</span> au Bénin ?</h1>
-        <p class="text-lg text-white/55 max-w-2xl leading-relaxed">Les tarifs indiqués sont des fourchettes indicatives.
+        <p class="text-sm font-semibold text-[#E88200] tracking-widest uppercase mb-5">Tarifs indicatifs</p>
+        <h1 class="font-black text-black mb-6 leading-tight" style="font-size: clamp(2.2rem, 5.5vw, 4rem);">Combien
+          coûte un site web<br><span class="text-[#E88200]">freelance</span> au Bénin ?</h1>
+        <p class="text-lg text-gray-600 max-w-2xl leading-relaxed">Les tarifs indiqués sont des fourchettes indicatives.
           Chaque projet est unique — utilisez l'estimateur ci-dessous ou contactez-moi pour un devis personnalisé
           gratuit sous 48h.</p>
       </div>
@@ -271,19 +271,30 @@
         </div>
       </div>
     </section>
-    <section class="py-24 bg-[#0066FF] relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-br from-[#0066FF] via-[#0055dd] to-[#0044bb]"></div>
-      <div
+
+
+
+    <section class="py-24 bg-[#FBF2E3] relative overflow-hidden">
+      <!-- <div class="absolute inset-0 bg-gradient-to-br from-[#0066FF] via-[#0055dd] to-[#0044bb]"></div> -->
+      <!-- <div
         class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none">
-      </div>
+      </div> -->
       <div class="max-w-4xl mx-auto px-6 text-center relative">
-        <h2 class="font-black text-white mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Prêt à démarrer ?</h2>
-        <p class="text-white/75 mb-10 text-lg">Devis gratuit, personnalisé et sans engagement sous 48h.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center"><a
+        <h2 class="font-black text-black mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Prêt à démarrer ?</h2>
+        <p class="text-gray-600 mb-10 text-lg">Devis gratuit, personnalisé et sans engagement sous 48h.</p>
+       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <UButton to="/contact" class="" color="primary" variant="outline" size="lg">
+        Demander un devis gratuit
+        </UButton>
+        <UButton to="/servicesdeveloppementweb" class="bg-[#E78318] hover:bg-[#cf7314] focus:ring-[#E78318] text-white border-transparent" size="lg">
+         Voir mes services ->
+        </UButton>
+      </div> 
+        <!-- <div class="flex flex-col sm:flex-row gap-4 justify-center"><a
             class="bg-white text-[#0066FF] font-bold px-8 py-4 rounded-xl hover:bg-white/90 transition-colors shadow-lg"
             href="/contact">Demander un devis gratuit</a><a
             class="border border-white/30 text-white font-medium px-8 py-4 rounded-xl hover:bg-white/10 transition-colors"
-            href="/services">Voir mes services</a></div>
+            href="/servicesdeveloppementweb">Voir mes services</a></div> -->
       </div>
     </section>
     <!-- <footer class="bg-[#0A0A0A] border-t border-white/8">
@@ -293,8 +304,8 @@
             <p class="text-white/80 font-bold text-sm mb-3">Antoine Gueguen</p>
             <p class="text-white/55 text-xs leading-relaxed mb-4">Développeur web freelance — création de sites
               sur-mesure React, Next.js, WordPress. Disponible partout au Bénin en remote.</p><a
-              href="mailto:antoine.gueguen@epitech.eu"
-              class="text-blue-400 text-xs font-medium hover:underline">antoine.gueguen@epitech.eu</a>
+              href="mailto:michoaganchiracdona@gmail.com"
+              class="text-blue-400 text-xs font-medium hover:underline">michoaganchiracdona@gmail.com</a>
           </div>
           <div>
             <p class="text-white/55 text-xs font-semibold uppercase tracking-wider mb-4">Navigation</p>
@@ -340,7 +351,7 @@
         </div>
         <div class="border-t border-white/8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p class="text-xs text-white/50">© 2026 Antoine Gueguen — Développeur Web Freelance | React, Next.js,
-            WordPress | France</p>
+            WordPress | Bénin</p>
           <div class="flex items-center gap-6"><a class="text-xs text-white/50 hover:text-white/80 transition-colors"
               href="/mentions-legales">Mentions légales</a><a
               class="text-xs text-white/50 hover:text-white/80 transition-colors"

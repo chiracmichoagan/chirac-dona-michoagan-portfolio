@@ -14,10 +14,6 @@
             class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0066FF]/8 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none">
         </div>
         <div class="max-w-4xl mx-auto px-6 relative">
-            <nav class="flex items-center gap-2 text-sm text-white/30 mb-12" aria-label="Fil d'Ariane">
-                <NuxtLink class="hover:text-white/60 transition-colors" to="/">Accueil</NuxtLink><span>/</span><span
-                    class="text-white/60 font-medium">Freelance ou agence web</span>
-            </nav>
             <p class="text-sm font-semibold text-[#0066FF] tracking-widest uppercase mb-5">Guide</p>
             <h1 class="font-black text-white mb-6 leading-tight" style="font-size: clamp(2rem, 5vw, 3.5rem);">
                 Freelance ou agence web :<br><span class="text-[#0066FF]">quelle différence</span>, et quel choix ?

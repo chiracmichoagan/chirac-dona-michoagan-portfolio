@@ -1,6 +1,7 @@
 <template>
-   <nav class="container my-12 p-4 max-w-6xl mx-auto flex items-center gap-2 text-sm text-gray-600 mb-12" aria-label="Fil d'Ariane">
-      <NuxtLink class="hover:text-black transition-colors" to="/">
+  <nav class="container my-12 p-4 max-w-6xl mx-auto flex items-center gap-2 text-sm text-gray-600 mb-12"
+    aria-label="Fil d'Ariane">
+    <NuxtLink class="hover:text-black transition-colors" to="/">
       Accueil
     </NuxtLink>
     <span>/</span>
@@ -9,22 +10,40 @@
   </nav>
 
   <div>
+
+    <section class="pt-28 md:pt-40 pb-12 bg-[#FBF2E3] relative overflow-hidden">
+      <!-- <div class="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0d1117] to-[#0A0A0A]"></div> -->
+      <!-- <div
+              class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0066FF]/8 rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none">
+            </div> -->
+      <!-- <div
+              class="absolute bottom-0 left-0 w-64 h-64 bg-purple-600/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none">
+            </div> -->
+      <div class="max-w-6xl mx-auto px-6 relative">
+        <!-- <nav class="flex items-center gap-2 text-sm text-white/30 mb-12" aria-label="Fil d'Ariane"><a
+                  class="hover:text-white/60 transition-colors" href="/">Accueil</a><span>/</span><span
+                  class="text-white/60 font-medium">Contact</span></nav> -->
+        <p class="text-sm font-semibold text-[#E88200] tracking-widest uppercase mb-5">Parlons de votre projet</p>
+        <h1 class="font-black text-black mb-6 leading-tight" style="font-size: clamp(2.2rem, 5.5vw, 4rem);">Devis
+          gratuit sous 48h —<br><span class="text-[#E88200]">sans engagement</span></h1>
+        <p class="text-lg text-gray-600 max-w-2xl leading-relaxed mb-10">Décrivez votre projet en quelques lignes. Je
+          vous réponds sous 24h avec un devis clair, détaillé et gratuit. Disponible partout au Bénin en remote.</p>
+        <div class="flex flex-wrap gap-3"><span
+            class="inline-flex items-center gap-2 text-sm text-gray-600 border border-gray-300 px-4 py-2 rounded-full bg-gray-100"><span
+              class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: rgb(0, 102, 255);"></span>Réponse
+            sous 24h</span><span
+            class="inline-flex items-center gap-2 text-sm text-gray-600 border border-gray-300 px-4 py-2 rounded-full bg-white/[0.04]"><span
+              class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: rgb(5, 150, 105);"></span>Devis
+            100% gratuit</span><span
+            class="inline-flex items-center gap-2 text-sm text-gray-600 border border-gray-300 px-4 py-2 rounded-full bg-white/[0.04]"><span
+              class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: rgb(124, 58, 237);"></span>Sans
+            engagement</span><span
+            class="inline-flex items-center gap-2 text-sm text-gray-600 border border-gray-300 px-4 py-2 rounded-full bg-white/[0.04]"><span
+              class="w-1.5 h-1.5 rounded-full flex-shrink-0" style="background-color: rgb(217, 119, 6);"></span>Remote
+            Bénin</span></div>
+      </div>
+    </section>
     <UContainer>
-      <section class="py-20 bg-gray-50 dark:bg-gray-900 rounded-xl mb-8">
-        <div class="container mx-auto px-4">
-          <div class="max-w-4xl mx-auto text-center">
-            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100">
-              Vous avez un projet en tête ou souhaitez discuter d'une
-              opportunité ? N'hésitez pas à me contacter !
-            </p>
-            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100">
-              Je réponds sous 24h.            </p>
-            <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 fade-in delay-100">
-             Une idée de projet ? Une question sur mes tarifs ? Envoyez-moi un message, je reviens vers vous rapidement.
-            </p>
-          </div>
-        </div>
-      </section>
 
       <section class="py-16">
         <div class="container mx-auto px-4">
@@ -177,7 +196,44 @@
           </div>
         </div>
       </section>
+
     </UContainer>
+    <section class="py-20 bg-[#F9F9F9]">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid sm:grid-cols-3 gap-5">
+          <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-5"
+              style="background-color: rgba(0, 102, 255, 0.07);">⚡</div>
+            <h3 class="font-bold text-[#0A0A0A] mb-2 text-base">Réponse sous 24h</h3>
+            <p class="text-[#6B6B6B] text-sm leading-relaxed">Je m'engage à vous répondre dans la journée, même le
+              week-end.
+            </p>
+          </div>
+          <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-5"
+              style="background-color: rgba(5, 150, 105, 0.07);">📄</div>
+            <h3 class="font-bold text-[#0A0A0A] mb-2 text-base">Devis gratuit</h3>
+            <p class="text-[#6B6B6B] text-sm leading-relaxed">Aucun frais pour le devis. Vous recevez une estimation
+              détaillée et personnalisée.</p>
+          </div>
+          <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-2xl mb-5"
+              style="background-color: rgba(124, 58, 237, 0.07);">🤝</div>
+            <h3 class="font-bold text-[#0A0A0A] mb-2 text-base">Sans engagement</h3>
+            <p class="text-[#6B6B6B] text-sm leading-relaxed">Vous êtes libre d'accepter ou non. Pas de pression, pas
+              de
+              relance abusive.</p>
+          </div>
+        </div>
+        <div class="mt-10 bg-white border border-gray-100 rounded-2xl px-8 py-6 shadow-sm text-center">
+          <p class="text-sm text-[#6B6B6B]">Vous pouvez aussi m'écrire directement à <a
+              href="mailto:michoaganchiracdona@gmail.com"
+              class="text-[#0066FF] font-semibold hover:underline">michoaganchiracdona@gmail.com</a> ou consulter <a
+              class="text-[#0066FF] font-medium hover:underline" href="/servicesdeveloppementweb">mes services</a> et <a
+              class="text-[#0066FF] font-medium hover:underline" href="/tarifs">mes tarifs indicatifs</a>.</p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
