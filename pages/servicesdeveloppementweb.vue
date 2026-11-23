@@ -601,12 +601,11 @@
       <h2 class="font-black text-black mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem);">Prêt à lancer votre projet ?
       </h2>
       <p class="text-gray-600 mb-10 text-lg">Devis gratuit sous 48h. Sans engagement.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <UButton to="/contact" color="primary" variant="outline" size="lg">
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <UButton to="/contact" class="" color="primary" variant="outline" size="lg">
           Me contacter
         </UButton>
-        <UButton to="/tarifs"
-          class="bg-[#E78318] hover:bg-[#cf7314] focus:ring-[#E78318] text-white border-transparent">
+        <UButton to="/tarifs" class="bg-[#E78318] hover:bg-[#cf7314] focus:ring-[#E78318] text-white border-transparent" size="lg">
           Voir les tarifs indicatifs ->
         </UButton>
       </div>
