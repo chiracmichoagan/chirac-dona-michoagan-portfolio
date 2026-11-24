@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="mb-8 bg-[#FBF2E3] dark:bg-gray-800 rounded-lg shadow-lg p-8">
+    <section class="mb-8 bg-[#FBF2E3] dark:bg-gray-800  shadow-lg p-8">
 
       <!-- <h1 class="font-montserrat text-2xl">Hello world!</h1> -->
       <div class="">
@@ -45,7 +45,7 @@
           <div class="">
             <!-- <img src="/assets/photo-chirac-dona-michoagan.png" alt="Dona Chirac MICHOAGAN"
               class="w-500 h-500  fade-in delay-200 object-cover no-repeat" /> -->
-            <img src="/public/assets/photo-chirac-dona.jpg" alt="Dona Chirac MICHOAGAN"
+            <img src="/assets/photo-chirac-dona.jpg" alt="Dona Chirac MICHOAGAN"
               class="w-2000 h-80  fade-in delay-200 object-cover no-repeat" />
           </div>
 
