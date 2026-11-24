@@ -203,37 +203,40 @@
               </div>
             </div>
           </div>
+
+
           <div style="opacity: 1; transform: none;">
-            <form class="space-y-4 border-2 border-[#E88200] rounded-xl p-6">
+
+
+            <form method="POST" class="space-y-4 border-2 border-[#E88200] rounded-xl p-6">
 
               <div class="absolute opacity-0 pointer-events-none" aria-hidden="true">
                 <input tabindex="-1" autocomplete="off" type="text" name="_honey">
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-black mb-1.5">Prénom et Nom *</label>
-                <input
-                  class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="Jean Dupont" name="name">
+                <label for="contact-name" class="block text-sm font-medium text-black mb-1.5">Prénom et Nom *</label>
+                <input class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
+                  placeholder="Jean Dupont" name="name" id="contact-name">
               </div>
 
 
               <div>
-                <label class="block text-sm font-medium text-black mb-1.5">Email <span class="text-gray-400">(optionnel
+                <label for="contact-email" class="block text-sm font-medium text-black mb-1.5">Email <span class="text-gray-400">(optionnel
                     si
                     téléphone renseigné)</span></label>
                 <input
                   class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="jean@exemple.fr" type="email" name="email">
+                  placeholder="jean@exemple.fr" type="email" name="email" id="contact-email">
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-black mb-1.5">Téléphone <span
+                <label for="contact-phone" class="block text-sm font-medium text-black mb-1.5">Téléphone <span
                     class="text-gray-400">(optionnel
                     si email renseigné)</span></label>
                 <input
                   class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="06 12 34 56 78" type="tel" name="phone">
+                  placeholder="06 12 34 56 78" type="tel" name="phone" id="contact-phone">
               </div>
 
               <div>
@@ -254,8 +257,8 @@
               </div>
 
               <div>
-                <label class="block text-sm font-medium text-black mb-1.5">Message *</label>
-                <textarea name="message" rows="5"
+                <label for="contact-message" class="block text-sm font-medium text-black mb-1.5">Message *</label>
+                <textarea id="contact-message" name="message" rows="5"
                   class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm resize-none"
                   placeholder="Décrivez votre projet en quelques mots..."></textarea>
               </div>
@@ -263,8 +266,8 @@
                 size="lg">
                 Envoyer mon message
               </UButton>
-              <!-- <button type="submit" class="w-full bg-[#0066FF] text-white font-semibold py-4 rounded-xl hover:bg-blue-500 transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2">Envoyer mon message</button> -->
             </form>
+
           </div>
         </div>
       </div>
