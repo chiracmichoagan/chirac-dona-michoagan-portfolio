@@ -24,14 +24,35 @@ export default defineEventHandler(async (event) => {
 
   const config = useRuntimeConfig()
 
+  const missingConfig = [
+    !config.smtpHost && 'NUXT_SMTP_HOST',
+    !config.smtpPort && 'NUXT_SMTP_PORT',
+    !config.smtpUser && 'NUXT_SMTP_USER',
+    !config.smtpPass && 'NUXT_SMTP_PASS',
+    !config.mailTo && 'NUXT_MAIL_TO'
+  ].filter(Boolean)
+
+  if (missingConfig.length) {
+    console.error(`[contact] Configuration manquante : ${missingConfig.join(', ')}`)
+    throw createError({ statusCode: 500, statusMessage: "L'envoi du message n'est pas configuré." })
+  }
+
+  const smtpPort = Number(config.smtpPort)
+  if (!Number.isInteger(smtpPort) || smtpPort < 1 || smtpPort > 65535) {
+    console.error('[contact] Configuration invalide : NUXT_SMTP_PORT')
+    throw createError({ statusCode: 500, statusMessage: "La configuration de l'envoi du message est invalide." })
+  }
+
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: { user: config.mailUser, pass: config.mailPass }
+    host: config.smtpHost,
+    port: smtpPort,
+    secure: smtpPort === 465,
+    auth: { user: config.smtpUser, pass: config.smtpPass }
   })
 
   try {
-    await transporter.sendMail({
-      from: `"Portfolio" <${config.mailUser}>`,
+    const info = await transporter.sendMail({
+      from: `"Portfolio" <${config.smtpUser}>`,
       to: config.mailTo,
       replyTo: email || undefined,
       subject: `Nouvelle demande de ${name}`,
@@ -44,6 +65,10 @@ export default defineEventHandler(async (event) => {
         message
       ].join('\n')
     })
+    if (info.accepted.length === 0) {
+      throw new Error(`Le serveur SMTP n'a accepté aucun destinataire : ${info.rejected.join(', ')}`)
+    }
+    console.log('[contact] Accepté par le serveur SMTP :', info.accepted)
   } catch (e) {
     console.error('Erreur envoi mail :', e)
     throw createError({ statusCode: 500, statusMessage: "Impossible d'envoyer le message pour le moment." })
