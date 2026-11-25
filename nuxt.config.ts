@@ -3,6 +3,12 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    mailUser: '',
+    mailPass: '',
+    mailTo: ''
+  },
+
   modules: [
     '@nuxt/ui',
     '@nuxtjs/tailwindcss',

@@ -208,26 +208,28 @@
           <div style="opacity: 1; transform: none;">
 
 
-            <form method="POST" class="space-y-4 border-2 border-[#E88200] rounded-xl p-6">
+            <form @submit.prevent="submitForm" class="space-y-4 border-2 border-[#E88200] rounded-xl p-6">
 
               <div class="absolute opacity-0 pointer-events-none" aria-hidden="true">
-                <input tabindex="-1" autocomplete="off" type="text" name="_honey">
+                <input tabindex="-1" v-model="form._honey" autocomplete="off" type="text" name="_honey">
               </div>
 
               <div>
                 <label for="contact-name" class="block text-sm font-medium text-black mb-1.5">Prénom et Nom *</label>
-                <input class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="Jean Dupont" name="name" id="contact-name">
+                <input
+                  class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
+                  placeholder="Jean Dupont" v-model="form.name" name="name" id="contact-name">
               </div>
 
 
               <div>
-                <label for="contact-email" class="block text-sm font-medium text-black mb-1.5">Email <span class="text-gray-400">(optionnel
+                <label for="contact-email" class="block text-sm font-medium text-black mb-1.5">Email <span
+                    class="text-gray-400">(optionnel
                     si
                     téléphone renseigné)</span></label>
                 <input
                   class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="jean@exemple.fr" type="email" name="email" id="contact-email">
+                  placeholder="jean@exemple.fr" type="email" v-model="form.email" name="email" id="contact-email">
               </div>
 
               <div>
@@ -236,13 +238,13 @@
                     si email renseigné)</span></label>
                 <input
                   class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm"
-                  placeholder="06 12 34 56 78" type="tel" name="phone" id="contact-phone">
+                  placeholder="06 12 34 56 78" type="tel" v-model="form.phone" name="phone" id="contact-phone">
               </div>
 
               <div>
                 <label for="contact-secteur" class="block text-sm font-medium text-black mb-1.5">Secteur
                   d'activité</label>
-                <select id="contact-secteur" name="secteur"
+                <select id="contact-secteur" name="secteur" v-model="form.secteur"
                   class="w-full px-4 py-3 rounded-xl bg-[#1A1A1A] border border-[#E88200] text-white/75 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm">
                   <option value="">Sélectionner...</option>
                   <option value="Restaurant">Restaurant</option>
@@ -258,14 +260,24 @@
 
               <div>
                 <label for="contact-message" class="block text-sm font-medium text-black mb-1.5">Message *</label>
-                <textarea id="contact-message" name="message" rows="5"
+                <textarea v-model="form.message" id="contact-message" name="message" rows="5"
                   class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm resize-none"
                   placeholder="Décrivez votre projet en quelques mots..."></textarea>
               </div>
-              <UButton class="flex items-center justify-center " to="/contact" color="primary" variant="outline"
+              <!-- <UButton class="flex items-center justify-center " to="/contact" color="primary" variant="outline"
                 size="lg">
                 Envoyer mon message
+              </UButton> -->
+
+              <UButton type="submit" :loading="status === 'loading'" :disabled="status === 'loading'"
+                class="flex items-center justify-center" color="primary" variant="outline" size="lg">
+                Envoyer mon message
               </UButton>
+
+              <p v-if="status === 'success'" class="text-green-600 text-sm">
+                Merci ! Ton message a bien été envoyé, je te réponds sous 24h.
+              </p>
+              <p v-if="status === 'error'" class="text-red-600 text-sm">{{ errorMsg }}</p>
             </form>
 
           </div>
@@ -335,6 +347,26 @@ const featuredProjects = [
   //   github: "https://github.com/chiracmichoagan/web-quizz.git",
   // },
 ];
+
+
+const form = reactive({
+  name: '', email: '', phone: '', secteur: '', message: '', _honey: ''
+})
+const status = ref('idle') // idle | loading | success | error
+const errorMsg = ref('')
+
+async function submitForm() {
+  status.value = 'loading'
+  errorMsg.value = ''
+  try {
+    await $fetch('/api/contact', { method: 'POST', body: form })
+    status.value = 'success'
+    Object.assign(form, { name: '', email: '', phone: '', secteur: '', message: '', _honey: '' })
+  } catch (e) {
+    status.value = 'error'
+    errorMsg.value = e?.data?.statusMessage || 'Une erreur est survenue.'
+  }
+}
 
 onMounted(() => {
   if (process.client) {
