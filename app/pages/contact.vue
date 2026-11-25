@@ -116,7 +116,7 @@
                         <UTooltip text="Twitter">
                           <UButton color="primary" variant="ghost" to="https://x.com/chinoisnois" target="_blank"
                             class="hover:scale-110 transition-transform" />
-                          <img src="public/assets/x.png" alt="Logo X de Twitter" class="h-4 mt-2 w-5" />
+                          <img src="/assets/x.png" alt="Logo X de Twitter" class="h-4 mt-2 w-5" />
                         </UTooltip>
                         <UTooltip text="GitHub">
                           <UButton color="black" variant="ghost" icon="i-simple-icons-github"
