@@ -4,7 +4,10 @@ export default defineEventHandler(async (event) => {
   const body = await readBody(event)
 
   // Anti-spam : si le champ caché est rempli, c'est un robot
-  if (body._honey) return { ok: true }
+  if (body._honey) {
+    console.warn('[contact] Honeypot rempli : message ignoré')
+    return { ok: true }
+  }
 
   const name = String(body.name || '').trim().slice(0, 100)
   const email = String(body.email || '').trim().slice(0, 150)
@@ -68,7 +71,11 @@ export default defineEventHandler(async (event) => {
     if (info.accepted.length === 0) {
       throw new Error(`Le serveur SMTP n'a accepté aucun destinataire : ${info.rejected.join(', ')}`)
     }
-    console.log('[contact] Accepté par le serveur SMTP :', info.accepted)
+    console.log('[contact] Accepté par le serveur SMTP :', {
+      messageId: info.messageId,
+      response: info.response,
+      acceptedCount: info.accepted.length
+    })
   } catch (e) {
     console.error('Erreur envoi mail :', e)
     throw createError({ statusCode: 500, statusMessage: "Impossible d'envoyer le message pour le moment." })

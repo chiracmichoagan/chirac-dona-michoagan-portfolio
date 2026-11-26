@@ -104,7 +104,7 @@ const commands = {
       <br>- <span class="text-green-400">clear</span>: Effacer le terminal
     `;
   },
-  // A propos de moi
+  // À propos de moi
   about: () => {
     if (hackerMode.value) {
       return `

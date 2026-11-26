@@ -5,7 +5,7 @@
       Accueil
     </NuxtLink>
     <span>/</span>
-    <span class="text-black font-medium">A propos</span>
+    <span class="text-black font-medium">À propos</span>
   </nav>
 
 

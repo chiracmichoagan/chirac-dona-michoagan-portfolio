@@ -1,0 +1,1507 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101820">
+  <meta name="description"
+    content="Découvrez les véhicules sélectionnés par Maison Vitesse, votre concessionnaire automobile indépendant à Lyon.">
+  <title>Maison Vitesse — L'automobile, autrement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #101820;
+      --ink-soft: #53606a;
+      --paper: #f7f7f4;
+      --white: #fff;
+      --orange: #e85d32;
+      --orange-dark: #c94821;
+      --line: #e7e8e5;
+      --radius: 18px;
+      --shadow: 0 18px 50px rgba(16, 24, 32, .1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: Manrope, sans-serif;
+    }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 6px;
+      padding: 0 21px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 700;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .button:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    .button--dark {
+      background: var(--ink);
+    }
+
+    .button--dark:hover {
+      background: #263642;
+    }
+
+    .button--outline {
+      border: 1px solid rgba(255, 255, 255, .55);
+      background: transparent;
+    }
+
+    .button--outline:hover {
+      background: var(--white);
+      color: var(--ink);
+    }
+
+    /* Navigation */
+    .topline {
+      background: var(--ink);
+      color: #d7dce0;
+      font-size: 11px;
+    }
+
+    .topline-inner {
+      min-height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .topline strong {
+      color: var(--white);
+      font-weight: 600;
+    }
+
+    .topline-right {
+      display: flex;
+      gap: 22px;
+    }
+
+    .topline a:hover {
+      color: var(--white);
+    }
+
+    .navbar {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      background: rgba(255, 255, 255, .96);
+      border-bottom: 1px solid rgba(16, 24, 32, .07);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--orange);
+      color: white;
+      font-family: Manrope, sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+    }
+
+    .brand-name {
+      font-family: Manrope, sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+      line-height: 1.05;
+    }
+
+    .brand-name small {
+      display: block;
+      margin-top: 4px;
+      color: #7a858c;
+      font-family: "DM Sans", sans-serif;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .2em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: #47535b;
+      font-size: 12px;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange);
+    }
+
+    .nav-cta {
+      min-height: 42px;
+      padding: 0 16px;
+      font-size: 11px;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: white;
+      color: var(--ink);
+      font-size: 20px;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #18232b url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2200&q=88") center 58% / cover no-repeat;
+      color: white;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(9, 16, 22, .88) 0%, rgba(9, 16, 22, .64) 43%, rgba(9, 16, 22, .08) 100%), linear-gradient(0deg, rgba(9, 16, 22, .42), transparent 40%);
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 76px 0 110px;
+    }
+
+    .hero .eyebrow {
+      color: #ff916f;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+      margin: 22px 0 18px;
+      font-size: clamp(42px, 6vw, 72px);
+      font-weight: 700;
+      letter-spacing: -.065em;
+      line-height: 1.02;
+    }
+
+    .hero h1 span {
+      color: #ff8a66;
+    }
+
+    .hero-copy {
+      max-width: 460px;
+      margin-bottom: 29px;
+      color: rgba(255, 255, 255, .77);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-foot {
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      left: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      color: rgba(255, 255, 255, .8);
+      font-size: 11px;
+    }
+
+    .hero-foot span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #7ddb9c;
+      box-shadow: 0 0 0 4px rgba(125, 219, 156, .16);
+    }
+
+    .hero-pagination {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-pagination i {
+      width: 20px;
+      height: 3px;
+      background: rgba(255, 255, 255, .4);
+    }
+
+    .hero-pagination i:first-child {
+      width: 38px;
+      background: var(--orange);
+    }
+
+    /* Trust strip */
+    .trust-strip {
+      position: relative;
+      z-index: 2;
+      margin-top: -1px;
+      background: var(--white);
+    }
+
+    .trust-inner {
+      min-height: 112px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 20px;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:first-child {
+      padding-left: 0;
+    }
+
+    .trust-item:last-child {
+      border: 0;
+    }
+
+    .trust-icon {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 40px;
+      border-radius: 50%;
+      background: #fff0eb;
+      color: var(--orange);
+      font-size: 17px;
+    }
+
+    .trust-item strong {
+      display: block;
+      margin-bottom: 3px;
+      font-family: Manrope, sans-serif;
+      font-size: 12px;
+    }
+
+    .trust-item small {
+      color: #818a90;
+      font-size: 10px;
+    }
+
+    /* Inventory */
+    .inventory {
+      padding: 103px 0 108px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      margin: 12px 0 0;
+      font-size: clamp(30px, 4vw, 43px);
+      letter-spacing: -.055em;
+      line-height: 1.12;
+    }
+
+    .section-heading p {
+      max-width: 340px;
+      margin: 0 0 4px;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .inventory-tools {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .search-wrap {
+      position: relative;
+      width: min(100%, 290px);
+    }
+
+    .search-wrap span {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      color: #8c969d;
+      transform: translateY(-50%);
+    }
+
+    .search-wrap input,
+    .filter-select {
+      width: 100%;
+      height: 44px;
+      border: 1px solid #e1e4e3;
+      border-radius: 5px;
+      outline: none;
+      background: white;
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    .search-wrap input {
+      padding: 0 13px 0 39px;
+    }
+
+    .search-wrap input:focus,
+    .filter-select:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(232, 93, 50, .1);
+    }
+
+    .filter-select {
+      width: auto;
+      min-width: 145px;
+      padding: 0 30px 0 12px;
+    }
+
+    .results-count {
+      margin-left: auto;
+      color: #768087;
+      font-size: 11px;
+    }
+
+    .car-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 21px;
+    }
+
+    .car-card {
+      overflow: hidden;
+      border: 1px solid #eceeeb;
+      border-radius: 8px;
+      background: white;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .car-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .car-photo {
+      position: relative;
+      height: 218px;
+      overflow: hidden;
+      background: #e4e7e6;
+    }
+
+    .car-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .car-card:hover .car-photo img {
+      transform: scale(1.04);
+    }
+
+    .badge {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      border-radius: 3px;
+      padding: 7px 9px;
+      background: var(--orange);
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .favorite {
+      position: absolute;
+      top: 11px;
+      right: 12px;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .93);
+      color: #53606a;
+      font-size: 17px;
+      transition: color .2s, transform .2s;
+    }
+
+    .favorite:hover {
+      transform: scale(1.08);
+    }
+
+    .favorite.is-active {
+      color: var(--orange);
+    }
+
+    .car-info {
+      padding: 17px 18px 18px;
+    }
+
+    .car-make {
+      margin: 0 0 5px;
+      color: #8a9398;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .car-info h3 {
+      margin: 0 0 14px;
+      font-size: 17px;
+      letter-spacing: -.035em;
+    }
+
+    .car-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #eef0ee;
+      color: #657079;
+      font-size: 10px;
+    }
+
+    .car-specs span {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .car-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 15px;
+    }
+
+    .price {
+      font-family: Manrope, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -.05em;
+    }
+
+    .price small {
+      display: block;
+      margin-top: 2px;
+      color: #8a9398;
+      font-family: "DM Sans", sans-serif;
+      font-size: 9px;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .details-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--orange);
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .empty-state {
+      display: none;
+      grid-column: 1 / -1;
+      padding: 45px 20px;
+      border: 1px dashed #d8ddda;
+      border-radius: 8px;
+      color: var(--ink-soft);
+      text-align: center;
+    }
+
+    .inventory-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 34px;
+    }
+
+    /* About */
+    .about {
+      padding: 86px 0;
+      background: #111d25;
+      color: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .about-image {
+      position: relative;
+      min-height: 400px;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 400px;
+      display: block;
+      border-radius: 7px;
+      object-fit: cover;
+    }
+
+    .experience-card {
+      position: absolute;
+      right: -24px;
+      bottom: 24px;
+      width: 160px;
+      padding: 19px;
+      border-radius: 5px;
+      background: var(--orange);
+    }
+
+    .experience-card strong {
+      display: block;
+      font-family: Manrope, sans-serif;
+      font-size: 30px;
+      letter-spacing: -.06em;
+    }
+
+    .experience-card span {
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .about-copy .eyebrow {
+      color: #ff916f;
+    }
+
+    .about-copy h2 {
+      margin: 15px 0 17px;
+      font-size: clamp(30px, 4vw, 43px);
+      letter-spacing: -.055em;
+      line-height: 1.12;
+    }
+
+    .about-copy>p {
+      max-width: 490px;
+      color: #b6c0c5;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .about-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 20px;
+      margin: 26px 0 30px;
+    }
+
+    .about-point {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #edf0f1;
+      font-size: 11px;
+    }
+
+    .about-point span {
+      color: #ff916f;
+      font-size: 16px;
+    }
+
+    /* Contact */
+    .contact {
+      padding: 98px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 75px;
+    }
+
+    .contact-copy h2 {
+      margin: 14px 0 16px;
+      font-size: clamp(30px, 4vw, 42px);
+      letter-spacing: -.055em;
+      line-height: 1.1;
+    }
+
+    .contact-copy>p {
+      max-width: 390px;
+      color: var(--ink-soft);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      margin-top: 23px;
+    }
+
+    .contact-detail-icon {
+      width: 36px;
+      height: 36px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 36px;
+      border-radius: 50%;
+      background: #fff0eb;
+      color: var(--orange);
+    }
+
+    .contact-detail strong {
+      display: block;
+      margin: 2px 0 4px;
+      font-size: 11px;
+    }
+
+    .contact-detail span,
+    .contact-detail a {
+      color: #778188;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 15px 40px rgba(16, 24, 32, .04);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      margin-bottom: 15px;
+    }
+
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      color: #53606a;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid #e2e5e3;
+      border-radius: 4px;
+      outline: 0;
+      background: #fff;
+      color: var(--ink);
+      font-size: 12px;
+    }
+
+    .field input,
+    .field select {
+      height: 42px;
+      padding: 0 11px;
+    }
+
+    .field textarea {
+      min-height: 90px;
+      padding: 11px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(232, 93, 50, .1);
+    }
+
+    .form-submit {
+      width: 100%;
+    }
+
+    .form-note {
+      margin: 11px 0 0;
+      color: #8a9398;
+      font-size: 9px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .form-feedback {
+      display: none;
+      margin: 13px 0 0;
+      color: #24784a;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      padding: 26px 0;
+      background: var(--ink);
+      color: #b3bdc2;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    footer .brand-name {
+      color: white;
+    }
+
+    footer .brand-name small {
+      color: #a4afb5;
+    }
+
+    .footer-copy {
+      font-size: 10px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      font-size: 10px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 17px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .nav-cta {
+        padding: 0 12px;
+      }
+
+      .trust-item {
+        padding: 8px 12px;
+      }
+
+      .car-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .contact-grid {
+        gap: 45px;
+      }
+
+      .experience-card {
+        right: -12px;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .container {
+        width: min(100% - 36px, 520px);
+      }
+
+      .topline-inner {
+        justify-content: center;
+        min-height: 32px;
+      }
+
+      .topline-right {
+        display: none;
+      }
+
+      .nav-inner {
+        height: 66px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+        margin-left: auto;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 66px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 7px 18px 13px;
+        border-bottom: 1px solid var(--line);
+        background: white;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+        border-bottom: 1px solid #f0f1ef;
+        font-size: 13px;
+      }
+
+      .nav-links a:last-child {
+        border: 0;
+      }
+
+      .hero {
+        min-height: 570px;
+        background-position: 59% center;
+      }
+
+      .hero::before {
+        background: linear-gradient(90deg, rgba(9, 16, 22, .88), rgba(9, 16, 22, .45)), linear-gradient(0deg, rgba(9, 16, 22, .45), transparent 45%);
+      }
+
+      .hero-content {
+        width: min(100% - 36px, 520px);
+        padding: 65px 0 104px;
+      }
+
+      .hero h1 {
+        font-size: clamp(43px, 12vw, 61px);
+      }
+
+      .hero-copy {
+        max-width: 390px;
+        font-size: 13px;
+      }
+
+      .hero-foot {
+        width: min(100% - 36px, 520px);
+        margin: 0 auto;
+      }
+
+      .trust-inner {
+        grid-template-columns: 1fr 1fr;
+        padding: 13px 0;
+      }
+
+      .trust-item {
+        min-height: 66px;
+        border-right: 0;
+      }
+
+      .trust-item:nth-child(odd) {
+        padding-left: 0;
+      }
+
+      .trust-item:first-child {
+        padding-left: 0;
+      }
+
+      .trust-icon {
+        width: 34px;
+        height: 34px;
+        flex-basis: 34px;
+      }
+
+      .inventory {
+        padding: 72px 0;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 25px;
+      }
+
+      .section-heading p {
+        max-width: 420px;
+      }
+
+      .inventory-tools {
+        flex-wrap: wrap;
+      }
+
+      .search-wrap {
+        width: 100%;
+      }
+
+      .filter-select {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .results-count {
+        width: 100%;
+        margin: 1px 0 0;
+      }
+
+      .car-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .car-photo {
+        height: 220px;
+      }
+
+      .about {
+        padding: 68px 0;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 43px;
+      }
+
+      .about-image {
+        min-height: 300px;
+        margin-right: 10px;
+      }
+
+      .about-image img {
+        height: 300px;
+      }
+
+      .experience-card {
+        right: -10px;
+        bottom: 15px;
+        width: 140px;
+        padding: 15px;
+      }
+
+      .about-points {
+        gap: 14px 9px;
+      }
+
+      .about-point {
+        font-size: 10px;
+      }
+
+      .contact {
+        padding: 72px 0;
+      }
+
+      .contact-form {
+        padding: 21px 17px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline">
+    <div class="container topline-inner">
+      <span><strong>Maison Vitesse</strong> — votre concessionnaire indépendant à Lyon</span>
+      <div class="topline-right">
+        <a href="tel:+33472000000">☎ &nbsp;04 72 00 00 00</a>
+        <span>Mar. – sam. &nbsp; 9h00 – 19h00</span>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#accueil" aria-label="Maison Vitesse, accueil">
+        <span class="brand-mark">MV</span>
+        <span class="brand-name">MAISON VITESSE<small>DEPUIS 1998 · LYON</small></span>
+      </a>
+      <nav class="nav-links" id="main-nav" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#vehicules">Nos véhicules</a>
+        <a href="#maison">La maison</a>
+        <a href="#contact">Nous contacter</a>
+      </nav>
+      <a class="button nav-cta" href="#vehicules">Voir le stock <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+        aria-controls="main-nav">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <span class="eyebrow">L'automobile, autrement</span>
+        <h1>La belle route<br>commence <span>ici.</span></h1>
+        <p class="hero-copy">Des voitures choisies avec soin, un accompagnement vraiment humain. Trouvez le véhicule qui
+          vous ressemble chez Maison Vitesse.</p>
+        <div class="hero-actions">
+          <a class="button" href="#vehicules">Découvrir nos véhicules <span aria-hidden="true">→</span></a>
+          <a class="button button--outline" href="#maison">Notre différence</a>
+        </div>
+      </div>
+      <div class="container hero-foot">
+        <span><i class="status-dot"></i> Ouvert aujourd'hui · Visite sans rendez-vous</span>
+        <span class="hero-pagination" aria-label="Image 1 sur 3"><i></i><i></i><i></i></span>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Nos engagements">
+      <div class="container trust-inner">
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">✓</span><span><strong>Véhicules
+              contrôlés</strong><small>Inspection en 100 points</small></span></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">◇</span><span><strong>Garantie
+              incluse</strong><small>Jusqu'à 24 mois</small></span></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">↗</span><span><strong>Financement
+              simple</strong><small>Une offre sur mesure</small></span></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">♡</span><span><strong>À vos
+              côtés</strong><small>Depuis plus de 25 ans</small></span></div>
+      </div>
+    </section>
+
+    <section class="inventory" id="vehicules">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">Notre sélection</span>
+            <h2>De belles histoires<br>sur quatre roues.</h2>
+          </div>
+          <p>Chaque véhicule est sélectionné, vérifié et préparé par notre équipe. À vous de trouver votre prochain coup
+            de cœur.</p>
+        </div>
+        <div class="inventory-tools" aria-label="Filtres des véhicules">
+          <label class="search-wrap"><span aria-hidden="true">⌕</span><input id="car-search" type="search"
+              placeholder="Marque, modèle..." aria-label="Rechercher une marque ou un modèle"></label>
+          <select class="filter-select" id="fuel-filter" aria-label="Filtrer par énergie">
+            <option value="">Toutes énergies</option>
+            <option value="Essence">Essence</option>
+            <option value="Diesel">Diesel</option>
+            <option value="Hybride">Hybride</option>
+            <option value="Électrique">Électrique</option>
+          </select>
+          <select class="filter-select" id="price-filter" aria-label="Filtrer par budget maximum">
+            <option value="">Tous les budgets</option>
+            <option value="20000">Moins de 20 000 €</option>
+            <option value="30000">Moins de 30 000 €</option>
+            <option value="40000">Moins de 40 000 €</option>
+          </select>
+          <span class="results-count" id="results-count" aria-live="polite">6 véhicules</span>
+        </div>
+
+        <div class="car-grid" id="car-grid">
+          <article class="car-card" data-name="volvo xc40 recharge" data-fuel="Électrique" data-price="38900">
+            <div class="car-photo">
+              <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=82"
+                alt="Volvo XC40 Recharge gris" loading="lazy">
+              <span class="badge">Coup de cœur</span>
+              <button class="favorite" type="button" aria-label="Ajouter le Volvo XC40 aux favoris"
+                aria-pressed="false">♡</button>
+            </div>
+            <div class="car-info">
+              <p class="car-make">Volvo · 2023</p>
+              <h3>XC40 Recharge</h3>
+              <div class="car-specs"><span>⚡ Électrique</span><span>↗ 18 400 km</span><span>Automatique</span></div>
+              <div class="car-bottom"><span class="price">38 900 €<small>À partir de 489 €/mois</small></span><a
+                  class="details-link" href="#contact" data-car="Volvo XC40 Recharge">Ça m'intéresse <span
+                    aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+          <article class="car-card" data-name="peugeot 3008 gt" data-fuel="Hybride" data-price="32700">
+            <div class="car-photo">
+              <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=82"
+                alt="SUV Peugeot 3008 sur une route" loading="lazy">
+              <span class="badge">Garantie 24 mois</span>
+              <button class="favorite" type="button" aria-label="Ajouter le Peugeot 3008 aux favoris"
+                aria-pressed="false">♡</button>
+            </div>
+            <div class="car-info">
+              <p class="car-make">Peugeot · 2022</p>
+              <h3>3008 GT Hybrid</h3>
+              <div class="car-specs"><span>◉ Hybride</span><span>↗ 26 100 km</span><span>Automatique</span></div>
+              <div class="car-bottom"><span class="price">32 700 €<small>À partir de 412 €/mois</small></span><a
+                  class="details-link" href="#contact" data-car="Peugeot 3008 GT Hybrid">Ça m'intéresse <span
+                    aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+          <article class="car-card" data-name="mini cooper s" data-fuel="Essence" data-price="24900">
+            <div class="car-photo">
+              <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=82"
+                alt="Mini Cooper S rouge" loading="lazy">
+              <span class="badge">Faible kilométrage</span>
+              <button class="favorite" type="button" aria-label="Ajouter la Mini Cooper aux favoris"
+                aria-pressed="false">♡</button>
+            </div>
+            <div class="car-info">
+              <p class="car-make">Mini · 2023</p>
+              <h3>Cooper S Camden</h3>
+              <div class="car-specs"><span>◉ Essence</span><span>↗ 12 800 km</span><span>Automatique</span></div>
+              <div class="car-bottom"><span class="price">24 900 €<small>À partir de 315 €/mois</small></span><a
+                  class="details-link" href="#contact" data-car="Mini Cooper S Camden">Ça m'intéresse <span
+                    aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+          <article class="car-card" data-name="bmw serie 3 touring" data-fuel="Diesel" data-price="28900">
+            <div class="car-photo">
+              <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=900&q=82"
+                alt="BMW Série 3 Touring bleue" loading="lazy">
+              <span class="badge">Nouveauté</span>
+              <button class="favorite" type="button" aria-label="Ajouter la BMW Série 3 aux favoris"
+                aria-pressed="false">♡</button>
+            </div>
+            <div class="car-info">
+              <p class="car-make">BMW · 2021</p>
+              <h3>Série 3 Touring 320d</h3>
+              <div class="car-specs"><span>◉ Diesel</span><span>↗ 39 500 km</span><span>Automatique</span></div>
+              <div class="car-bottom"><span class="price">28 900 €<small>À partir de 365 €/mois</small></span><a
+                  class="details-link" href="#contact" data-car="BMW Série 3 Touring">Ça m'intéresse <span
+                    aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+          <article class="car-card" data-name="audi q3 sportback" data-fuel="Essence" data-price="35900">
+            <div class="car-photo">
+              <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?auto=format&fit=crop&w=900&q=82"
+                alt="Audi Q3 Sportback gris" loading="lazy">
+              <span class="badge">Sélection MV</span>
+              <button class="favorite" type="button" aria-label="Ajouter l'Audi Q3 aux favoris"
+                aria-pressed="false">♡</button>
+            </div>
+            <div class="car-info">
+              <p class="car-make">Audi · 2022</p>
+              <h3>Q3 Sportback S line</h3>
+              <div class="car-specs"><span>◉ Essence</span><span>↗ 21 200 km</span><span>Automatique</span></div>
+              <div class="car-bottom"><span class="price">35 900 €<small>À partir de 453 €/mois</small></span><a
+                  class="details-link" href="#contact" data-car="Audi Q3 Sportback S line">Ça m'intéresse <span
+                    aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+          <article class="car-card" data-name="toyota yaris cross" data-fuel="Hybride" data-price="26900">
+            <div class="car-photo">
+              <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=900&q=82"
+                alt="Toyota Yaris Cross en extérieur" loading="lazy">
+              <span class="badge">Économique</span>
+              <button class="favorite" type="button" aria-label="Ajouter la Toyota Yaris Cross aux favoris"
+                aria-pressed="false">♡</button>
+            </div>
+            <div class="car-info">
+              <p class="car-make">Toyota · 2023</p>
+              <h3>Yaris Cross Collection</h3>
+              <div class="car-specs"><span>◉ Hybride</span><span>↗ 15 600 km</span><span>Automatique</span></div>
+              <div class="car-bottom"><span class="price">26 900 €<small>À partir de 340 €/mois</small></span><a
+                  class="details-link" href="#contact" data-car="Toyota Yaris Cross Collection">Ça m'intéresse <span
+                    aria-hidden="true">→</span></a></div>
+            </div>
+          </article>
+          <div class="empty-state" id="empty-state">Aucun véhicule ne correspond à votre recherche. Essayez d'autres
+            filtres.</div>
+        </div>
+        <div class="inventory-cta"><a class="button button--dark" href="#contact">Vous cherchez un modèle précis ? <span
+              aria-hidden="true">→</span></a></div>
+      </div>
+    </section>
+
+    <section class="about" id="maison">
+      <div class="container about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1100&q=85"
+            alt="Un membre de l'équipe prépare un véhicule dans notre atelier" loading="lazy">
+          <div class="experience-card"><strong>25 ans</strong><span>de passion automobile et de confiance
+              partagée.</span></div>
+        </div>
+        <div class="about-copy">
+          <span class="eyebrow">La maison, c'est vous</span>
+          <h2>Du sérieux, sans<br>se prendre au sérieux.</h2>
+          <p>Depuis 1998, nous aidons les conducteurs de la région lyonnaise à trouver la bonne voiture. Pas celle qu'on
+            veut vous vendre : celle qui vous va vraiment.</p>
+          <div class="about-points">
+            <div class="about-point"><span>✓</span> Sélection indépendante</div>
+            <div class="about-point"><span>✓</span> Historique vérifié</div>
+            <div class="about-point"><span>✓</span> Essai sur rendez-vous</div>
+            <div class="about-point"><span>✓</span> Reprise de votre véhicule</div>
+          </div>
+          <a class="button" href="#contact">Venez nous rencontrer <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">On en parle ?</span>
+          <h2>Votre prochain départ<br>commence par un bonjour.</h2>
+          <p>Une question, un essai à réserver ou une voiture à faire reprendre ? Notre équipe vous répond avec plaisir.
+          </p>
+          <div class="contact-detail"><span class="contact-detail-icon" aria-hidden="true">⌖</span><span><strong>Notre
+                showroom</strong><span>24 rue des Ateliers, 69007 Lyon<br>Parking visiteurs sur place</span></span>
+          </div>
+          <div class="contact-detail"><span class="contact-detail-icon"
+              aria-hidden="true">☎</span><span><strong>Appelez-nous</strong><a href="tel:+33472000000">04 72 00 00
+                00</a></span></div>
+          <div class="contact-detail"><span class="contact-detail-icon"
+              aria-hidden="true">◷</span><span><strong>Horaires</strong><span>Mar. – sam. : 9h00 – 19h00<br>Dim. – lun.
+                : fermé</span></span></div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <div class="field"><label for="name">Votre nom</label><input id="name" name="name" type="text"
+                placeholder="Prénom et nom" required></div>
+            <div class="field"><label for="email">Votre e-mail</label><input id="email" name="email" type="email"
+                placeholder="vous@exemple.fr" required></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="phone">Téléphone (facultatif)</label><input id="phone" name="phone"
+                type="tel" placeholder="06 00 00 00 00"></div>
+            <div class="field"><label for="subject">Votre demande</label><select id="subject" name="subject">
+                <option>Un essai véhicule</option>
+                <option>Une demande d'information</option>
+                <option>Une reprise de véhicule</option>
+                <option>Un financement</option>
+              </select></div>
+          </div>
+          <div class="field"><label for="message">Votre message</label><textarea id="message" name="message"
+              placeholder="Dites-nous tout..."></textarea></div>
+          <button class="button form-submit" type="submit">Envoyer mon message <span
+              aria-hidden="true">→</span></button>
+          <p class="form-note">En envoyant ce formulaire, vous acceptez d'être recontacté au sujet de votre demande.</p>
+          <p class="form-feedback" id="form-feedback" role="status">Merci ! Votre message est prêt. Notre équipe
+            reviendra vers vous rapidement.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a class="brand" href="#accueil"><span class="brand-mark">MV</span><span class="brand-name">MAISON
+          VITESSE<small>DEPUIS 1998 · LYON</small></span></a>
+      <span class="footer-copy">© <span id="current-year"></span> Maison Vitesse. Tous droits réservés.</span>
+      <div class="footer-links"><a href="#contact">Mentions légales</a><a href="#contact">Confidentialité</a><a
+          href="#accueil">Retour en haut ↑</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.querySelector("#car-search");
+    const fuelFilter = document.querySelector("#fuel-filter");
+    const priceFilter = document.querySelector("#price-filter");
+    const carCards = [...document.querySelectorAll(".car-card")];
+    const resultsCount = document.querySelector("#results-count");
+    const emptyState = document.querySelector("#empty-state");
+
+    function filterCars() {
+      const query = searchInput.value.trim().toLocaleLowerCase("fr");
+      const fuel = fuelFilter.value;
+      const maxPrice = Number(priceFilter.value) || Infinity;
+      let visibleCount = 0;
+
+      carCards.forEach((card) => {
+        const matchesQuery = card.dataset.name.includes(query);
+        const matchesFuel = !fuel || card.dataset.fuel === fuel;
+        const matchesPrice = Number(card.dataset.price) <= maxPrice;
+        const isVisible = matchesQuery && matchesFuel && matchesPrice;
+        card.hidden = !isVisible;
+        if (isVisible) visibleCount += 1;
+      });
+
+      resultsCount.textContent = `${visibleCount} véhicule${visibleCount > 1 ? "s" : ""}`;
+      emptyState.style.display = visibleCount === 0 ? "block" : "none";
+    }
+
+    searchInput.addEventListener("input", filterCars);
+    fuelFilter.addEventListener("change", filterCars);
+    priceFilter.addEventListener("change", filterCars);
+
+    document.querySelectorAll(".favorite").forEach((button) => {
+      button.addEventListener("click", () => {
+        const isFavorite = button.getAttribute("aria-pressed") === "true";
+        button.setAttribute("aria-pressed", String(!isFavorite));
+        button.classList.toggle("is-active", !isFavorite);
+        button.textContent = isFavorite ? "♡" : "♥";
+      });
+    });
+
+    document.querySelectorAll(".details-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        const message = document.querySelector("#message");
+        message.value = `Bonjour, je souhaiterais en savoir plus sur la ${link.dataset.car}.`;
+      });
+    });
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const mainNav = document.querySelector("#main-nav");
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Ouvrir le menu" : "Fermer le menu");
+      mainNav.classList.toggle("is-open", !isOpen);
+    });
+    mainNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mainNav.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+      });
+    });
+
+    document.querySelector("#contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.querySelector("#form-feedback").style.display = "block";
+      event.currentTarget.reset();
+    });
+
+    document.querySelector("#current-year").textContent = new Date().getFullYear();
+  </script>
+</body>
+
+</html>

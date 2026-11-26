@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta name="description"
+    content="Maison Sépia, une cuisine de saison généreuse et sincère au cœur de Lyon. Découvrez notre carte et réservez votre table.">
+  <title>Maison Sépia — Cuisine de saison à Lyon</title>
+  <style>
+    :root {
+      --paper: #f6f1e8;
+      --paper-dark: #eee6d8;
+      --ink: #292a22;
+      --muted: #716f63;
+      --olive: #596044;
+      --rust: #b65b3e;
+      --line: rgba(41, 42, 34, .16);
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Trebuchet MS", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .wrap {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--rust);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+    }
+
+    h2 {
+      margin-bottom: 18px;
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      line-height: 1.04;
+      letter-spacing: -.045em;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 23px;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      cursor: pointer;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: background .2s, color .2s, transform .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .button-light {
+      border-color: var(--paper);
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .button-light:hover {
+      color: var(--paper);
+    }
+
+    .arrow {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .site-header {
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      left: 0;
+      color: var(--paper);
+    }
+
+    .nav {
+      display: flex;
+      min-height: 92px;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(246, 241, 232, .3);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 1px solid rgba(246, 241, 232, .75);
+      border-radius: 50%;
+      font-family: var(--serif);
+      font-size: 1.2rem;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 1.32rem;
+      letter-spacing: .02em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 42px);
+    }
+
+    .nav-links>a:not(.button) {
+      font-size: .76rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links>a:not(.button):hover {
+      color: #e4ad8b;
+    }
+
+    .nav .button {
+      min-height: 44px;
+      padding-inline: 16px;
+      border-color: rgba(246, 241, 232, .75);
+      background: transparent;
+    }
+
+    .nav .button:hover {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: none;
+      color: var(--paper);
+      cursor: pointer;
+      font-size: 1.7rem;
+    }
+
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: min(790px, 94vh);
+      align-items: center;
+      overflow: hidden;
+      background: #35362d url("https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2200&q=85") center 54% / cover no-repeat;
+      color: var(--paper);
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(20, 23, 19, .78), rgba(20, 23, 19, .43) 52%, rgba(20, 23, 19, .1));
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(760px, 100%);
+      padding-top: 92px;
+    }
+
+    .hero .eyebrow {
+      color: #e2a17e;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-size: clamp(3.6rem, 8.5vw, 7.7rem);
+      line-height: .91;
+      letter-spacing: -.055em;
+    }
+
+    .hero-copy {
+      max-width: 440px;
+      margin-bottom: 33px;
+      color: rgba(246, 241, 232, .83);
+      font-size: 1.03rem;
+    }
+
+    .hero-note {
+      position: absolute;
+      right: 0;
+      bottom: 42px;
+      z-index: 1;
+      color: rgba(246, 241, 232, .85);
+      font-size: .72rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9%;
+      align-items: center;
+      padding-block: 130px;
+    }
+
+    .intro-image {
+      position: relative;
+      min-height: 480px;
+    }
+
+    .intro-image img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .intro-image::after {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--rust);
+      content: "";
+      pointer-events: none;
+    }
+
+    .intro-copy {
+      max-width: 480px;
+    }
+
+    .intro-copy p:not(.eyebrow) {
+      color: var(--muted);
+    }
+
+    .signature {
+      margin: 26px 0 0;
+      color: var(--olive);
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-style: italic;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid var(--rust);
+      color: var(--ink);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .menu-section {
+      padding-block: 104px 112px;
+      background: var(--paper-dark);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 0;
+    }
+
+    .section-heading>p {
+      max-width: 330px;
+      margin-bottom: 5px;
+      color: var(--muted);
+    }
+
+    .menu-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .menu-tab {
+      position: relative;
+      padding: 0 18px 15px;
+      border: 0;
+      background: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .menu-tab:first-child {
+      padding-left: 0;
+    }
+
+    .menu-tab[aria-selected="true"] {
+      color: var(--rust);
+    }
+
+    .menu-tab[aria-selected="true"]::after {
+      position: absolute;
+      right: 0;
+      bottom: -1px;
+      left: 0;
+      height: 2px;
+      background: var(--rust);
+      content: "";
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 9%;
+    }
+
+    .dish {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      animation: appear .35s ease both;
+    }
+
+    .dish h3 {
+      margin-bottom: 5px;
+      font-size: 1.35rem;
+    }
+
+    .dish p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .87rem;
+    }
+
+    .dish-price {
+      flex: 0 0 auto;
+      padding-top: 3px;
+      color: var(--rust);
+      font-family: var(--serif);
+      font-size: 1.15rem;
+    }
+
+    .menu-footnote {
+      margin: 26px 0 0;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(7px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .season {
+      display: grid;
+      min-height: 610px;
+      grid-template-columns: 1fr 1fr;
+      background: var(--olive);
+      color: var(--paper);
+    }
+
+    .season-image {
+      min-height: 420px;
+      background: url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1300&q=85") center / cover no-repeat;
+    }
+
+    .season-copy {
+      display: flex;
+      max-width: 600px;
+      flex-direction: column;
+      justify-content: center;
+      padding: 90px clamp(36px, 8vw, 125px);
+    }
+
+    .season .eyebrow {
+      color: #e5ae8d;
+    }
+
+    .season-copy p:not(.eyebrow) {
+      max-width: 400px;
+      color: rgba(246, 241, 232, .76);
+    }
+
+    .season .button {
+      align-self: flex-start;
+      margin-top: 20px;
+    }
+
+    .visit {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 9%;
+      padding-block: 120px;
+    }
+
+    .visit-intro {
+      max-width: 450px;
+    }
+
+    .visit-intro>p:not(.eyebrow) {
+      color: var(--muted);
+    }
+
+    .visit-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 45px;
+    }
+
+    .detail h3 {
+      margin-bottom: 10px;
+      color: var(--rust);
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .detail p {
+      margin: 0;
+      font-size: .9rem;
+    }
+
+    .reservation {
+      padding: 38px;
+      background: #eae2d4;
+    }
+
+    .reservation h3 {
+      margin-bottom: 8px;
+      font-size: 2rem;
+    }
+
+    .reservation>p {
+      margin-bottom: 26px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .field-wide {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      min-height: 48px;
+      padding: 0 12px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .field input:focus,
+    .field select:focus {
+      outline: 2px solid var(--olive);
+      outline-offset: 1px;
+    }
+
+    .reservation .button {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .form-message {
+      min-height: 1.5em;
+      margin: 13px 0 0;
+      color: var(--olive);
+      font-size: .85rem;
+    }
+
+    .site-footer {
+      padding-block: 60px 24px;
+      background: #292a22;
+      color: var(--paper);
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 35px;
+      padding-bottom: 45px;
+    }
+
+    .footer-brand p {
+      max-width: 260px;
+      margin: 15px 0 0;
+      color: rgba(246, 241, 232, .65);
+      font-size: .86rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      padding-top: 8px;
+    }
+
+    .footer-links a {
+      color: rgba(246, 241, 232, .8);
+      font-size: .78rem;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(246, 241, 232, .2);
+      color: rgba(246, 241, 232, .55);
+      font-size: .72rem;
+    }
+
+    @media (max-width: 760px) {
+      .wrap {
+        width: min(100% - 36px, 560px);
+      }
+
+      .nav {
+        min-height: 76px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 24px 24px;
+        background: #292a22;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links>a:not(.button) {
+        padding: 13px 0;
+      }
+
+      .nav-links .button {
+        margin-top: 10px;
+      }
+
+      .hero {
+        min-height: 720px;
+        min-height: 90svh;
+        background-position: 58% center;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.6rem, 16vw, 6rem);
+      }
+
+      .hero-note {
+        right: 18px;
+        bottom: 24px;
+        font-size: .62rem;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 52px;
+        padding-block: 82px;
+      }
+
+      .intro-image {
+        min-height: 350px;
+        margin-right: 12px;
+      }
+
+      .intro-copy {
+        max-width: none;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .menu-section {
+        padding-block: 78px;
+      }
+
+      .menu-tabs {
+        gap: 4px;
+        overflow-x: auto;
+      }
+
+      .menu-tab {
+        flex: 0 0 auto;
+        padding-inline: 12px;
+        font-size: .7rem;
+      }
+
+      .menu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .season {
+        grid-template-columns: 1fr;
+      }
+
+      .season-image {
+        min-height: 340px;
+      }
+
+      .season-copy {
+        padding: 65px 28px 75px;
+      }
+
+      .visit {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding-block: 82px;
+      }
+
+      .visit-details {
+        margin-top: 32px;
+      }
+
+      .reservation {
+        padding: 28px 22px;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .footer-top {
+        padding-bottom: 30px;
+      }
+
+      .footer-bottom {
+        gap: 5px;
+      }
+    }
+
+    @media (max-width: 390px) {
+
+      .form-grid,
+      .visit-details {
+        grid-template-columns: 1fr;
+      }
+
+      .field-wide {
+        grid-column: auto;
+      }
+
+      .brand-name {
+        font-size: 1.15rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="Maison Sépia, accueil">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span class="brand-name">Maison Sépia</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+        aria-controls="nav-links">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#maison">La maison</a>
+        <a href="#carte">La carte</a>
+        <a href="#visite">Nous trouver</a>
+        <a class="button" href="#visite">Réserver <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content wrap">
+        <p class="eyebrow">Restaurant de quartier · Lyon 2<sup>e</sup></p>
+        <h1>Le goût des<br>bonnes choses.</h1>
+        <p class="hero-copy">Une cuisine vivante, généreuse et de saison. Des produits bien choisis, des assiettes
+          sincères, et toujours une place à votre table.</p>
+        <a class="button button-light" href="#carte">Découvrir la carte <span class="arrow"
+            aria-hidden="true">↓</span></a>
+      </div>
+      <p class="hero-note">Cuisine de saison · Fait maison</p>
+    </section>
+
+    <section class="intro wrap" id="maison">
+      <div class="intro-image">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1100&q=85"
+          alt="Salle chaleureuse et lumineuse de Maison Sépia" loading="lazy">
+      </div>
+      <div class="intro-copy">
+        <p class="eyebrow">Une maison, une histoire</p>
+        <h2>À table, on prend le temps.</h2>
+        <p>Maison Sépia, c’est l’envie de bien manger et de se sentir bien. Au fil des saisons, notre cuisine fait la
+          part belle aux producteurs voisins, aux légumes du marché et aux recettes qui rassemblent.</p>
+        <p>Un déjeuner qui s’étire, un dîner improvisé, un verre partagé au comptoir : poussez la porte, on s’occupe du
+          reste.</p>
+        <p class="signature">À très vite, Camille &amp; Thomas</p>
+      </div>
+    </section>
+
+    <section class="menu-section" id="carte">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Le menu du moment</p>
+            <h2>Simplement délicieux.</h2>
+          </div>
+          <p>Une carte courte, renouvelée au rythme du marché et des saisons. Du bon, du frais, et rien de compliqué.
+          </p>
+        </div>
+        <div class="menu-tabs" role="tablist" aria-label="Catégories de la carte">
+          <button class="menu-tab" type="button" role="tab" id="tab-entrees" aria-selected="true"
+            aria-controls="menu-items" data-category="entrees">Entrées</button>
+          <button class="menu-tab" type="button" role="tab" id="tab-plats" aria-selected="false"
+            aria-controls="menu-items" data-category="plats">Plats</button>
+          <button class="menu-tab" type="button" role="tab" id="tab-desserts" aria-selected="false"
+            aria-controls="menu-items" data-category="desserts">Desserts</button>
+          <button class="menu-tab" type="button" role="tab" id="tab-boissons" aria-selected="false"
+            aria-controls="menu-items" data-category="boissons">À boire</button>
+        </div>
+        <div class="menu-grid" id="menu-items" role="tabpanel" aria-labelledby="tab-entrees" aria-live="polite"></div>
+        <p class="menu-footnote">Carte susceptible d’évoluer selon les arrivages. Allergènes : n’hésitez pas à nous
+          demander.</p>
+      </div>
+    </section>
+
+    <section class="season">
+      <div class="season-image" role="img" aria-label="Assiette fraîche préparée avec des produits de saison"></div>
+      <div class="season-copy">
+        <p class="eyebrow">Du champ à l’assiette</p>
+        <h2>Les saisons<br>donnent le ton.</h2>
+        <p>Nous travaillons avec des producteurs passionnés, au plus près de Lyon. Leurs récoltes inspirent notre
+          cuisine : moins de kilomètres, plus de goût, et une carte qui change pour de vrai.</p>
+        <a class="button button-light" href="#visite">Venez goûter <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="visit wrap" id="visite">
+      <div class="visit-intro">
+        <p class="eyebrow">On vous garde une place</p>
+        <h2>À bientôt<br>à la maison.</h2>
+        <p>Au cœur de la Presqu’île, à deux pas des quais. Pour un déjeuner, un dîner ou juste un verre, on sera heureux
+          de vous accueillir.</p>
+        <div class="visit-details">
+          <div class="detail">
+            <h3>Adresse</h3>
+            <p>18 rue des Archers<br>69002 Lyon</p>
+          </div>
+          <div class="detail">
+            <h3>Horaires</h3>
+            <p>Mar. – Sam.<br>12h – 14h · 19h – 22h</p>
+          </div>
+          <div class="detail">
+            <h3>Nous appeler</h3>
+            <p><a href="tel:+33478234567">04 78 23 45 67</a></p>
+          </div>
+          <div class="detail">
+            <h3>Nous écrire</h3>
+            <p><a href="mailto:bonjour@maisonsepia.fr">bonjour@maisonsepia.fr</a></p>
+          </div>
+        </div>
+      </div>
+      <form class="reservation" id="reservation-form">
+        <h3>Réserver une table</h3>
+        <p>Un petit mot et on vous confirme ça par téléphone.</p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Votre nom</label>
+            <input id="name" name="name" type="text" autocomplete="name" placeholder="Camille Martin" required>
+          </div>
+          <div class="field">
+            <label for="phone">Téléphone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="06 12 34 56 78" required>
+          </div>
+          <div class="field">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="guests">Personnes</label>
+            <select id="guests" name="guests">
+              <option value="1">1 personne</option>
+              <option value="2" selected>2 personnes</option>
+              <option value="3">3 personnes</option>
+              <option value="4">4 personnes</option>
+              <option value="5">5 personnes</option>
+              <option value="6">6 personnes</option>
+            </select>
+          </div>
+          <div class="field field-wide">
+            <label for="service">Service</label>
+            <select id="service" name="service">
+              <option value="dejeuner">Déjeuner · 12h – 14h</option>
+              <option value="diner">Dîner · 19h – 22h</option>
+            </select>
+          </div>
+        </div>
+        <button class="button" type="submit">Demander une réservation <span class="arrow"
+            aria-hidden="true">↗</span></button>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#accueil"><span class="brand-mark" aria-hidden="true">S</span><span
+              class="brand-name">Maison Sépia</span></a>
+          <p>Une cuisine de saison, une maison ouverte. Au plaisir de vous recevoir à Lyon.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#maison">La maison</a>
+          <a href="#carte">La carte</a>
+          <a href="#visite">Réservations</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram ↗</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Maison Sépia · Fait avec gourmandise à Lyon</span>
+        <span>Mentions légales</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menu = {
+      entrees: [
+        { name: "Poireaux crayons", description: "Vinaigrette noisette, œuf mollet, herbes fraîches", price: "12 €" },
+        { name: "Terrine de campagne", description: "Pickles maison, pain au levain grillé", price: "13 €" },
+        { name: "Carottes rôties", description: "Yaourt battu, cumin, miel de pays", price: "11 €" },
+        { name: "Velouté du marché", description: "Légumes de saison, croûtons dorés", price: "10 €" }
+      ],
+      plats: [
+        { name: "Volaille fermière", description: "Jus court, purée de pommes de terre, champignons", price: "24 €" },
+        { name: "Pêche du jour", description: "Fenouil confit, agrumes, huile d’aneth", price: "26 €" },
+        { name: "Ravioles aux herbes", description: "Beurre noisette, sauge, vieux comté", price: "21 €" },
+        { name: "Légumes du maraîcher", description: "Céréales anciennes, crème de petits pois", price: "19 €" }
+      ],
+      desserts: [
+        { name: "Tarte fine aux pommes", description: "Pâte croustillante, crème crue vanillée", price: "10 €" },
+        { name: "Mousse au chocolat", description: "Chocolat noir, fleur de sel, noisettes", price: "9 €" },
+        { name: "Riz au lait", description: "Caramel ambré, riz de Camargue", price: "9 €" },
+        { name: "Fromages de la région", description: "Sélection affinée, confiture de saison", price: "12 €" }
+      ],
+      boissons: [
+        { name: "Verre de vin", description: "Sélection de vignerons indépendants", price: "dès 7 €" },
+        { name: "Jus de pomme fermier", description: "Pressé près de Lyon, sans sucres ajoutés", price: "5 €" },
+        { name: "Limonade artisanale", description: "Citron frais, bulles légères", price: "5 €" },
+        { name: "Café de spécialité", description: "Torréfié à Lyon, servi avec douceur", price: "3 €" }
+      ]
+    };
+
+    const tabs = [...document.querySelectorAll(".menu-tab")];
+    const menuItems = document.querySelector("#menu-items");
+
+    function showMenu(category) {
+      const activeTab = tabs.find((tab) => tab.dataset.category === category);
+      tabs.forEach((tab) => {
+        const selected = tab === activeTab;
+        tab.setAttribute("aria-selected", String(selected));
+        tab.tabIndex = selected ? 0 : -1;
+      });
+      menuItems.setAttribute("aria-labelledby", activeTab.id);
+      menuItems.innerHTML = menu[category].map((dish) => `
+        <article class="dish">
+          <div><h3>${dish.name}</h3><p>${dish.description}</p></div>
+          <span class="dish-price">${dish.price}</span>
+        </article>
+      `).join("");
+    }
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => showMenu(tab.dataset.category));
+      tab.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+          event.preventDefault();
+          const direction = event.key === "ArrowRight" ? 1 : -1;
+          const nextTab = tabs[(index + direction + tabs.length) % tabs.length];
+          nextTab.focus();
+          showMenu(nextTab.dataset.category);
+        }
+      });
+    });
+    showMenu("entrees");
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+    menuToggle.addEventListener("click", () => {
+      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!expanded));
+      menuToggle.setAttribute("aria-label", expanded ? "Ouvrir le menu" : "Fermer le menu");
+      navLinks.classList.toggle("is-open", !expanded);
+    });
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+      });
+    });
+
+    const dateInput = document.querySelector("#date");
+    const today = new Date();
+    dateInput.min = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    document.querySelector("#year").textContent = new Date().getFullYear();
+    document.querySelector("#reservation-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const name = form.elements.name.value.trim();
+      document.querySelector("#form-message").textContent =
+        `Merci ${name} ! Votre demande est prête. Appelez-nous au 04 78 23 45 67 pour confirmer votre réservation.`;
+      form.reset();
+      dateInput.min = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    });
+  </script>
+</body>
+
+</html>

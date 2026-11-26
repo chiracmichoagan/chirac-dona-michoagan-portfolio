@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description"
+    content="Maison Florale compose à la main des bouquets de saison, naturels et délicats. Découvrez notre atelier et commandez votre bouquet.">
+  <title>Maison Florale — Des fleurs, tout simplement</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #26372d;
+      --ink-soft: #68766a;
+      --paper: #f8f6f0;
+      --white: #fffefa;
+      --green: #526b50;
+      --green-dark: #3e573e;
+      --pink: #e6a99d;
+      --line: #e7e5dc;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: var(--sans);
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .announcement {
+      padding: 10px 20px;
+      background: var(--green);
+      color: white;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: .04em;
+    }
+
+    .announcement strong {
+      font-weight: 700;
+    }
+
+    .navbar {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid rgba(38, 55, 45, .08);
+      background: rgba(248, 246, 240, .94);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(82, 107, 80, .34);
+      border-radius: 50%;
+      color: var(--green);
+      font-family: var(--serif);
+      font-size: 22px;
+      font-style: italic;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1;
+    }
+
+    .brand-name small {
+      display: block;
+      margin-top: 6px;
+      color: var(--ink-soft);
+      font-family: var(--sans);
+      font-size: 8px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: #536157;
+      font-size: 12px;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: #b16e63;
+    }
+
+    .button {
+      min-height: 47px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid var(--green);
+      border-radius: 2px;
+      padding: 0 21px;
+      background: var(--green);
+      color: white;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      transition: background .2s, color .2s, transform .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--green-dark);
+    }
+
+    .button--outline {
+      background: transparent;
+      color: var(--green);
+    }
+
+    .button--outline:hover {
+      background: var(--green);
+      color: white;
+    }
+
+    .nav-cta {
+      min-height: 41px;
+      padding: 0 16px;
+    }
+
+    .menu-toggle {
+      width: 42px;
+      height: 42px;
+      display: none;
+      border: 1px solid var(--line);
+      background: transparent;
+      font-size: 21px;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #d7d1bd url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2200&q=88") center 48% / cover no-repeat;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(28, 43, 33, .7), rgba(28, 43, 33, .4) 47%, rgba(28, 43, 33, .04) 100%);
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 90px 0 105px;
+      color: white;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 25px;
+      height: 1px;
+      background: currentColor;
+      content: "";
+    }
+
+    .hero .eyebrow {
+      color: #f3d4c9;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+      margin: 22px 0 18px;
+      font-size: clamp(48px, 7vw, 82px);
+      letter-spacing: -.045em;
+      line-height: 1.02;
+    }
+
+    .hero h1 em {
+      color: #f0c5b7;
+      font-weight: 500;
+    }
+
+    .hero-copy {
+      max-width: 425px;
+      margin-bottom: 28px;
+      color: rgba(255, 255, 255, .86);
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero .button {
+      border-color: #f1e9df;
+      background: #f1e9df;
+      color: var(--ink);
+    }
+
+    .hero .button:hover {
+      background: white;
+    }
+
+    .hero .button--outline {
+      border-color: rgba(255, 255, 255, .65);
+      background: transparent;
+      color: white;
+    }
+
+    .hero .button--outline:hover {
+      background: white;
+      color: var(--ink);
+    }
+
+    .hero-note {
+      position: absolute;
+      right: 0;
+      bottom: 28px;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      color: rgba(255, 255, 255, .86);
+      font-size: 10px;
+      letter-spacing: .05em;
+    }
+
+    .hero-note span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-note span:first-child::before {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #c9dfb9;
+      content: "";
+    }
+
+    .promise {
+      background: var(--white);
+    }
+
+    .promise-grid {
+      min-height: 108px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+
+    .promise-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 18px;
+      border-right: 1px solid var(--line);
+    }
+
+    .promise-item:first-child {
+      justify-content: flex-start;
+    }
+
+    .promise-item:last-child {
+      justify-content: flex-end;
+      border: 0;
+    }
+
+    .promise-icon {
+      color: #b67a6e;
+      font-size: 19px;
+    }
+
+    .promise-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .promise-item small {
+      color: var(--ink-soft);
+      font-size: 10px;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading .eyebrow,
+    .about-copy .eyebrow,
+    .contact-copy .eyebrow {
+      color: #a76e63;
+    }
+
+    .section-heading h2 {
+      margin: 13px 0 0;
+      font-size: clamp(34px, 4vw, 48px);
+      letter-spacing: -.035em;
+      line-height: 1.12;
+    }
+
+    .section-heading p {
+      max-width: 355px;
+      margin: 0 0 3px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .filter-button {
+      min-height: 36px;
+      border: 1px solid #dcded4;
+      border-radius: 30px;
+      padding: 0 16px;
+      background: transparent;
+      color: #667368;
+      font-size: 10px;
+      cursor: pointer;
+      transition: all .2s;
+    }
+
+    .filter-button:hover,
+    .filter-button[aria-pressed="true"] {
+      border-color: var(--green);
+      background: var(--green);
+      color: white;
+    }
+
+    .bouquet-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .bouquet-card {
+      min-width: 0;
+    }
+
+    .bouquet-card[hidden] {
+      display: none;
+    }
+
+    .bouquet-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4 / 4.65;
+      background: #eae5da;
+    }
+
+    .bouquet-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+    }
+
+    .bouquet-card:hover .bouquet-image img {
+      transform: scale(1.045);
+    }
+
+    .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      padding: 7px 10px;
+      background: rgba(255, 254, 250, .94);
+      color: var(--green);
+      font-size: 9px;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .bouquet-info {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 15px 1px 0;
+    }
+
+    .bouquet-info h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+    }
+
+    .bouquet-info p {
+      margin: 0;
+      color: var(--ink-soft);
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    .price {
+      flex-shrink: 0;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .shop-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 13px;
+      color: #a76e63;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .shop-link:hover {
+      color: var(--green);
+    }
+
+    .season-note {
+      padding: 0 0 100px;
+    }
+
+    .season-panel {
+      min-height: 355px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      overflow: hidden;
+      background: #e8e7db;
+    }
+
+    .season-photo {
+      min-height: 355px;
+      background: #d8d5c8 url("https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=1100&q=85") center / cover no-repeat;
+    }
+
+    .season-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 55px clamp(28px, 6vw, 78px);
+    }
+
+    .season-content .eyebrow {
+      color: #a76e63;
+    }
+
+    .season-content h2 {
+      margin: 15px 0 13px;
+      font-size: clamp(32px, 4vw, 44px);
+      letter-spacing: -.03em;
+      line-height: 1.12;
+    }
+
+    .season-content p {
+      max-width: 370px;
+      margin-bottom: 23px;
+      color: #667166;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      align-items: center;
+      gap: clamp(40px, 8vw, 110px);
+    }
+
+    .about-image {
+      position: relative;
+      min-height: 490px;
+      background: #e7dfd2 url("https://images.unsplash.com/photo-1457089328109-e5d9bd499191?auto=format&fit=crop&w=1100&q=85") center / cover no-repeat;
+    }
+
+    .about-image::after {
+      position: absolute;
+      right: -16px;
+      bottom: -16px;
+      width: 64%;
+      height: 62%;
+      border: 1px solid #d7b6a8;
+      content: "";
+      pointer-events: none;
+    }
+
+    .about-copy {
+      padding: 15px 0;
+    }
+
+    .about-copy h2 {
+      margin: 15px 0 18px;
+      font-size: clamp(36px, 4.2vw, 50px);
+      letter-spacing: -.04em;
+      line-height: 1.1;
+    }
+
+    .about-copy h2 em {
+      color: #a76e63;
+      font-weight: 500;
+    }
+
+    .about-copy>p {
+      max-width: 490px;
+      margin-bottom: 18px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.95;
+    }
+
+    .signature {
+      margin-top: 25px;
+      color: #a76e63;
+      font-family: var(--serif);
+      font-size: 24px;
+      font-style: italic;
+    }
+
+    .signature small {
+      display: block;
+      margin-top: 5px;
+      color: var(--ink-soft);
+      font-family: var(--sans);
+      font-size: 9px;
+      font-style: normal;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .testimonial {
+      padding: 91px 0;
+      background: #e8e7db;
+      text-align: center;
+    }
+
+    .testimonial blockquote {
+      max-width: 760px;
+      margin: 22px auto 20px;
+      font-family: var(--serif);
+      font-size: clamp(24px, 3.5vw, 39px);
+      letter-spacing: -.02em;
+      line-height: 1.4;
+    }
+
+    .stars {
+      color: #a76e63;
+      font-size: 13px;
+      letter-spacing: .2em;
+    }
+
+    .quote-author {
+      color: var(--ink-soft);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      padding: 100px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 80px;
+    }
+
+    .contact-copy h2 {
+      margin: 14px 0 15px;
+      font-size: clamp(36px, 4vw, 48px);
+      line-height: 1.1;
+    }
+
+    .contact-copy>p {
+      max-width: 355px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    .contact-detail {
+      margin-top: 27px;
+      color: var(--ink-soft);
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    .contact-detail strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 17px 14px;
+      align-content: start;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .field--full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      color: #566257;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid #dedfd6;
+      border-radius: 0;
+      outline: none;
+      padding: 12px 13px;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 11px;
+    }
+
+    .field input,
+    .field select {
+      height: 44px;
+    }
+
+    .field textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--green);
+      box-shadow: 0 0 0 3px rgba(82, 107, 80, .1);
+    }
+
+    .contact-form .button {
+      justify-self: start;
+      grid-column: 1 / -1;
+      cursor: pointer;
+    }
+
+    .form-note {
+      grid-column: 1 / -1;
+      margin: -7px 0 0;
+      color: var(--ink-soft);
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    .footer {
+      padding: 38px 0 23px;
+      background: #304337;
+      color: white;
+    }
+
+    .footer-main {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 30px;
+    }
+
+    .footer .brand-mark {
+      border-color: rgba(255, 255, 255, .45);
+      color: white;
+    }
+
+    .footer .brand-name small {
+      color: rgba(255, 255, 255, .65);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      color: rgba(255, 255, 255, .78);
+      font-size: 10px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid rgba(255, 255, 255, .18);
+      padding-top: 18px;
+      color: rgba(255, 255, 255, .62);
+      font-size: 9px;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        gap: 18px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        min-height: 590px;
+        background-position: 58% center;
+      }
+
+      .promise-grid {
+        min-height: auto;
+        padding: 15px 0;
+      }
+
+      .promise-item {
+        justify-content: center !important;
+        padding: 12px;
+      }
+
+      .promise-item small {
+        font-size: 9px;
+      }
+
+      .section {
+        padding: 78px 0;
+      }
+
+      .bouquet-grid {
+        gap: 18px;
+      }
+
+      .season-note {
+        padding-bottom: 78px;
+      }
+
+      .about-grid {
+        gap: 42px;
+      }
+
+      .about-image {
+        min-height: 410px;
+      }
+
+      .contact-grid {
+        gap: 42px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 36px, 480px);
+      }
+
+      .announcement {
+        font-size: 9px;
+      }
+
+      .nav-inner {
+        height: 68px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 18px 15px;
+        background: var(--paper);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links a:last-child {
+        border-bottom: 0;
+      }
+
+      .hero {
+        min-height: 600px;
+        background-position: 59% center;
+      }
+
+      .hero::before {
+        background: linear-gradient(90deg, rgba(28, 43, 33, .76), rgba(28, 43, 33, .46) 72%, rgba(28, 43, 33, .2));
+      }
+
+      .hero-content {
+        width: calc(100% - 36px);
+        padding: 75px 0 88px;
+      }
+
+      .hero h1 {
+        max-width: 480px;
+        font-size: clamp(47px, 13vw, 66px);
+      }
+
+      .hero-copy {
+        max-width: 360px;
+        font-size: 12px;
+      }
+
+      .hero-note {
+        font-size: 8px;
+      }
+
+      .promise-grid {
+        grid-template-columns: 1fr;
+        padding: 7px 0;
+      }
+
+      .promise-item,
+      .promise-item:first-child,
+      .promise-item:last-child {
+        justify-content: flex-start !important;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 11px 3px;
+      }
+
+      .promise-item:last-child {
+        border-bottom: 0;
+      }
+
+      .promise-icon {
+        width: 27px;
+        text-align: center;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .section-heading {
+        display: block;
+        margin-bottom: 26px;
+      }
+
+      .section-heading p {
+        margin-top: 13px;
+      }
+
+      .bouquet-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 23px 13px;
+      }
+
+      .bouquet-image {
+        aspect-ratio: 4 / 4.8;
+      }
+
+      .bouquet-info h3 {
+        font-size: 15px;
+      }
+
+      .bouquet-info p {
+        font-size: 9px;
+      }
+
+      .price {
+        font-size: 10px;
+      }
+
+      .badge {
+        top: 9px;
+        left: 9px;
+        padding: 6px 7px;
+        font-size: 8px;
+      }
+
+      .season-note {
+        padding-bottom: 70px;
+      }
+
+      .season-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .season-photo {
+        min-height: 250px;
+      }
+
+      .season-content {
+        padding: 37px 25px 42px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 37px;
+      }
+
+      .about-image {
+        min-height: 390px;
+        margin-right: 14px;
+      }
+
+      .about-copy {
+        padding: 0;
+      }
+
+      .testimonial {
+        padding: 70px 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .contact-form {
+        gap: 14px 10px;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        font-size: 16px;
+      }
+
+      .footer-main {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        gap: 15px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">Fleurs de saison, cueillies avec soin <strong>· Livraison offerte dès 60 €</strong></div>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#accueil" aria-label="Maison Florale, accueil">
+        <span class="brand-mark" aria-hidden="true">mf</span>
+        <span class="brand-name">Maison Florale<small>Fleuriste & atelier</small></span>
+      </a>
+      <nav class="nav-links" id="navigation" aria-label="Navigation principale">
+        <a href="#bouquets">Nos bouquets</a>
+        <a href="#saison">La saison</a>
+        <a href="#atelier">Notre atelier</a>
+        <a href="#contact">Nous contacter</a>
+      </nav>
+      <a class="button nav-cta" href="#contact">Commander un bouquet <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="navigation"
+        aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <span class="eyebrow">Des fleurs, tout simplement</span>
+        <h1>Un peu de nature,<br><em>beaucoup d'émotion.</em></h1>
+        <p class="hero-copy">Des bouquets vivants et spontanés, imaginés à l'atelier au rythme des saisons. Pour les
+          beaux jours comme pour les petits riens.</p>
+        <div class="hero-actions">
+          <a class="button" href="#bouquets">Découvrir les bouquets <span aria-hidden="true">→</span></a>
+          <a class="button button--outline" href="#atelier">L'histoire de l'atelier</a>
+        </div>
+        <div class="hero-note">
+          <span>Compositions artisanales, faites à la main</span>
+          <span>Depuis 2016 · Lyon</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise" aria-label="Nos engagements">
+      <div class="container promise-grid">
+        <div class="promise-item"><span class="promise-icon" aria-hidden="true">✿</span>
+          <div><strong>De saison & de saisonnalité</strong><small>Des fleurs choisies au fil de l'année</small></div>
+        </div>
+        <div class="promise-item"><span class="promise-icon" aria-hidden="true">♡</span>
+          <div><strong>Composé à la main</strong><small>Chaque bouquet est unique</small></div>
+        </div>
+        <div class="promise-item"><span class="promise-icon" aria-hidden="true">⌁</span>
+          <div><strong>Livraison tout en douceur</strong><small>À vélo dans Lyon et ses environs</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="bouquets">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">Le jardin du moment</span>
+            <h2>Nos bouquets préférés</h2>
+          </div>
+          <p>Des fleurs fraîches sélectionnées chaque semaine. Choisissez votre bouquet, nous le préparons avec amour à
+            l'atelier.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrer les bouquets">
+          <button class="filter-button" type="button" data-filter="all" aria-pressed="true">Tout voir</button>
+          <button class="filter-button" type="button" data-filter="saison" aria-pressed="false">Bouquets de
+            saison</button>
+          <button class="filter-button" type="button" data-filter="occasion" aria-pressed="false">Pour offrir</button>
+          <button class="filter-button" type="button" data-filter="petit" aria-pressed="false">Petites
+            attentions</button>
+        </div>
+        <div class="bouquet-grid">
+          <article class="bouquet-card reveal" data-category="saison occasion">
+            <a class="bouquet-image" href="#contact" aria-label="Commander le bouquet L'Aube">
+              <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=850&q=82"
+                alt="Bouquet de fleurs roses et blanches dans un vase" loading="lazy">
+              <span class="badge">Coup de cœur</span>
+            </a>
+            <div class="bouquet-info">
+              <div>
+                <h3>L'Aube</h3>
+                <p>Renoncules, roses & feuillage léger</p>
+              </div><span class="price">45 €</span>
+            </div>
+            <a class="shop-link" href="#contact" data-product="L'Aube">Je le veux <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="bouquet-card reveal" data-category="saison">
+            <a class="bouquet-image" href="#contact" aria-label="Commander le bouquet Champ Libre">
+              <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=850&q=82"
+                alt="Composition généreuse de fleurs fraîches aux tons pastel" loading="lazy">
+              <span class="badge">Fleurs de saison</span>
+            </a>
+            <div class="bouquet-info">
+              <div>
+                <h3>Champ Libre</h3>
+                <p>Fleurs des champs, esprit sauvage</p>
+              </div><span class="price">38 €</span>
+            </div>
+            <a class="shop-link" href="#contact" data-product="Champ Libre">Je le veux <span
+                aria-hidden="true">→</span></a>
+          </article>
+          <article class="bouquet-card reveal" data-category="occasion">
+            <a class="bouquet-image" href="#contact" aria-label="Commander le bouquet Rose tendre">
+              <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?auto=format&fit=crop&w=850&q=82"
+                alt="Bouquet délicat de roses dans des tons poudrés" loading="lazy">
+              <span class="badge">À offrir</span>
+            </a>
+            <div class="bouquet-info">
+              <div>
+                <h3>Rose tendre</h3>
+                <p>Roses de jardin & petites fleurs</p>
+              </div><span class="price">52 €</span>
+            </div>
+            <a class="shop-link" href="#contact" data-product="Rose tendre">Je le veux <span
+                aria-hidden="true">→</span></a>
+          </article>
+          <article class="bouquet-card reveal" data-category="petit saison">
+            <a class="bouquet-image" href="#contact" aria-label="Commander le bouquet Petit Soleil">
+              <img src="https://images.unsplash.com/photo-1494625927555-6ec4433b1571?auto=format&fit=crop&w=850&q=82"
+                alt="Petite composition florale lumineuse" loading="lazy">
+              <span class="badge">Petite attention</span>
+            </a>
+            <div class="bouquet-info">
+              <div>
+                <h3>Petit Soleil</h3>
+                <p>Une touche de couleur à la maison</p>
+              </div><span class="price">28 €</span>
+            </div>
+            <a class="shop-link" href="#contact" data-product="Petit Soleil">Je le veux <span
+                aria-hidden="true">→</span></a>
+          </article>
+          <article class="bouquet-card reveal" data-category="saison occasion">
+            <a class="bouquet-image" href="#contact" aria-label="Commander le bouquet Jardin Secret">
+              <img src="https://images.unsplash.com/photo-1529257414772-1960b7bea4a4?auto=format&fit=crop&w=850&q=82"
+                alt="Bouquet romantique aux textures et couleurs naturelles" loading="lazy">
+              <span class="badge">En édition limitée</span>
+            </a>
+            <div class="bouquet-info">
+              <div>
+                <h3>Jardin Secret</h3>
+                <p>Dahlias, cosmos & feuillage du jour</p>
+              </div><span class="price">49 €</span>
+            </div>
+            <a class="shop-link" href="#contact" data-product="Jardin Secret">Je le veux <span
+                aria-hidden="true">→</span></a>
+          </article>
+          <article class="bouquet-card reveal" data-category="petit occasion">
+            <a class="bouquet-image" href="#contact" aria-label="Commander le bouquet Douceur">
+              <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=850&q=82"
+                alt="Bouquet de fleurs aux teintes douces et naturelles" loading="lazy">
+              <span class="badge">À offrir</span>
+            </a>
+            <div class="bouquet-info">
+              <div>
+                <h3>Douceur</h3>
+                <p>Un petit geste qui fait du bien</p>
+              </div><span class="price">32 €</span>
+            </div>
+            <a class="shop-link" href="#contact" data-product="Douceur">Je le veux <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="season-note" id="saison">
+      <div class="container season-panel reveal">
+        <div class="season-photo" role="img" aria-label="Fleurs de saison cueillies au jardin"></div>
+        <div class="season-content">
+          <span class="eyebrow">Au fil des saisons</span>
+          <h2>La beauté du moment,<br>sans en faire trop.</h2>
+          <p>Nous suivons le calendrier des fleurs pour composer avec ce que la nature offre de plus beau. Des couleurs
+            fraîches, des variétés locales, et un brin de poésie.</p>
+          <a class="button button--outline" href="#contact">Demander une composition <span
+              aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="atelier">
+      <div class="container about-grid">
+        <div class="about-image reveal" role="img" aria-label="Fleuriste préparant un bouquet dans son atelier"></div>
+        <div class="about-copy reveal">
+          <span class="eyebrow">Une histoire de fleurs</span>
+          <h2>Un atelier à taille humaine,<br><em>un amour immense.</em></h2>
+          <p>Maison Florale, c'est le petit atelier de Camille, fleuriste passionnée et cueilleuse de jolis instants.
+            Ici, pas de bouquet tout fait : chaque composition raconte une histoire et trouve son inspiration dans les
+            fleurs du jour.</p>
+          <p>Nous travaillons avec des producteurs locaux dès que la saison le permet, et emballons vos bouquets dans
+            des matières simples et responsables. De la fleur au ruban, chaque détail compte.</p>
+          <a class="button button--outline" href="#contact">Passer à l'atelier <span aria-hidden="true">→</span></a>
+          <div class="signature">Camille<small>Fleuriste & fondatrice</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial">
+      <div class="container reveal">
+        <span class="eyebrow">Vos mots doux</span>
+        <div class="stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote>« Un bouquet plein de vie, composé avec beaucoup de goût. On a l'impression d'avoir un petit bout de
+          jardin chez soi. »</blockquote>
+        <p class="quote-author">Émilie · Cliente de l'atelier</p>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <span class="eyebrow">Une envie fleurie ?</span>
+          <h2>Parlons de votre<br>prochain bouquet.</h2>
+          <p>Un anniversaire, un grand jour ou juste envie de fleurs ? Racontez-nous ce que vous imaginez. Nous vous
+            répondrons avec plaisir.</p>
+          <div class="contact-detail"><strong>Maison Florale</strong><br>18 rue des Capucins, 69001 Lyon<br>Du mardi au
+            samedi · 10h–19h<br><a href="tel:+33472000000">04 72 00 00 00</a> · <a
+              href="mailto:bonjour@maisonflorale.fr">bonjour@maisonflorale.fr</a></div>
+        </div>
+        <form class="contact-form reveal" id="contact-form">
+          <div class="field"><label for="name">Votre prénom</label><input id="name" name="name" type="text"
+              placeholder="Camille" autocomplete="given-name" required></div>
+          <div class="field"><label for="email">Votre adresse e-mail</label><input id="email" name="email" type="email"
+              placeholder="camille@exemple.fr" autocomplete="email" required></div>
+          <div class="field field--full"><label for="occasion">Votre occasion</label><select id="occasion"
+              name="occasion">
+              <option value="">Choisir une occasion</option>
+              <option>Juste pour le plaisir</option>
+              <option>Anniversaire</option>
+              <option>Mariage ou événement</option>
+              <option>Un dernier hommage</option>
+              <option>Autre demande</option>
+            </select></div>
+          <div class="field field--full"><label for="message">Quelques mots sur votre bouquet</label><textarea
+              id="message" name="message" placeholder="Les couleurs, les fleurs, la date souhaitée…"></textarea></div>
+          <button class="button" type="submit">Préparer ma demande <span aria-hidden="true">→</span></button>
+          <p class="form-note">Votre demande s'ouvrira dans votre application de messagerie afin que vous puissiez nous
+            l'envoyer.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <a class="brand" href="#accueil" aria-label="Maison Florale, retour en haut">
+          <span class="brand-mark" aria-hidden="true">mf</span>
+          <span class="brand-name">Maison Florale<small>Fleuriste & atelier</small></span>
+        </a>
+        <nav class="footer-links" aria-label="Liens de pied de page">
+          <a href="#bouquets">Les bouquets</a><a href="#atelier">L'atelier</a><a href="#contact">Contact</a><a
+            href="mailto:bonjour@maisonflorale.fr">Nous écrire</a>
+        </nav>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> Maison Florale · Fait avec amour à Lyon</span><a
+          href="#accueil">Retour en haut ↑</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#navigation");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Ouvrir le menu" : "Fermer le menu");
+      menuToggle.textContent = isOpen ? "☰" : "×";
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navigation.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.querySelectorAll(".filter-button").forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        document.querySelectorAll(".filter-button").forEach((item) => {
+          item.setAttribute("aria-pressed", String(item === button));
+        });
+        document.querySelectorAll(".bouquet-card").forEach((card) => {
+          const categories = card.dataset.category.split(" ");
+          card.hidden = filter !== "all" && !categories.includes(filter);
+        });
+      });
+    });
+
+    document.querySelectorAll("[data-product]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const message = document.querySelector("#message");
+        message.value = `Bonjour, je souhaiterais commander le bouquet ${link.dataset.product}.`;
+      });
+    });
+
+    document.querySelector("#contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const data = new FormData(form);
+      const subject = `Demande de bouquet — ${data.get("name")}`;
+      const body = [
+        `Bonjour Maison Florale,`,
+        ``,
+        `Je m'appelle ${data.get("name")} (${data.get("email")}).`,
+        `Occasion : ${data.get("occasion") || "non précisée"}.`,
+        ``,
+        data.get("message") || "Je souhaiterais échanger au sujet d'un bouquet.",
+      ].join("\n");
+      window.location.href = `mailto:bonjour@maisonflorale.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
+    } else {
+      document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
+    }
+  </script>
+</body>
+
+</html>

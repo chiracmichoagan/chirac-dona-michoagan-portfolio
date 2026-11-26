@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f8f7">
+  <meta name="description"
+    content="Le cabinet du Dr Camille Laurent, médecin généraliste à Lyon. Une médecine attentive, des consultations sur rendez-vous et un accompagnement personnalisé.">
+  <title>Dr Camille Laurent — Médecine générale à Lyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #19333a;
+      --muted: #647a7d;
+      --teal: #167c78;
+      --teal-dark: #116763;
+      --mint: #e7f2ef;
+      --paper: #f4f8f7;
+      --white: #fff;
+      --line: #dce8e5;
+      --sans: "DM Sans", sans-serif;
+      --display: "Manrope", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-family: var(--sans);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--display);
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .topline {
+      padding: 9px 16px;
+      background: var(--ink);
+      color: #e9f4f1;
+      text-align: center;
+      font-size: 11px;
+    }
+
+    .topline span {
+      color: #9de0ce;
+    }
+
+    .navbar {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid rgba(25, 51, 58, .08);
+      background: rgba(244, 248, 247, .95);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: var(--teal);
+      color: white;
+    }
+
+    .brand-mark svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .brand-name {
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .brand-name small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: #52696d;
+      font-size: 12px;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .button {
+      min-height: 47px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 1px solid var(--teal);
+      border-radius: 7px;
+      padding: 0 19px;
+      background: var(--teal);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--teal-dark);
+      box-shadow: 0 8px 20px rgba(22, 124, 120, .18);
+    }
+
+    .button svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .button--outline {
+      border-color: rgba(255, 255, 255, .62);
+      background: transparent;
+      color: white;
+    }
+
+    .button--outline:hover {
+      background: white;
+      color: var(--ink);
+    }
+
+    .nav-cta {
+      min-height: 41px;
+      padding: 0 15px;
+      font-size: 11px;
+    }
+
+    .menu-toggle {
+      width: 42px;
+      height: 42px;
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: transparent;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: #35595a url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2200&q=88") center 44% / cover no-repeat;
+    }
+
+    .hero::before {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(17, 45, 51, .88), rgba(17, 45, 51, .68) 47%, rgba(17, 45, 51, .08));
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      width: min(1160px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 86px 0 105px;
+      color: white;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--teal);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 22px;
+      height: 2px;
+      border-radius: 2px;
+      background: currentColor;
+      content: "";
+    }
+
+    .hero .eyebrow {
+      color: #a9e3d4;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+      margin: 22px 0 18px;
+      font-size: clamp(44px, 6.5vw, 76px);
+      font-weight: 700;
+      letter-spacing: -.06em;
+      line-height: 1.06;
+    }
+
+    .hero h1 span {
+      color: #a9e3d4;
+    }
+
+    .hero-copy {
+      max-width: 450px;
+      margin-bottom: 28px;
+      color: rgba(255, 255, 255, .84);
+      font-size: 14px;
+      line-height: 1.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero .button {
+      border-color: #9be0ce;
+      background: #9be0ce;
+      color: var(--ink);
+    }
+
+    .hero .button:hover {
+      border-color: white;
+      background: white;
+    }
+
+    .hero .button--outline {
+      border-color: rgba(255, 255, 255, .62);
+      background: transparent;
+      color: white;
+    }
+
+    .hero .button--outline:hover {
+      background: white;
+      color: var(--ink);
+    }
+
+    .hero-caption {
+      position: absolute;
+      right: 0;
+      bottom: 24px;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: rgba(255, 255, 255, .84);
+      font-size: 10px;
+    }
+
+    .hero-caption span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-caption span:first-child::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #9be0ce;
+      content: "";
+    }
+
+    .trust {
+      background: var(--white);
+    }
+
+    .trust-grid {
+      min-height: 105px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px 18px;
+      border-right: 1px solid var(--line);
+    }
+
+    .trust-item:first-child {
+      justify-content: flex-start;
+    }
+
+    .trust-item:last-child {
+      justify-content: flex-end;
+      border: 0;
+    }
+
+    .trust-icon {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      flex: 0 0 38px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--mint);
+      color: var(--teal);
+    }
+
+    .trust-icon svg {
+      width: 19px;
+      height: 19px;
+    }
+
+    .trust-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-family: var(--display);
+      font-size: 12px;
+    }
+
+    .trust-item small {
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .section {
+      padding: 94px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 34px;
+    }
+
+    .section-heading h2,
+    .about-copy h2,
+    .contact-copy h2 {
+      margin: 13px 0 0;
+      font-size: clamp(32px, 4vw, 47px);
+      font-weight: 700;
+      letter-spacing: -.055em;
+      line-height: 1.13;
+    }
+
+    .section-heading p {
+      max-width: 360px;
+      margin: 0 0 3px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    .services {
+      background: var(--white);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      min-height: 215px;
+      padding: 25px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: white;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: #b7d8d1;
+      box-shadow: 0 14px 32px rgba(25, 51, 58, .06);
+    }
+
+    .service-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 21px;
+      border-radius: 13px;
+      background: var(--mint);
+      color: var(--teal);
+    }
+
+    .service-icon svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 9px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .about-photo {
+      position: relative;
+      min-height: 440px;
+      border-radius: 13px;
+      background: #dce9e5 url("https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1100&q=85") center 38% / cover no-repeat;
+    }
+
+    .about-photo::after {
+      position: absolute;
+      right: -17px;
+      bottom: -17px;
+      z-index: -1;
+      width: 68%;
+      height: 65%;
+      border-radius: 12px;
+      background: #dcece7;
+      content: "";
+    }
+
+    .about-badge {
+      position: absolute;
+      right: -27px;
+      bottom: 28px;
+      width: 160px;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      background: white;
+      box-shadow: 0 10px 28px rgba(25, 51, 58, .09);
+    }
+
+    .about-badge strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--teal);
+      font-family: var(--display);
+      font-size: 20px;
+    }
+
+    .about-badge span {
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .about-copy .eyebrow,
+    .contact-copy .eyebrow {
+      color: var(--teal);
+    }
+
+    .about-copy h2 {
+      max-width: 500px;
+      margin-bottom: 17px;
+    }
+
+    .about-copy>p {
+      max-width: 520px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 13px;
+      margin: 24px 0 27px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #40595c;
+      font-size: 11px;
+    }
+
+    .check {
+      width: 21px;
+      height: 21px;
+      display: grid;
+      flex: 0 0 21px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--mint);
+      color: var(--teal);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .approach {
+      background: #eaf3f0;
+    }
+
+    .approach .section-heading {
+      margin-bottom: 36px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .step {
+      padding-top: 21px;
+      border-top: 1px solid #b8d3cd;
+    }
+
+    .step-number {
+      display: block;
+      margin-bottom: 23px;
+      color: var(--teal);
+      font-family: var(--display);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    .step h3 {
+      margin-bottom: 9px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .step p {
+      max-width: 300px;
+      margin: 0;
+      color: #607679;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .contact {
+      background: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .82fr 1.18fr;
+      gap: 70px;
+    }
+
+    .contact-copy h2 {
+      margin-bottom: 14px;
+    }
+
+    .contact-copy>p {
+      max-width: 360px;
+      margin-bottom: 25px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 17px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .contact-detail .trust-icon {
+      width: 36px;
+      height: 36px;
+      flex-basis: 36px;
+      border-radius: 10px;
+    }
+
+    .contact-detail strong {
+      display: block;
+      margin: 2px 0 5px;
+      font-size: 11px;
+    }
+
+    .contact-detail span,
+    .contact-detail a {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.65;
+    }
+
+    .contact-detail a:hover {
+      color: var(--teal);
+    }
+
+    .contact-form {
+      padding: 27px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: #fbfdfc;
+    }
+
+    .form-heading {
+      margin-bottom: 20px;
+    }
+
+    .form-heading h3 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .form-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field--wide {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      color: #41595d;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-height: 43px;
+      border: 1px solid #dce7e4;
+      border-radius: 6px;
+      outline: 0;
+      padding: 11px 12px;
+      background: white;
+      color: var(--ink);
+      font-size: 11px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .field textarea {
+      min-height: 88px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(22, 124, 120, .1);
+    }
+
+    .form-note {
+      margin: 13px 0 16px;
+      color: var(--muted);
+      font-size: 9px;
+      line-height: 1.65;
+    }
+
+    .contact-form .button {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .form-feedback {
+      display: none;
+      margin: 14px 0 0;
+      border-radius: 6px;
+      padding: 12px;
+      background: var(--mint);
+      color: #245c55;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .form-feedback.is-visible {
+      display: block;
+    }
+
+    .faq {
+      padding: 76px 0;
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 68px;
+    }
+
+    .faq-title h2 {
+      margin: 14px 0 12px;
+      font-size: clamp(30px, 3.5vw, 40px);
+      letter-spacing: -.05em;
+    }
+
+    .faq-title p {
+      max-width: 300px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      border: 0;
+      padding: 19px 0;
+      background: transparent;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .faq-question span:last-child {
+      color: var(--teal);
+      font-size: 18px;
+      font-weight: 400;
+      transition: transform .2s;
+    }
+
+    .faq-question[aria-expanded="true"] span:last-child {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .25s ease;
+    }
+
+    .faq-answer>div {
+      overflow: hidden;
+    }
+
+    .faq-answer p {
+      max-width: 600px;
+      margin: 0;
+      padding: 0 30px 18px 0;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .faq-item.is-open .faq-answer {
+      grid-template-rows: 1fr;
+    }
+
+    .footer {
+      padding: 30px 0;
+      border-top: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .footer-copy {
+      color: var(--muted);
+      font-size: 9px;
+      line-height: 1.7;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 19px;
+      color: #52696d;
+      font-size: 10px;
+    }
+
+    .footer-links a:hover {
+      color: var(--teal);
+    }
+
+    .disclaimer {
+      margin: 20px 0 0;
+      color: #849497;
+      font-size: 9px;
+      line-height: 1.65;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity .55s ease, transform .55s ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 17px;
+      }
+
+      .about-grid {
+        gap: 48px;
+      }
+
+      .contact-grid,
+      .faq-layout {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      html {
+        scroll-padding-top: 72px;
+      }
+
+      .container {
+        width: min(100% - 36px, 560px);
+      }
+
+      .topline {
+        font-size: 10px;
+      }
+
+      .nav-inner {
+        min-height: 68px;
+        gap: 12px;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: grid;
+        flex: 0 0 42px;
+        place-items: center;
+        margin-left: auto;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        margin: 0;
+        border-bottom: 1px solid var(--line);
+        padding: 8px 18px 14px;
+        background: var(--paper);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        padding: 13px 4px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .nav-links a:last-child {
+        border-bottom: 0;
+      }
+
+      .hero {
+        min-height: 590px;
+        background-position: 58% center;
+      }
+
+      .hero::before {
+        background: linear-gradient(90deg, rgba(17, 45, 51, .88), rgba(17, 45, 51, .62) 72%, rgba(17, 45, 51, .3));
+      }
+
+      .hero-content {
+        width: min(100% - 36px, 560px);
+        padding: 70px 0 90px;
+      }
+
+      .hero h1 {
+        max-width: 520px;
+        font-size: clamp(43px, 11vw, 64px);
+      }
+
+      .hero-copy {
+        max-width: 390px;
+        font-size: 13px;
+      }
+
+      .hero-caption {
+        width: min(100% - 36px, 560px);
+        margin: 0 auto;
+        font-size: 9px;
+      }
+
+      .hero-caption span:last-child {
+        text-align: right;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        padding: 9px 0;
+      }
+
+      .trust-item,
+      .trust-item:first-child,
+      .trust-item:last-child {
+        justify-content: flex-start;
+        border: 0;
+        padding: 11px 4px;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .service-card {
+        min-height: 200px;
+        padding: 19px;
+      }
+
+      .about-grid,
+      .contact-grid,
+      .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 37px;
+      }
+
+      .about-photo {
+        min-height: 420px;
+        margin-right: 14px;
+      }
+
+      .steps {
+        gap: 18px;
+      }
+
+      .faq-layout {
+        gap: 22px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .container,
+      .hero-content {
+        width: calc(100% - 32px);
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .hero {
+        min-height: 570px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        max-width: 270px;
+      }
+
+      .hero-caption {
+        width: calc(100% - 32px);
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 7px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: 0;
+      }
+
+      .about-photo {
+        min-height: 360px;
+      }
+
+      .about-badge {
+        right: -12px;
+        bottom: 18px;
+        width: 145px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .step {
+        display: grid;
+        grid-template-columns: 48px 1fr;
+        column-gap: 12px;
+      }
+
+      .step-number {
+        grid-row: span 2;
+        margin: 3px 0 0;
+      }
+
+      .step h3 {
+        margin-bottom: 6px;
+      }
+
+      .step p {
+        grid-column: 2;
+      }
+
+      .contact-form {
+        padding: 20px 16px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field--wide {
+        grid-column: auto;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline">Nouveau patient ? <span>Le cabinet vous accueille sur rendez-vous.</span></div>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#accueil" aria-label="Dr Camille Laurent, accueil">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round">
+            <path d="M12 4v16M4 12h16" />
+          </svg></span>
+        <span class="brand-name">Dr Camille Laurent<small>Médecine générale</small></span>
+      </a>
+      <nav class="nav-links" id="navigation-principale" aria-label="Navigation principale">
+        <a href="#soins">Soins</a><a href="#medecin">Le médecin</a><a href="#deroulement">Votre visite</a><a
+          href="#questions">Questions</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="button nav-cta" href="#contact">Prendre rendez-vous <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+        aria-controls="navigation-principale">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <span class="eyebrow">Cabinet médical · Lyon 6<sup>e</sup></span>
+        <h1>Prendre soin de vous, <span>simplement.</span></h1>
+        <p class="hero-copy">Une médecine de proximité, à l’écoute de chacun. Je vous accompagne à chaque étape de votre
+          santé, avec attention et confiance.</p>
+        <div class="hero-actions"><a class="button" href="#contact">Demander un rendez-vous <span
+              aria-hidden="true">→</span></a><a class="button button--outline" href="#soins">Découvrir le cabinet</a>
+        </div>
+        <div class="hero-caption"><span>Consultations adultes et enfants</span><span>12 rue des Tilleuls, Lyon
+            6<sup>e</sup></span></div>
+      </div>
+    </section>
+
+    <section class="trust" aria-label="Informations pratiques">
+      <div class="container trust-grid">
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="16" rx="2" />
+              <path d="M16 3v4M8 3v4M3 10h18" />
+            </svg></span><span><strong>Sur rendez-vous</strong><small>Pour prendre le temps nécessaire</small></span>
+        </div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+              <circle cx="12" cy="10" r="2.5" />
+            </svg></span><span><strong>Au cœur de Lyon</strong><small>Facilement accessible en transports</small></span>
+        </div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg></span><span><strong>Écoute et confidentialité</strong><small>Un échange en toute
+              confiance</small></span></div>
+      </div>
+    </section>
+
+    <section class="section services" id="soins">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">Un accompagnement complet</span>
+            <h2>Des soins adaptés à<br>chaque moment de vie.</h2>
+          </div>
+          <p>Du suivi régulier aux petits maux du quotidien, chaque consultation est un temps d’échange dédié à votre
+            santé.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 3v4M16 3v4M5 8h14M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z" />
+                <path d="M12 12v6M9 15h6" />
+              </svg></span>
+            <h3>Consultation générale</h3>
+            <p>Évaluation de votre santé, diagnostic et prise en charge des problèmes courants.</p>
+          </article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="5" />
+                <path d="M8.5 12 7 22l5-3 5 3-1.5-10" />
+              </svg></span>
+            <h3>Prévention & dépistage</h3>
+            <p>Bilans de santé, conseils de prévention et dépistages selon votre situation.</p>
+          </article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.9A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z" />
+                <path d="M8 12h8M12 8v8" />
+              </svg></span>
+            <h3>Suivi des maladies chroniques</h3>
+            <p>Un suivi régulier et coordonné pour mieux vivre avec une maladie chronique.</p>
+          </article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3 4 7v5c0 5 3.4 8 8 9 4.6-1 8-4 8-9V7l-8-4Z" />
+                <path d="M12 8v8M8 12h8" />
+              </svg></span>
+            <h3>Vaccination</h3>
+            <p>Conseils et vaccinations recommandées à chaque âge de la vie.</p>
+          </article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 12h4l3-8 4 16 3-8h4" />
+              </svg></span>
+            <h3>Santé de l’enfant</h3>
+            <p>Consultations de suivi, prévention et accompagnement des familles.</p>
+          </article>
+          <article class="service-card reveal"><span class="service-icon" aria-hidden="true"><svg viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z" />
+                <path d="M9 12h6M12 9v6" />
+              </svg></span>
+            <h3>Certificats & conseils</h3>
+            <p>Un accompagnement pour vos démarches de santé et vos questions du quotidien.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="medecin">
+      <div class="container about-grid">
+        <div class="about-photo reveal" role="img" aria-label="Portrait d’une médecin dans son cabinet">
+          <div class="about-badge"><strong>À vos côtés</strong><span>Un suivi médical attentif et personnalisé.</span>
+          </div>
+        </div>
+        <div class="about-copy reveal"><span class="eyebrow">Votre médecin</span>
+          <h2>Une relation de confiance, avant tout.</h2>
+          <p>Je suis le Dr Camille Laurent, médecin généraliste. Je crois en une médecine accessible, préventive et
+            profondément humaine, où chaque patient est accueilli et écouté sans jugement.</p>
+          <p>Mon rôle est de vous accompagner dans la durée, de répondre à vos questions et de construire avec vous un
+            parcours de soins qui vous ressemble.</p>
+          <ul class="check-list">
+            <li><span class="check" aria-hidden="true">✓</span>Médecine générale pour adultes et enfants</li>
+            <li><span class="check" aria-hidden="true">✓</span>Consultations dans un cadre calme et confidentiel</li>
+            <li><span class="check" aria-hidden="true">✓</span>Coordination avec vos autres professionnels de santé</li>
+          </ul>
+          <a class="button" href="#contact">Rencontrons-nous <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach" id="deroulement">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">Votre consultation</span>
+            <h2>Un parcours simple,<br>en toute sérénité.</h2>
+          </div>
+          <p>Un accueil attentif et des informations claires, avant, pendant et après votre rendez-vous.</p>
+        </div>
+        <div class="steps">
+          <article class="step reveal"><span class="step-number">01 / RENDEZ-VOUS</span>
+            <h3>Choisissez votre créneau</h3>
+            <p>Contactez le cabinet par téléphone pour convenir d’un rendez-vous adapté à vos disponibilités.</p>
+          </article>
+          <article class="step reveal"><span class="step-number">02 / CONSULTATION</span>
+            <h3>Nous prenons le temps</h3>
+            <p>Nous échangeons sur vos besoins et votre santé, dans un cadre confidentiel et bienveillant.</p>
+          </article>
+          <article class="step reveal"><span class="step-number">03 / SUIVI</span>
+            <h3>Vous repartez accompagné</h3>
+            <p>Vous recevez des explications claires et, si nécessaire, un plan de suivi personnalisé.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal"><span class="eyebrow">Nous contacter</span>
+          <h2>À votre écoute,<br>tout simplement.</h2>
+          <p>Pour organiser une consultation ou poser une question pratique, contactez le cabinet. En cas d’urgence
+            médicale, composez le 15 ou le 112.</p>
+          <div class="contact-details">
+            <div class="contact-detail"><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 3.1 5.2 2 2 0 0 1 5.1 3h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.7L8.1 11a16 16 0 0 0 4.9 4.9l1.6-1.9a2 2 0 0 1 1.7-.6l3 .5a2 2 0 0 1 1.7 2Z" />
+                </svg></span><span><strong>Téléphone</strong><a href="tel:+33472000000">04 72 00 00 00</a></span></div>
+            <div class="contact-detail"><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z" />
+                  <circle cx="12" cy="10" r="2.5" />
+                </svg></span><span><strong>Adresse</strong><span>12 rue des Tilleuls, 69006 Lyon</span></span></div>
+            <div class="contact-detail"><span class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg></span><span><strong>Horaires indicatifs</strong><span>Lun–Ven, 9 h–18 h · Sur
+                  rendez-vous</span></span></div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-heading">
+            <h3>Demander à être recontacté</h3>
+            <p>Ce formulaire est une démonstration et ne transmet aucune donnée au cabinet.</p>
+          </div>
+          <div class="form-grid">
+            <div class="field"><label for="nom">Votre nom</label><input id="nom" name="nom" type="text"
+                autocomplete="name" required></div>
+            <div class="field"><label for="telephone">Votre téléphone</label><input id="telephone" name="telephone"
+                type="tel" autocomplete="tel" required></div>
+            <div class="field field--wide"><label for="motif">Motif de votre demande</label><select id="motif"
+                name="motif" required>
+                <option value="">Choisir un motif</option>
+                <option>Consultation générale</option>
+                <option>Suivi / prévention</option>
+                <option>Question pratique</option>
+                <option>Autre demande</option>
+              </select></div>
+            <div class="field field--wide"><label for="message">Votre message <span style="font-weight:400">(facultatif,
+                  sans information médicale)</span></label><textarea id="message" name="message"
+                placeholder="Indiquez vos disponibilités, sans détail médical..."></textarea></div>
+          </div>
+          <p class="form-note">Évitez de transmettre des informations de santé par ce formulaire. Pour toute question
+            médicale, contactez directement le cabinet.</p>
+          <button class="button" type="submit">Préparer ma demande <span aria-hidden="true">→</span></button>
+          <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="faq" id="questions">
+      <div class="container faq-layout">
+        <div class="faq-title reveal"><span class="eyebrow">Bon à savoir</span>
+          <h2>Vos questions,<br>nos réponses.</h2>
+          <p>Vous ne trouvez pas l’information recherchée ? Appelez le cabinet, nous vous renseignerons.</p>
+        </div>
+        <div class="faq-list reveal">
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Comment
+                prendre rendez-vous ?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <div>
+                <p>Appelez le cabinet au 04 72 00 00 00 afin de convenir d’un créneau. Ce site est une maquette de
+                  démonstration et ne permet pas de réserver un rendez-vous en ligne.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Quels
+                documents apporter ?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <div>
+                <p>Pensez à apporter votre carte Vitale, votre carte de complémentaire santé et, si vous en disposez,
+                  vos ordonnances ou résultats d’examens récents utiles à la consultation.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Le cabinet
+                reçoit-il les enfants ?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <div>
+                <p>Oui, le cabinet accueille les adultes et les enfants pour les consultations de médecine générale et
+                  le suivi de prévention.</p>
+              </div>
+            </div>
+          </article>
+          <article class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Que faire en
+                cas d’urgence ?</span><span aria-hidden="true">+</span></button>
+            <div class="faq-answer">
+              <div>
+                <p>En cas d’urgence médicale, appelez le 15 (SAMU) ou le 112. N’utilisez pas le formulaire de ce site
+                  pour une urgence ou une demande médicale urgente.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">© <span id="current-year"></span> Dr Camille Laurent · Médecine générale<br>12 rue des
+          Tilleuls, 69006 Lyon</div>
+        <nav class="footer-links" aria-label="Liens de pied de page"><a href="#accueil">Accueil</a><a
+            href="#contact">Contact</a><a href="#questions">Questions fréquentes</a></nav>
+      </div>
+      <p class="disclaimer">Site de démonstration : nom, coordonnées et informations fictifs. Ce site ne remplace pas
+        une consultation médicale et ne constitue pas un service d’urgence. En cas d’urgence, appelez le 15 ou le 112.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      menuToggle.setAttribute("aria-label", isExpanded ? "Ouvrir le menu" : "Fermer le menu");
+      navLinks.classList.toggle("is-open", !isExpanded);
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+      });
+    });
+
+    document.querySelectorAll(".faq-question").forEach((question) => {
+      question.addEventListener("click", () => {
+        const isExpanded = question.getAttribute("aria-expanded") === "true";
+        question.setAttribute("aria-expanded", String(!isExpanded));
+        question.closest(".faq-item").classList.toggle("is-open", !isExpanded);
+      });
+    });
+
+    const contactForm = document.querySelector("#contact-form");
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) return;
+      const feedback = document.querySelector("#form-feedback");
+      feedback.textContent = "Merci " + contactForm.elements.nom.value.trim() + " ! Ceci est une maquette : votre demande n’a pas été envoyée. Appelez le cabinet au 04 72 00 00 00 pour prendre rendez-vous.";
+      feedback.classList.add("is-visible");
+      contactForm.reset();
+    });
+
+    document.querySelector("#current-year").textContent = new Date().getFullYear();
+
+    const revealElements = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealElements.forEach((element) => revealObserver.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("is-visible"));
+    }
+  </script>
+</body>
+
+</html>

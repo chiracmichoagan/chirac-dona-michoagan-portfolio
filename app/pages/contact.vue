@@ -238,6 +238,8 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig()
+
 const form = ref({
   name: "",
   email: "",
@@ -254,14 +256,11 @@ const formStatus = ref({
 });
 
 const submitForm = async () => {
-  loading.value = true;
-
-  // Validation du formulaire
   if (
-    !form.value.name ||
-    !form.value.email ||
-    !form.value.subject ||
-    !form.value.message
+    !form.value.name.trim() ||
+    !form.value.email.trim() ||
+    !form.value.subject.trim() ||
+    !form.value.message.trim()
   ) {
     formStatus.value = {
       show: true,
@@ -269,36 +268,71 @@ const submitForm = async () => {
       title: "Erreur",
       message: "Veuillez remplir tous les champs du formulaire.",
     };
-    loading.value = false;
     return;
   }
 
-  // Envoi du formulaire
-  await new Promise((resolve) => setTimeout(resolve, 1500));
+  if (!config.public.web3formsKey) {
+    formStatus.value = {
+      show: true,
+      type: "danger",
+      title: "Configuration manquante",
+      message: "L'envoi du formulaire n'est pas configuré. Veuillez réessayer plus tard.",
+    };
+    return;
+  }
 
-  // Affichage du message de succès
-  formStatus.value = {
-    show: true,
-    type: "success",
-    title: "Message envoyé !",
-    message:
-      "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
-  };
+  loading.value = true;
+  formStatus.value.show = false;
 
-  // Réinitialisation du formulaire
-  form.value = {
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  };
+  try {
+    const response = await $fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { Accept: "application/json" },
+      body: {
+        access_key: config.public.web3formsKey,
+        subject: form.value.subject.trim(),
+        from_name: form.value.name.trim(),
+        name: form.value.name.trim(),
+        email: form.value.email.trim(),
+        replyto: form.value.email.trim(),
+        message: form.value.message.trim(),
+        botcheck: false,
+      },
+    });
 
-  loading.value = false;
+    if (!response.success) {
+      throw new Error(response.message || "Web3Forms n'a pas pu envoyer votre message.");
+    }
 
-  // Masquer l'alerte après 5 secondes
-  setTimeout(() => {
-    formStatus.value.show = false;
-  }, 5000);
+    formStatus.value = {
+      show: true,
+      type: "success",
+      title: "Message envoyé !",
+      message: "Merci pour votre message. Je vous répondrai dans les plus brefs délais.",
+    };
+    form.value = {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    };
+
+    setTimeout(() => {
+      formStatus.value.show = false;
+    }, 5000);
+  } catch (error) {
+    formStatus.value = {
+      show: true,
+      type: "danger",
+      title: "Erreur d'envoi",
+      message:
+        error?.data?.message ||
+        error?.message ||
+        "Une erreur est survenue. Veuillez réessayer.",
+    };
+  } finally {
+    loading.value = false;
+  }
 };
 
 // Animation  au chargement du composant

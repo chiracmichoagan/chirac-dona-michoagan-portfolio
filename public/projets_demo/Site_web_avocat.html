@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description"
+    content="Maître Camille Laurent, avocate au barreau de Paris. Conseil et défense en droit des affaires, droit du travail et contentieux.">
+  <title>Maître Camille Laurent — Avocate à Paris</title>
+  <style>
+    :root {
+      --ink: #1d2926;
+      --muted: #65716c;
+      --paper: #f7f5f0;
+      --white: #fffefa;
+      --green: #28443c;
+      --green-dark: #20372f;
+      --gold: #b48b55;
+      --line: #deded5;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 18px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: clamp(36px, 5vw, 54px);
+      line-height: 1.1;
+      letter-spacing: -.035em;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 23px;
+      border: 1px solid var(--green);
+      background: var(--green);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--green-dark);
+    }
+
+    .button .arrow {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    header {
+      position: relative;
+      z-index: 5;
+      border-bottom: 1px solid rgba(29, 41, 38, .09);
+      background: rgba(247, 245, 240, .94);
+    }
+
+    .nav-row {
+      display: flex;
+      min-height: 86px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 22px;
+    }
+
+    .brand-name {
+      display: block;
+      font-family: var(--serif);
+      font-size: 17px;
+      line-height: 1.15;
+    }
+
+    .brand-caption {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 40px);
+    }
+
+    .nav-links a {
+      color: #43504b;
+      font-size: 12px;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links .nav-contact {
+      padding: 11px 17px;
+      border: 1px solid var(--green);
+      color: var(--green);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 92px 0 96px;
+    }
+
+    .hero::after {
+      position: absolute;
+      top: -110px;
+      right: -120px;
+      width: 570px;
+      height: 570px;
+      border: 1px solid rgba(180, 139, 85, .18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 50px rgba(180, 139, 85, .025), 0 0 0 100px rgba(180, 139, 85, .02);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero h1 {
+      max-width: 650px;
+      margin-bottom: 24px;
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+
+    .hero h1 em {
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .hero-copy {
+      max-width: 480px;
+      margin-bottom: 31px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .hero-note {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: 20px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .hero-note::before {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      content: "";
+    }
+
+    .portrait-card {
+      position: relative;
+      display: flex;
+      min-height: 445px;
+      align-items: flex-end;
+      overflow: hidden;
+      padding: 30px;
+      background: linear-gradient(155deg, #d8d2c4 0%, #b8b2a2 46%, #738078 100%);
+    }
+
+    .portrait-card::before,
+    .portrait-card::after {
+      position: absolute;
+      content: "";
+    }
+
+    .portrait-card::before {
+      top: 36px;
+      right: 12%;
+      width: 58%;
+      height: 82%;
+      border: 1px solid rgba(255, 254, 250, .55);
+      border-radius: 48% 48% 0 0;
+    }
+
+    .portrait-card::after {
+      right: 22%;
+      bottom: 0;
+      width: 39%;
+      height: 76%;
+      border-radius: 47% 47% 0 0;
+      background: linear-gradient(110deg, #38453f 0%, #263630 100%);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, .16);
+    }
+
+    .portrait-label {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      padding: 16px 18px;
+      background: rgba(255, 254, 250, .94);
+    }
+
+    .portrait-label strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 400;
+    }
+
+    .portrait-label span {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .hero-stamp {
+      position: absolute;
+      right: -20px;
+      bottom: 75px;
+      z-index: 2;
+      display: grid;
+      width: 86px;
+      height: 86px;
+      place-items: center;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      background: var(--paper);
+      color: var(--green);
+      font-family: var(--serif);
+      font-size: 13px;
+      line-height: 1.25;
+      text-align: center;
+      transform: rotate(9deg);
+    }
+
+    .trust-bar {
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 254, 250, .48);
+    }
+
+    .trust-items {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: #4a5751;
+      font-family: var(--serif);
+      font-size: 15px;
+    }
+
+    .trust-item span {
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 17px;
+    }
+
+    section {
+      scroll-margin-top: 25px;
+    }
+
+    .expertise {
+      padding: 105px 0 110px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 36px;
+      margin-bottom: 45px;
+    }
+
+    .section-heading h2 {
+      max-width: 560px;
+      margin-bottom: 0;
+    }
+
+    .section-heading>p {
+      max-width: 330px;
+      margin-bottom: 5px;
+      color: var(--muted);
+    }
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .expertise-card {
+      min-height: 270px;
+      padding: 30px 28px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 13px;
+    }
+
+    .expertise-card h3 {
+      margin: 34px 0 12px;
+      font-size: 25px;
+    }
+
+    .expertise-card p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--green);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .about {
+      padding: 92px 0;
+      background: var(--green);
+      color: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      align-items: center;
+      gap: 90px;
+    }
+
+    .about-visual {
+      position: relative;
+      display: grid;
+      min-height: 380px;
+      place-items: center;
+      overflow: hidden;
+      border: 1px solid rgba(255, 254, 250, .25);
+      background: linear-gradient(145deg, rgba(255, 255, 255, .07), rgba(0, 0, 0, .12));
+    }
+
+    .about-visual::before {
+      position: absolute;
+      width: 220px;
+      height: 280px;
+      border: 1px solid rgba(180, 139, 85, .8);
+      border-radius: 50% 50% 0 0;
+      content: "";
+    }
+
+    .about-visual::after {
+      position: absolute;
+      bottom: 0;
+      width: 130px;
+      height: 235px;
+      border-radius: 50% 50% 0 0;
+      background: rgba(255, 254, 250, .1);
+      content: "";
+    }
+
+    .about-monogram {
+      position: relative;
+      z-index: 1;
+      margin-top: -60px;
+      color: var(--white);
+      font-family: var(--serif);
+      font-size: 65px;
+      letter-spacing: -.08em;
+    }
+
+    .about .eyebrow {
+      color: #d6b98f;
+    }
+
+    .about h2 {
+      max-width: 560px;
+    }
+
+    .about-copy {
+      max-width: 560px;
+      color: rgba(255, 254, 250, .75);
+    }
+
+    .about-values {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .about-value {
+      padding-top: 17px;
+      border-top: 1px solid rgba(255, 254, 250, .22);
+    }
+
+    .about-value strong {
+      display: block;
+      margin-bottom: 5px;
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .about-value span {
+      color: rgba(255, 254, 250, .65);
+      font-size: 11px;
+    }
+
+    .approach {
+      padding: 100px 0;
+    }
+
+    .approach .section-heading {
+      margin-bottom: 54px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 35px;
+    }
+
+    .step {
+      padding-top: 23px;
+      border-top: 1px solid var(--gold);
+    }
+
+    .step-number {
+      color: var(--gold);
+      font-family: var(--serif);
+      font-size: 14px;
+    }
+
+    .step h3 {
+      margin: 22px 0 10px;
+      font-size: 23px;
+    }
+
+    .step p {
+      max-width: 290px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact {
+      padding: 90px 0;
+      background: #eae8df;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 85px;
+    }
+
+    .contact h2 {
+      font-size: clamp(38px, 4vw, 51px);
+    }
+
+    .contact-intro {
+      max-width: 380px;
+      margin-bottom: 35px;
+      color: var(--muted);
+    }
+
+    .contact-detail {
+      display: grid;
+      gap: 17px;
+    }
+
+    .contact-detail a,
+    .contact-detail div {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+      font-size: 13px;
+    }
+
+    .contact-icon {
+      width: 30px;
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      padding: 30px;
+      background: var(--white);
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      color: #4b5752;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      outline: none;
+      background: transparent;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--green);
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-footer {
+      display: flex;
+      grid-column: 1 / -1;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .form-note {
+      max-width: 230px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .form-status {
+      grid-column: 1 / -1;
+      min-height: 20px;
+      margin: 0;
+      color: var(--green);
+      font-size: 12px;
+    }
+
+    footer {
+      padding: 25px 0;
+      background: var(--green-dark);
+      color: rgba(255, 254, 250, .72);
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      font-size: 10px;
+    }
+
+    .footer-brand {
+      color: white;
+      font-family: var(--serif);
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid {
+        gap: 38px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .portrait-card {
+        min-height: 370px;
+      }
+
+      .about-grid {
+        gap: 45px;
+      }
+
+      .contact-grid {
+        gap: 40px;
+      }
+
+      .nav-links {
+        gap: 18px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .wrap {
+        width: min(100% - 36px, 520px);
+      }
+
+      .nav-row {
+        min-height: 72px;
+      }
+
+      .menu-toggle {
+        display: grid;
+        place-items: center;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 18px 18px;
+        border-bottom: 1px solid var(--line);
+        background: var(--paper);
+      }
+
+      .nav-links.is-open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        padding: 12px 8px;
+      }
+
+      .nav-links .nav-contact {
+        margin-top: 5px;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 60px 0 70px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .hero h1 {
+        font-size: clamp(48px, 14vw, 68px);
+      }
+
+      .hero-copy {
+        font-size: 14px;
+      }
+
+      .hero-note {
+        display: flex;
+        margin: 18px 0 0;
+      }
+
+      .portrait-card {
+        min-height: 360px;
+      }
+
+      .hero-stamp {
+        right: 4px;
+        bottom: 67px;
+      }
+
+      .trust-items {
+        justify-content: flex-start;
+        gap: 18px 25px;
+      }
+
+      .trust-item {
+        font-size: 13px;
+      }
+
+      .expertise,
+      .approach {
+        padding: 72px 0;
+      }
+
+      .section-heading {
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .section-heading>p {
+        margin-top: 16px;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .expertise-card {
+        min-height: 0;
+        padding: 25px;
+      }
+
+      .expertise-card h3 {
+        margin-top: 22px;
+      }
+
+      .about {
+        padding: 70px 0;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .about-visual {
+        min-height: 280px;
+      }
+
+      .about-visual::before {
+        height: 235px;
+      }
+
+      .about-visual::after {
+        height: 195px;
+      }
+
+      .about-values {
+        gap: 18px 14px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+        gap: 27px;
+      }
+
+      .contact {
+        padding: 70px 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .contact-form {
+        padding: 22px 18px;
+      }
+
+      .form-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-row {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav-row">
+      <a class="brand" href="#accueil" aria-label="Maître Camille Laurent, accueil">
+        <span class="brand-mark" aria-hidden="true">CL</span>
+        <span><span class="brand-name">Camille Laurent</span><span class="brand-caption">Avocate au barreau de
+            Paris</span></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+        aria-controls="navigation">☰</button>
+      <nav class="nav-links" id="navigation" aria-label="Navigation principale">
+        <a href="#expertises">Expertises</a>
+        <a href="#cabinet">Le cabinet</a>
+        <a href="#approche">Notre approche</a>
+        <a class="nav-contact" href="#contact">Prendre rendez-vous</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Conseil · Défense · Engagement</p>
+          <h1>Le droit, avec <em>clarté</em> et conviction.</h1>
+          <p class="hero-copy">Un accompagnement juridique exigeant et humain, pensé pour protéger vos intérêts et vous
+            aider à avancer sereinement.</p>
+          <a class="button" href="#contact">Parlons de votre situation <span class="arrow"
+              aria-hidden="true">↗</span></a>
+          <span class="hero-note">Premier échange confidentiel</span>
+        </div>
+        <div class="portrait-card" role="img" aria-label="Portrait illustré de Maître Camille Laurent">
+          <div class="portrait-label"><strong>Maître Camille Laurent</strong><span>Avocate · Paris</span></div>
+          <span class="hero-stamp">À vos côtés<br>à chaque étape</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-bar" aria-label="Engagements du cabinet">
+      <div class="wrap trust-items">
+        <div class="trust-item"><span aria-hidden="true">✳</span> Écoute attentive</div>
+        <div class="trust-item"><span aria-hidden="true">◇</span> Conseil stratégique</div>
+        <div class="trust-item"><span aria-hidden="true">⌂</span> Suivi personnalisé</div>
+        <div class="trust-item"><span aria-hidden="true">✓</span> Transparence des honoraires</div>
+      </div>
+    </div>
+
+    <section class="expertise" id="expertises">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Domaines d'intervention</p>
+            <h2>Une expertise au service de vos enjeux.</h2>
+          </div>
+          <p>Chaque situation mérite une analyse précise et une stratégie adaptée. Le cabinet vous accompagne à chaque
+            étape.</p>
+        </div>
+        <div class="expertise-grid">
+          <article class="expertise-card">
+            <span class="card-number">01 / Conseil & contentieux</span>
+            <h3>Droit des affaires</h3>
+            <p>Contrats, relations commerciales, création et vie de l'entreprise : sécurisez vos décisions et défendez
+              vos intérêts.</p>
+            <a class="text-link" href="#contact">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="expertise-card">
+            <span class="card-number">02 / Employeurs & salariés</span>
+            <h3>Droit du travail</h3>
+            <p>Conseil et accompagnement dans les relations individuelles et collectives, de la négociation au
+              contentieux.</p>
+            <a class="text-link" href="#contact">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+          <article class="expertise-card">
+            <span class="card-number">03 / Résolution des litiges</span>
+            <h3>Contentieux civil</h3>
+            <p>Une défense rigoureuse de vos droits, avec une approche pragmatique privilégiant la solution la plus
+              juste.</p>
+            <a class="text-link" href="#contact">En savoir plus <span aria-hidden="true">→</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="cabinet">
+      <div class="wrap about-grid">
+        <div class="about-visual" role="img" aria-label="Monogramme du cabinet Camille Laurent"><span
+            class="about-monogram">C.L.</span></div>
+        <div>
+          <p class="eyebrow">Le cabinet</p>
+          <h2>Une relation de confiance, avant tout.</h2>
+          <p class="about-copy">Parce qu'une décision juridique engage souvent bien plus qu'un dossier, le cabinet
+            privilégie une relation directe, une écoute sans jugement et des réponses compréhensibles. Vous connaissez
+            les options, les risques et les prochaines étapes.</p>
+          <div class="about-values">
+            <div class="about-value"><strong>Proximité</strong><span>Un interlocuteur dédié, disponible et à
+                l'écoute.</span></div>
+            <div class="about-value"><strong>Exigence</strong><span>Une analyse approfondie de chaque dossier.</span>
+            </div>
+            <div class="about-value"><strong>Indépendance</strong><span>Un conseil loyal, guidé par vos intérêts.</span>
+            </div>
+            <div class="about-value"><strong>Confidentialité</strong><span>Le secret professionnel au cœur de la
+                relation.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="approach" id="approche">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Comment nous travaillons</p>
+            <h2>Un accompagnement clair, à chaque étape.</h2>
+          </div>
+          <p>Vous gardez une vision précise de votre dossier et des décisions à prendre.</p>
+        </div>
+        <div class="steps">
+          <article class="step"><span class="step-number">Étape 01</span>
+            <h3>Nous faisons le point</h3>
+            <p>Un premier échange pour comprendre votre situation, vos objectifs et les éléments du dossier.</p>
+          </article>
+          <article class="step"><span class="step-number">Étape 02</span>
+            <h3>Nous définissons la stratégie</h3>
+            <p>Vous recevez une analyse claire, les options possibles et une convention d'honoraires détaillée.</p>
+          </article>
+          <article class="step"><span class="step-number">Étape 03</span>
+            <h3>Nous avançons ensemble</h3>
+            <p>Le cabinet met en œuvre la stratégie retenue et vous tient informé des avancées.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Commençons par en parler.</h2>
+          <p class="contact-intro">Décrivez brièvement votre besoin. Le cabinet reviendra vers vous pour convenir d'un
+            premier échange confidentiel.</p>
+          <div class="contact-detail">
+            <a href="mailto:contact@laurent-avocat.fr"><span class="contact-icon"
+                aria-hidden="true">✉</span><span>contact@laurent-avocat.fr</span></a>
+            <a href="tel:+33142600000"><span class="contact-icon" aria-hidden="true">☎</span><span>01 42 60 00
+                00</span></a>
+            <div><span class="contact-icon" aria-hidden="true">⌖</span><span>12, rue de la Paix<br>75002 Paris</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="field"><label for="name">Votre nom</label><input id="name" name="name" autocomplete="name"
+              required></div>
+          <div class="field"><label for="email">Votre adresse e-mail</label><input id="email" name="email" type="email"
+              autocomplete="email" required></div>
+          <div class="field full"><label for="subject">Objet de votre demande</label><input id="subject" name="subject"
+              required></div>
+          <div class="field full"><label for="message">Votre message</label><textarea id="message" name="message"
+              required></textarea></div>
+          <div class="form-footer">
+            <p class="form-note">Vos informations restent confidentielles et ne sont utilisées que pour répondre à votre
+              demande.</p>
+            <button class="button" type="submit">Préparer mon message <span class="arrow"
+                aria-hidden="true">↗</span></button>
+          </div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <span class="footer-brand">Maître Camille Laurent</span>
+      <span>© <span id="year"></span> · Tous droits réservés</span>
+      <div class="footer-links"><a href="#contact">Mentions légales</a><a href="#contact">Confidentialité</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#navigation");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", String(!isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Ouvrir le menu" : "Fermer le menu");
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        navigation.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+      }
+    });
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+
+    document.querySelector("#contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+
+      const data = new FormData(form);
+      const subject = encodeURIComponent(data.get("subject"));
+      const body = encodeURIComponent(
+        `Nom : ${data.get("name")}\nE-mail : ${data.get("email")}\n\n${data.get("message")}`
+      );
+      document.querySelector("#form-status").textContent =
+        "Votre application de messagerie va s'ouvrir pour vous permettre d'envoyer votre demande.";
+      window.location.href = `mailto:contact@laurent-avocat.fr?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+
+</html>

@@ -2,14 +2,19 @@ import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-
-  runtimeConfig: {
-    smtpHost: '',
-    smtpPort: '',
-    smtpUser: '',
-    smtpPass: '',
-    mailTo: ''
+   runtimeConfig: {
+    public: {
+      web3formsKey: ''
+    }
   },
+
+  // runtimeConfig: {
+  //   smtpHost: '',
+  //   smtpPort: '',
+  //   smtpUser: '',
+  //   smtpPass: '',
+  //   mailTo: ''
+  // },
 
   modules: [
     '@nuxt/ui',

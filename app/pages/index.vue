@@ -207,11 +207,10 @@
 
           <div style="opacity: 1; transform: none;">
 
-
-            <form @submit.prevent="submitForm" class="space-y-4 border-2 border-[#E88200] rounded-xl p-6">
+             <form @submit.prevent="submitForm" class="space-y-4 border-2 border-[#E88200] rounded-xl p-6">
 
               <div class="absolute opacity-0 pointer-events-none" aria-hidden="true">
-                <input tabindex="-1" v-model="form._honey" autocomplete="off" type="text" name="_honey">
+                <input tabindex="-1" v-model="form._honey" autocomplete="new-password" type="text" name="_honey">
               </div>
 
               <div>
@@ -264,10 +263,7 @@
                   class="w-full px-4 py-3 rounded-xl bg-white/5 border border-[#E88200] text-gray-600 placeholder:text-gray-400 focus:outline-none focus:border-[#0066FF] focus:ring-2 focus:ring-[#0066FF]/15 transition-all text-sm resize-none"
                   placeholder="Décrivez votre projet en quelques mots..."></textarea>
               </div>
-              <!-- <UButton class="flex items-center justify-center " to="/contact" color="primary" variant="outline"
-                size="lg">
-                Envoyer mon message
-              </UButton> -->
+             
 
               <UButton type="submit" :loading="status === 'loading'" :disabled="status === 'loading'"
                 class="flex items-center justify-center" color="primary" variant="outline" size="lg">
@@ -320,6 +316,7 @@
 </template>
 
 <script setup>
+import { reactive, ref, onMounted } from 'vue';
 
 useSeoMeta({
   title: 'Développeur Web Freelance au Bénin', // Affichera : "Développeur Web Freelance au Bénin | Chirac Dona Michoagan"
@@ -348,25 +345,77 @@ const featuredProjects = [
   // },
 ];
 
+const config = useRuntimeConfig()
 
 const form = reactive({
-  name: '', email: '', phone: '', secteur: '', message: '', _honey: ''
+  name: '',
+  email: '',
+  phone: '',
+  secteur: '',
+  message: '',
+  botcheck: false
 })
 const status = ref('idle') // idle | loading | success | error
 const errorMsg = ref('')
 
 async function submitForm() {
-  status.value = 'loading'
   errorMsg.value = ''
+
+  if (!form.email.trim() && !form.phone.trim()) {
+    status.value = 'error'
+    errorMsg.value = 'Renseigne un email ou un téléphone.'
+    return
+  }
+
+  status.value = 'loading'
   try {
-    await $fetch('/api/contact', { method: 'POST', body: form })
-    status.value = 'success'
-    Object.assign(form, { name: '', email: '', phone: '', secteur: '', message: '', _honey: '' })
+    const res = await $fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: {
+        access_key: config.public.web3formsKey,
+        subject: `Nouvelle demande de ${form.name}`,
+        from_name: 'Portfolio',
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        secteur: form.secteur,
+        message: form.message,
+        botcheck: form.botcheck
+      }
+    })
+
+    if (res.success) {
+      status.value = 'success'
+      Object.assign(form, { name: '', email: '', phone: '', secteur: '', message: '', botcheck: false })
+    } else {
+      throw new Error(res.message)
+    }
   } catch (e) {
     status.value = 'error'
-    errorMsg.value = e?.data?.statusMessage || 'Une erreur est survenue.'
+    errorMsg.value = e?.data?.message || e?.message || 'Une erreur est survenue. Réessaie ou écris-moi par e-mail.'
   }
 }
+
+
+// const form = reactive({
+//   name: '', email: '', phone: '', secteur: '', message: '', _honey: ''
+// })
+// const status = ref('idle') // idle | loading | success | error
+// const errorMsg = ref('')
+
+// async function submitForm() {
+//   status.value = 'loading'
+//   errorMsg.value = ''
+//   try {
+//     await $fetch('/api/contact', { method: 'POST', body: form })
+//     status.value = 'success'
+//     Object.assign(form, { name: '', email: '', phone: '', secteur: '', message: '', _honey: '' })
+//   } catch (e) {
+//     status.value = 'error'
+//     errorMsg.value = e?.data?.statusMessage || 'Une erreur est survenue.'
+//   }
+// }
 
 onMounted(() => {
   if (process.client) {

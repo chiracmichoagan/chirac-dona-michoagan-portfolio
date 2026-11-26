@@ -57,7 +57,7 @@
           <NuxtLink to="/about"
             class="text-gray-500 whitespace-nowrap size-16 leading-5 font-bold hover:text-black transition-colors  flex items-center  gap-2"
             active-class="!text-[#E78318] font-semibold">
-            A propos
+            À propos
           </NuxtLink>
 
 
@@ -183,7 +183,7 @@
           <NuxtLink to="/about" @click="isMenuOpen = false"
             class="text-gray-500 whitespace-nowrap leading-5 font-bold hover:text-black transition-colors flex items-center gap-2"
             active-class="!text-[#E78318] font-semibold">
-            A propos
+            À propos
           </NuxtLink>
 
           <NuxtLink to="/projects" @click="isMenuOpen = false"
@@ -267,15 +267,15 @@
               <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/">Accueil </NuxtLink>
             </li>
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/a-propos">À propos
+              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/about">À propos
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/services">Services
+              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/servicesdeveloppementweb">Services
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/realisations">
+              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/projects">
                 Réalisations </NuxtLink>
             </li>
             <li>
@@ -292,34 +292,42 @@
           <p class="text-white/55 text-xs font-semibold uppercase tracking-wider mb-4">Secteurs</p>
           <ul class="space-y-2">
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/restaurant">Site web
-                restaurant </NuxtLink>
+              <NuxtLink external class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/projets_demo/Site_web_restaurant.html" target="_blank" rel="noopener noreferrer">
+                Site web
+                restaurant
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/medecin">Site web
-                médecin </NuxtLink>
+              <NuxtLink external class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/projets_demo/Site_web_medecin.html" target="_blank" rel="noopener noreferrer">
+                Site
+                web médecin
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/avocat">Site web
-                avocat </NuxtLink>
+              <NuxtLink external class="text-white/50 text-xs hover:text-white/80 transition-colors"
+                to="/projets_demo/Site_web_avocat.html" target="_blank" rel="noopener noreferrer">Site web
+                avocat
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/mecanicien">Site web
-                mécanicien </NuxtLink>
+              <NuxtLink external class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/projets_demo/Site_web_mecanicien.html" target="_blank" rel="noopener noreferrer">Site web
+                mécanicien
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/fleuriste">Site web
-                fleuriste </NuxtLink>
+              <NuxtLink external class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/projets_demo/Site_web_fleuriste.html" target="_blank" rel="noopener noreferrer">
+                Site web fleuriste
+              </NuxtLink>
             </li>
             <li>
-              <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/concessionnaire">Site
-                web
-                concessionnaire </NuxtLink>
+              <NuxtLink external class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/projets_demo/Site_web_concessionnaire.html" target="_blank" rel="noopener noreferrer">
+                Site web concessionnaire
+              </NuxtLink>
             </li>
-            <li>
+            <!-- <li>
               <NuxtLink class="text-white/50 text-xs hover:text-white/80 transition-colors" to="/permis-bateaux">Permis
                 bateaux </NuxtLink>
-            </li>
+            </li> -->
           </ul>
         </div>
         <div>
@@ -354,7 +362,7 @@
           <NuxtLink class="text-xs text-white/50 hover:text-white/80 transition-colors" to="/mentions-legales">Mentions
             légales </NuxtLink>
           <NuxtLink class="text-xs text-white/50 hover:text-white/80 transition-colors"
-            to="/politique-de-confidentialite">Confidentialité </NuxtLink>
+            to="/confidentialite">Confidentialité </NuxtLink>
 
           <NuxtLink to="https://linkedin.com/in/antoine-gueguen" target="_blank" rel="noopener noreferrer"
             class="text-white/50 hover:text-[#0066FF] transition-colors" aria-label="LinkedIn Antoine Gueguen"><svg
