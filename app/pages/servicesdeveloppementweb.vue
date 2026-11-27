@@ -328,7 +328,7 @@
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
           </div>
@@ -344,7 +344,7 @@
           </div>
         </NuxtLink>
         <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3" to="/projets_demo/Site_web_restaurant.html">
-          <img alt="Site web Restaurant — exemple réalisé par Chirac Dona Michoagan" loading="lazy" decoding="async" data-nimg="fill" class="object-cover transition-transform duration-700 group-hover:scale-105" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <img alt="Site web Restaurant — exemple réalisé par Chirac Dona Michoagan" loading="lazy" decoding="async" data-nimg="fill" class="object-cover transition-transform duration-700 group-hover:scale-105" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="">
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
           </div>
           <div
@@ -363,7 +363,7 @@
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
           </div>
@@ -382,7 +382,7 @@
           to="/projets_demo/Site_web_avocat.html"><img alt="Site web Avocat — exemple réalisé par Chirac Dona Michoagan" loading="lazy" decoding="async"
             data-nimg="fill" class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
           </div>
@@ -402,7 +402,7 @@
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
           </div>
@@ -422,7 +422,7 @@
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
           </div>
@@ -442,7 +442,7 @@
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="">
           <div
             class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
           </div>
@@ -457,26 +457,6 @@
             <p class="text-white/55 text-sm leading-snug">Catalogue véhicules en ligne, leads qualifiés</p>
           </div>
         </NuxtLink>
-        <!-- <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/projets_demo/Site_web_permis_bateaux.html"><img alt="Site web Permis bateaux — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
-          </div>
-          <div
-            class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          </div>
-          <div class="absolute inset-0 flex flex-col justify-end p-6">
-            <div class="flex items-start justify-between mb-3"><span class="text-3xl">⚓</span><span
-                class="flex items-center gap-1.5 text-[#0066FF] text-xs font-bold bg-[#0066FF]/10 backdrop-blur-sm border border-[#0066FF]/25 px-3 py-1.5 rounded-full opacity-100 md:opacity-0 md:group-hover:opacity-100 md:translate-y-2 md:group-hover:translate-y-0 transition-all duration-300">Voir
-                l'exemple →</span></div>
-            <h3 class="text-white font-bold text-xl leading-tight mb-1">Permis bateaux</h3>
-            <p class="text-white/55 text-sm leading-snug">Inscriptions en ligne, calendrier formations, SEO</p>
-          </div>
-        </NuxtLink> -->
       </div>
     </div>
   </section>
