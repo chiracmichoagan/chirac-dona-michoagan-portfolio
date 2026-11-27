@@ -23,7 +23,7 @@
                 niveau de suivi attendu après la livraison.</p>
         </div>
     </section>
-    <section class="py-20 bg-[#F9F9F9]">
+    <section class="py-20 bg-[#F9F9F9] overflow-hidden relative">
         <div class="max-w-3xl mx-auto px-6">
             <p class="text-lg text-[#1A1A1A] leading-relaxed mb-6"><strong>Un développeur web freelance</strong> est
                 un professionnel indépendant qui conçoit et développe seul des sites web pour ses clients, sans
@@ -35,7 +35,7 @@
                 spécialistes — avec les écarts de coût et d'organisation que cela implique.</p>
         </div>
     </section>
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white overflow-hidden relative">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="font-black text-[#0A0A0A] mb-10" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">Freelance vs
                 agence web : le comparatif</h2>
@@ -86,7 +86,7 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-[#F9F9F9]">
+    <section class="py-20 bg-[#F9F9F9] overflow-hidden relative">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="font-black text-[#0A0A0A] mb-10" style="font-size: clamp(1.6rem, 3vw, 2.4rem);">Comment
                 choisir entre freelance et agence ?</h2>
@@ -129,7 +129,7 @@
             </div>
         </div>
     </section>
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white overflow-hidden relative">
         <div class="max-w-3xl mx-auto px-6">
             <p class="text-sm font-semibold text-[#0066FF] tracking-widest uppercase mb-4">FAQ</p>
             <h2 class="font-black text-[#0A0A0A] mb-14" style="font-size: clamp(1.8rem, 4vw, 2.6rem);">Questions

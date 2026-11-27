@@ -7,7 +7,7 @@
     <span class="text-black font-medium">Projets</span>
 
   </nav>
-    <section class="py-2 text-center">
+    <section class="py-2 text-center overflow-hidden relative">
       <div class="container mx-auto px-4 text-center">
         
           <h1 class="border w-40 mx-auto text-center mb-4 font-bold bg-gray-100 dark:bg-gray-800 rounded-full p-1 text-[#E88200]">
@@ -22,7 +22,7 @@
       </div>
     </section>
 
-    <section class="py-16">
+    <section class="py-16 overflow-hidden relative">
       <div class="container mx-auto px-4">
         <div class="mt-8 sm:mt-10">
           <h3

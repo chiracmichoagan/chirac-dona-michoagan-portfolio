@@ -1,4 +1,5 @@
 <template>
+  
   <!-- Debut Header -->
   <header class="container p-4 bg-[#FFFCF5] dark:bg-gray-800 shadow-2xl sticky top-0 z-50">
     <div class="container mx-auto flex justify-around items-center">
@@ -92,17 +93,17 @@
                  invisible group-hover:visible opacity-0 group-hover:opacity-100 
                  transition-all duration-300 z-50">
                 <li>
-                  <NuxtLink to="/" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
+                  <NuxtLink to="/blog/lesarticles" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
                     Articles
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/tutoriels" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
+                  <NuxtLink to="/blog/tutoriels" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
                     Tutoriels
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/actualites" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
+                  <NuxtLink to="/blog/actualites" class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
                     Actualités
                   </NuxtLink>
                 </li>
@@ -210,19 +211,19 @@
               <ul
                 class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all duration-300 z-50">
                 <li>
-                  <NuxtLink to="/" @click="isMenuOpen = false"
+                  <NuxtLink to="/blog/lesarticles" @click="isMenuOpen = false"
                     class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
                     Articles
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/tutoriels" @click="isMenuOpen = false"
+                  <NuxtLink to="/blog/tutoriels" @click="isMenuOpen = false"
                     class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
                     Tutoriels
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/actualites" @click="isMenuOpen = false"
+                  <NuxtLink to="/blog/actualites" @click="isMenuOpen = false"
                     class="block px-4 py-2 hover:bg-[#E78318] hover:text-white">
                     Actualités
                   </NuxtLink>

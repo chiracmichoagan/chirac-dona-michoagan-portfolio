@@ -49,7 +49,7 @@
     </div>
   </section>
 
-  <section class="py-28 my-24 bg-[#F9F9F9]">
+  <section class="py-28 my-24 bg-[#F9F9F9] relative overflow-hidden">
     <div class="max-w-6xl mx-auto px-6">
       <div class="mb-16">
         <p class="text-sm font-semibold text-[#0066FF] tracking-widest uppercase mb-3">Prestations de services</p>
@@ -323,8 +323,8 @@
         </p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <!-- <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/notaire"><img alt="Site web Notaire — exemple réalisé par Antoine Gueguen" loading="lazy"
+        <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/projets_demo/Site_web_notaire.html"><img alt="Site web Notaire — exemple réalisé par Chirac Dona Michoagan" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -342,15 +342,10 @@
             <h3 class="text-white font-bold text-xl leading-tight mb-1">Notaire</h3>
             <p class="text-white/55 text-sm leading-snug">Actes authentiques, prise de RDV, image institutionnelle</p>
           </div>
-        </NuxtLink> -->
-        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/restaurant"><img alt="Site web Restaurant — exemple réalisé par Antoine Gueguen" loading="lazy"
-            decoding="async" data-nimg="fill"
-            class="object-cover transition-transform duration-700 group-hover:scale-105"
-            style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
+        </NuxtLink>
+        <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3" to="/projets_demo/Site_web_restaurant.html">
+          <img alt="Site web Restaurant — exemple réalisé par Chirac Dona Michoagan" loading="lazy" decoding="async" data-nimg="fill" class="object-cover transition-transform duration-700 group-hover:scale-105" style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/10 group-hover:from-black/75 transition-all duration-300">
           </div>
           <div
             class="absolute inset-0 rounded-2xl border-2 border-[#0066FF] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
@@ -363,8 +358,8 @@
             <p class="text-white/55 text-sm leading-snug">Réservations en ligne, menu digital, SEO local</p>
           </div>
         </NuxtLink>
-        <!-- <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/medecin"><img alt="Site web Médecin — exemple réalisé par Antoine Gueguen" loading="lazy"
+        <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/projets_demo/Site_web_medecin.html"><img alt="Site web Médecin — exemple réalisé par Chirac Dona Michoagan" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -383,8 +378,8 @@
             <p class="text-white/55 text-sm leading-snug">Prise de RDV en ligne, confiance patients, SEO local</p>
           </div>
         </NuxtLink>
-        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/avocat"><img alt="Site web Avocat — exemple réalisé par Antoine Gueguen" loading="lazy" decoding="async"
+        <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/projets_demo/Site_web_avocat.html"><img alt="Site web Avocat — exemple réalisé par Chirac Dona Michoagan" loading="lazy" decoding="async"
             data-nimg="fill" class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" src="/assets/restaurant-site.png">
@@ -402,8 +397,8 @@
             <p class="text-white/55 text-sm leading-snug">Image professionnelle, prise de contact, référencement</p>
           </div>
         </NuxtLink>
-        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/mecanicien"><img alt="Site web Mécanicien — exemple réalisé par Antoine Gueguen" loading="lazy"
+        <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/projets_demo/Site_web_mecanicien.html"><img alt="Site web Mécanicien — exemple réalisé par Chirac Dona Michoagan" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -422,8 +417,8 @@
             <p class="text-white/55 text-sm leading-snug">Devis en ligne, avis clients, référencement local</p>
           </div>
         </NuxtLink>
-        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/fleuriste"><img alt="Site web Fleuriste — exemple réalisé par Antoine Gueguen" loading="lazy"
+        <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/projets_demo/Site_web_fleuriste.html"><img alt="Site web Fleuriste — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -442,8 +437,8 @@
             <p class="text-white/55 text-sm leading-snug">Commande en ligne, galerie produits, SEO local</p>
           </div>
         </NuxtLink>
-        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/concessionnaire"><img alt="Site web Concessionnaire — exemple réalisé par Antoine Gueguen" loading="lazy"
+        <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/projets_demo/Site_web_concessionnaire.html"><img alt="Site web Concessionnaire — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -462,8 +457,8 @@
             <p class="text-white/55 text-sm leading-snug">Catalogue véhicules en ligne, leads qualifiés</p>
           </div>
         </NuxtLink>
-        <NuxtLink class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
-          to="/permis-bateaux"><img alt="Site web Permis bateaux — exemple réalisé par Antoine Gueguen" loading="lazy"
+        <!-- <NuxtLink external class="group relative rounded-2xl overflow-hidden cursor-pointer block" style="aspect-ratio:4/3"
+          to="/projets_demo/Site_web_permis_bateaux.html"><img alt="Site web Permis bateaux — exemple réalisé par Antoine Gueguen" loading="lazy"
             decoding="async" data-nimg="fill"
             class="object-cover transition-transform duration-700 group-hover:scale-105"
             style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
@@ -486,11 +481,7 @@
     </div>
   </section>
 
-
-
-
-
-  <section class="py-28 my-24 bg-[#F9F9F9]">
+  <section class="py-28 my-24 bg-[#F9F9F9] overflow-hidden relative">
     <div class="max-w-6xl mx-auto px-6">
       <p class="text-sm font-bold text-[#0066FF] tracking-widest uppercase mb-4">Simple & rapide</p>
       <h2 class="font-black text-black mb-16" style="font-size: clamp(1.8rem, 4vw, 3rem);">Comment ça se passe ?</h2>
@@ -523,8 +514,7 @@
     </div>
   </section>
 
-
-  <section class="py-28 my-24 bg-[#FBF2E3]">
+  <section class="py-28 my-24 bg-[#FBF2E3] overflow-hidden relative">
     <div class="max-w-4xl mx-auto px-6">
       <p class="text-sm font-semibold text-[#E88200] tracking-widest uppercase mb-4">FAQ</p>
       <h2 class="font-black text-[#0A0A0A] mb-14" style="font-size: clamp(1.8rem, 4vw, 3rem);">Questions fréquentes</h2>
@@ -589,8 +579,6 @@
       </div>
     </div>
   </section>
-
-
 
   <section class="py-28 my-24 bg-[#F9F9F9] relative overflow-hidden">
     <!-- <div class="absolute inset-0 bg-gradient-to-br from-[#0066FF] via-[#0055dd] to-[#0044bb]"></div> -->

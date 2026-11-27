@@ -198,7 +198,7 @@
       </section>
 
     </UContainer>
-    <section class="py-20 bg-[#F9F9F9]">
+    <section class="py-20 bg-[#F9F9F9] overflow-hidden relative">
       <div class="max-w-6xl mx-auto px-6">
         <div class="grid sm:grid-cols-3 gap-5">
           <div class="bg-white border border-gray-100 rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">

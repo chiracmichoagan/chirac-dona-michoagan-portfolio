@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#172b2b">
+  <meta name="description"
+    content="L'Étude notariale Beaumont vous accompagne dans vos projets immobiliers, familiaux et patrimoniaux avec écoute, conseil et sécurité juridique.">
+  <title>Étude Beaumont — Notaires & conseils</title>
+  <style>
+    :root {
+      --ink: #172b2b;
+      --ink-soft: #29413e;
+      --paper: #f7f5ef;
+      --white: #fffefa;
+      --gold: #bd9a5c;
+      --gold-light: #dfc99e;
+      --muted: #6d7771;
+      --line: #e6e2d8;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Segoe UI", Arial, sans-serif;
+      --shadow: 0 22px 60px rgba(23, 43, 43, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .topbar {
+      background: var(--ink);
+      color: rgba(255, 255, 255, .77);
+      font-size: 11px;
+      letter-spacing: .08em;
+    }
+
+    .topbar-inner {
+      min-height: 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .topbar a {
+      color: var(--gold-light);
+    }
+
+    .topbar-right {
+      display: flex;
+      gap: 24px;
+    }
+
+    .header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      background: rgba(255, 254, 250, .96);
+      border-bottom: 1px solid rgba(23, 43, 43, .08);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font: 24px var(--serif);
+    }
+
+    .brand-name {
+      display: block;
+      font: 20px var(--serif);
+      letter-spacing: .02em;
+    }
+
+    .brand-caption {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #475651;
+      font-size: 12px;
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta,
+    .button {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 20px;
+      border: 1px solid var(--ink);
+      color: var(--white);
+      background: var(--ink);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      transition: background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .nav-cta:hover,
+    .button:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      background: transparent;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0 84px;
+      background: var(--white);
+    }
+
+    .hero::after {
+      position: absolute;
+      z-index: 0;
+      top: -180px;
+      right: -180px;
+      width: 520px;
+      height: 520px;
+      border: 1px solid rgba(189, 154, 92, .18);
+      border-radius: 50%;
+      content: "";
+      box-shadow: 0 0 0 45px rgba(189, 154, 92, .035), 0 0 0 90px rgba(189, 154, 92, .025);
+      pointer-events: none;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.03fr .97fr;
+      align-items: center;
+      gap: 76px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #967744;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 580px;
+      margin: 22px 0;
+      font: 400 clamp(44px, 5.3vw, 72px)/1.07 var(--serif);
+      letter-spacing: -.035em;
+    }
+
+    h1 em {
+      color: var(--gold);
+      font-weight: 400;
+    }
+
+    .hero-copy {
+      max-width: 465px;
+      margin-bottom: 30px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .text-link {
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+
+    .text-link span {
+      margin-left: 8px;
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      min-height: 460px;
+      padding: 0 0 27px 27px;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0 0 27px 27px;
+      background:
+        linear-gradient(180deg, rgba(23, 43, 43, .02), rgba(23, 43, 43, .24)),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=85") center/cover;
+    }
+
+    .hero-image-wrap::before {
+      position: absolute;
+      z-index: 1;
+      inset: 18px 18px 9px 9px;
+      border: 1px solid rgba(255, 255, 255, .65);
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero-note {
+      position: absolute;
+      z-index: 2;
+      right: -18px;
+      bottom: 0;
+      width: 220px;
+      padding: 22px 24px;
+      color: var(--white);
+      background: var(--ink);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-note strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--gold-light);
+      font: 22px var(--serif);
+    }
+
+    .hero-note span {
+      color: rgba(255, 255, 255, .72);
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .trust-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .trust-inner {
+      min-height: 94px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 10px;
+    }
+
+    .trust-item+.trust-item {
+      border-left: 1px solid var(--line);
+    }
+
+    .trust-icon {
+      color: var(--gold);
+      font: 25px var(--serif);
+    }
+
+    .trust-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font: 15px var(--serif);
+    }
+
+    .trust-item span:last-child {
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .04em;
+    }
+
+    .section {
+      padding: 104px 0;
+    }
+
+    .section-heading {
+      max-width: 620px;
+      margin: 0 auto 50px;
+      text-align: center;
+    }
+
+    .section-heading .eyebrow {
+      justify-content: center;
+    }
+
+    .section-heading h2,
+    .about-copy h2,
+    .contact-copy h2 {
+      margin: 16px 0;
+      font: 400 clamp(34px, 4vw, 48px)/1.14 var(--serif);
+      letter-spacing: -.025em;
+    }
+
+    .section-heading p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .expertise {
+      background: var(--paper);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      min-height: 248px;
+      padding: 30px;
+      border: 1px solid var(--line);
+      background: var(--white);
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-light);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      display: inline-grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      margin-bottom: 22px;
+      border: 1px solid var(--gold-light);
+      color: var(--gold);
+      font: 21px var(--serif);
+    }
+
+    .service-card h3 {
+      margin-bottom: 11px;
+      font: 22px var(--serif);
+    }
+
+    .service-card p {
+      min-height: 62px;
+      margin-bottom: 17px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.75;
+    }
+
+    .service-card a {
+      color: #987b4c;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .about {
+      color: var(--white);
+      background: var(--ink);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 90px;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 410px;
+    }
+
+    .about-visual img {
+      position: absolute;
+      inset: 0 35px 30px 0;
+      width: calc(100% - 35px);
+      height: calc(100% - 30px);
+      object-fit: cover;
+      filter: saturate(.72);
+    }
+
+    .about-visual::after {
+      position: absolute;
+      inset: 20px 15px 10px 20px;
+      border: 1px solid var(--gold);
+      content: "";
+      pointer-events: none;
+    }
+
+    .about-stamp {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      bottom: 0;
+      width: 122px;
+      height: 122px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(223, 201, 158, .55);
+      border-radius: 50%;
+      color: var(--gold-light);
+      background: var(--ink);
+      text-align: center;
+      font: 15px/1.35 var(--serif);
+    }
+
+    .about-copy .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .about-copy h2 {
+      max-width: 470px;
+    }
+
+    .about-copy>p {
+      max-width: 510px;
+      color: rgba(255, 255, 255, .65);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 23px;
+      margin: 29px 0 30px;
+    }
+
+    .value {
+      display: flex;
+      gap: 12px;
+      color: rgba(255, 255, 255, .77);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .value b {
+      color: var(--gold-light);
+      font: 18px var(--serif);
+    }
+
+    .button-outline {
+      border-color: rgba(255, 255, 255, .45);
+      color: var(--white);
+      background: transparent;
+    }
+
+    .button-outline:hover {
+      color: var(--ink);
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    .steps {
+      background: var(--white);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 42px;
+    }
+
+    .step {
+      position: relative;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+
+    .step-number {
+      position: absolute;
+      top: -16px;
+      left: 0;
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      border: 1px solid var(--gold-light);
+      color: #987b4c;
+      background: var(--white);
+      font: 15px var(--serif);
+    }
+
+    .step h3 {
+      margin: 13px 0 10px;
+      font: 21px var(--serif);
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .contact {
+      padding: 95px 0;
+      background: #eeece4;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-copy .eyebrow {
+      margin-top: 8px;
+    }
+
+    .contact-copy h2 {
+      margin-top: 18px;
+    }
+
+    .contact-copy>p {
+      max-width: 360px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    .contact-detail b {
+      display: block;
+      color: var(--ink);
+      font: 15px var(--serif);
+    }
+
+    .contact-detail .detail-icon {
+      color: var(--gold);
+      font-size: 16px;
+    }
+
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 32px;
+      background: var(--white);
+      box-shadow: 0 12px 40px rgba(23, 43, 43, .07);
+    }
+
+    .field {
+      display: grid;
+      gap: 7px;
+    }
+
+    .field-full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      color: #52605a;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      min-height: 45px;
+      padding: 11px 12px;
+      border: 1px solid #e4e2db;
+      border-radius: 0;
+      outline: none;
+      color: var(--ink);
+      background: #fffefa;
+      font-size: 12px;
+    }
+
+    .field textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px rgba(189, 154, 92, .12);
+    }
+
+    .form-footer {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .form-note {
+      max-width: 240px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    .form-message {
+      grid-column: 1 / -1;
+      display: none;
+      margin: 0;
+      padding: 12px;
+      color: #24543b;
+      background: #edf6ef;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .form-message.visible {
+      display: block;
+    }
+
+    .footer {
+      padding: 40px 0 20px;
+      color: rgba(255, 255, 255, .7);
+      background: #102120;
+    }
+
+    .footer-main {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      padding-bottom: 30px;
+    }
+
+    .footer .brand-name {
+      color: var(--white);
+    }
+
+    .footer .brand-caption {
+      color: rgba(255, 255, 255, .5);
+    }
+
+    .footer-note {
+      max-width: 330px;
+      margin: 8px 0 0;
+      color: rgba(255, 255, 255, .52);
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      font-size: 11px;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, .12);
+      color: rgba(255, 255, 255, .42);
+      font-size: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 17px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero-grid {
+        gap: 40px;
+      }
+
+      .hero-image-wrap {
+        min-height: 390px;
+      }
+
+      .about-grid {
+        gap: 45px;
+      }
+
+      .contact-grid {
+        gap: 40px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        width: min(100% - 36px, 560px);
+      }
+
+      .topbar-inner {
+        justify-content: center;
+      }
+
+      .topbar-left {
+        display: none;
+      }
+
+      .topbar-right {
+        justify-content: center;
+        gap: 16px;
+        font-size: 10px;
+      }
+
+      .nav {
+        min-height: 70px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 69px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 18px 18px;
+        border-bottom: 1px solid var(--line);
+        background: var(--white);
+      }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-links a {
+        padding: 13px 4px;
+        border-bottom: 1px solid var(--line);
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 55px 0 60px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      h1 {
+        max-width: 510px;
+        font-size: clamp(43px, 11vw, 62px);
+      }
+
+      .hero-copy {
+        font-size: 14px;
+      }
+
+      .hero-image-wrap {
+        min-height: 350px;
+        margin-right: 12px;
+      }
+
+      .hero-note {
+        right: -10px;
+        width: 195px;
+        padding: 17px 19px;
+      }
+
+      .trust-inner {
+        grid-template-columns: 1fr;
+        padding: 8px 0;
+      }
+
+      .trust-item {
+        justify-content: flex-start;
+        padding: 14px 10px;
+      }
+
+      .trust-item+.trust-item {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .section {
+        padding: 75px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 35px;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .service-card {
+        min-height: 0;
+        padding: 25px;
+      }
+
+      .service-card p {
+        min-height: 0;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
+
+      .about-visual {
+        min-height: 330px;
+      }
+
+      .about-copy h2 {
+        max-width: 520px;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .contact {
+        padding: 72px 0;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .contact-form {
+        padding: 24px 18px;
+      }
+
+      .footer-main {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        gap: 16px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 430px) {
+      .brand-name {
+        font-size: 18px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+      }
+
+      .topbar-right {
+        gap: 11px;
+      }
+
+      .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+      }
+
+      .hero-image-wrap {
+        min-height: 280px;
+      }
+
+      .hero-note {
+        width: 176px;
+      }
+
+      .values {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+
+      .field-full,
+      .form-footer,
+      .form-message {
+        grid-column: 1;
+      }
+
+      .form-footer {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-left">Une étude à vos côtés, à chaque étape de votre vie.</span>
+      <div class="topbar-right">
+        <span>Lun — Ven · 9h00–18h00</span>
+        <a href="tel:+33142601842">01 42 60 18 42</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="header">
+    <nav class="container nav" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="Étude Beaumont, accueil">
+        <span class="brand-mark">B.</span>
+        <span><span class="brand-name">Étude Beaumont</span><span class="brand-caption">Notaires &
+            conseils</span></span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#expertises">Nos expertises</a>
+        <a href="#etude">L'étude</a>
+        <a href="#accompagnement">Votre projet</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="#contact">PRENDRE RENDEZ-VOUS <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+        aria-controls="nav-links">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Votre notaire de confiance</div>
+          <h1>Donner à vos projets <em>un avenir serein.</em></h1>
+          <p class="hero-copy">À chaque moment important, nous vous apportons des conseils clairs et un accompagnement
+            attentif. Le droit, rendu plus humain.</p>
+          <div class="hero-actions">
+            <a class="button" href="#contact">PARLONS DE VOTRE PROJET <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#expertises">DÉCOUVRIR NOS EXPERTISES <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-image-wrap" aria-label="Espace de travail lumineux de l'étude notariale" role="img">
+          <div class="hero-image"></div>
+          <div class="hero-note"><strong>À vos côtés.</strong><span>Un conseil attentif, une relation durable, une
+              sécurité juridique à chaque étape.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Nos engagements">
+      <div class="container trust-inner">
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">◇</span><span><strong>Conseil sur
+              mesure</strong><span>Des réponses adaptées à votre situation</span></span></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">⌂</span><span><strong>Proximité &
+              écoute</strong><span>Un interlocuteur dédié à votre projet</span></span></div>
+        <div class="trust-item"><span class="trust-icon" aria-hidden="true">✦</span><span><strong>Sécurité
+              juridique</strong><span>La sérénité d'un acte authentique</span></span></div>
+      </div>
+    </section>
+
+    <section class="section expertise" id="expertises">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Nos domaines d'intervention</div>
+          <h2>Un accompagnement à chaque chapitre de votre vie.</h2>
+          <p>Nous mettons notre expertise au service de vos décisions, avec rigueur, pédagogie et disponibilité.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">⌂</span>
+            <h3>Immobilier</h3>
+            <p>Achat, vente, financement ou investissement : sécurisez chaque étape de votre projet immobilier.</p>
+            <a href="#contact">En savoir plus&nbsp; ↗</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">♡</span>
+            <h3>Famille & patrimoine</h3>
+            <p>Contrat de mariage, donation, succession : protégez vos proches et préparez l'avenir sereinement.</p>
+            <a href="#contact">En savoir plus&nbsp; ↗</a>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">✧</span>
+            <h3>Droit des affaires</h3>
+            <p>Création, cession ou transmission : accompagnez les grandes décisions de votre entreprise.</p>
+            <a href="#contact">En savoir plus&nbsp; ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="etude">
+      <div class="container about-grid">
+        <div class="about-visual">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
+            alt="Bureau lumineux de l'Étude Beaumont">
+          <div class="about-stamp">Depuis<br>1998</div>
+        </div>
+        <div class="about-copy">
+          <div class="eyebrow">Une étude indépendante</div>
+          <h2>Le sérieux du droit. La chaleur d'une relation humaine.</h2>
+          <p>Parce que chaque histoire est unique, notre équipe prend le temps de comprendre la vôtre. Nous faisons du
+            conseil et de la proximité les fondements d'un accompagnement durable.</p>
+          <div class="values">
+            <div class="value"><b>01</b><span>Une écoute attentive, sans jargon inutile.</span></div>
+            <div class="value"><b>02</b><span>Des explications claires à chaque étape.</span></div>
+            <div class="value"><b>03</b><span>Une équipe engagée à vos côtés.</span></div>
+            <div class="value"><b>04</b><span>La confidentialité de vos échanges.</span></div>
+          </div>
+          <a class="button button-outline" href="#contact">RENCONTRER L'ÉTUDE <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section steps" id="accompagnement">
+      <div class="container">
+        <div class="section-heading">
+          <div class="eyebrow">Simplement, à vos côtés</div>
+          <h2>Votre projet, en toute confiance.</h2>
+          <p>Un parcours lisible et un accompagnement personnalisé, du premier échange à la signature.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step"><span class="step-number">01</span>
+            <h3>Nous échangeons</h3>
+            <p>Vous nous présentez votre situation et vos objectifs. Nous prenons le temps de vous écouter.</p>
+          </article>
+          <article class="step"><span class="step-number">02</span>
+            <h3>Nous vous conseillons</h3>
+            <p>Nous étudions votre dossier et vous expliquons les solutions possibles, en toute transparence.</p>
+          </article>
+          <article class="step"><span class="step-number">03</span>
+            <h3>Nous concrétisons</h3>
+            <p>Nous préparons et sécurisons les actes nécessaires, puis restons disponibles après la signature.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <div class="eyebrow">Parlons-en</div>
+          <h2>Un projet ou une question&nbsp;?</h2>
+          <p>Notre équipe est à votre écoute. Laissez-nous un message, nous vous recontacterons dans les meilleurs
+            délais.</p>
+          <div class="contact-details">
+            <div class="contact-detail"><span class="detail-icon" aria-hidden="true">⌖</span><span><b>Nous trouver</b>18
+                avenue Victor-Hugo, 75016 Paris</span></div>
+            <div class="contact-detail"><span class="detail-icon" aria-hidden="true">◷</span><span><b>Nous
+                  rencontrer</b>Du lundi au vendredi, 9h00–18h00</span></div>
+            <div class="contact-detail"><span class="detail-icon" aria-hidden="true">✆</span><span><b>Nous appeler</b><a
+                  href="tel:+33142601842">01 42 60 18 42</a></span></div>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="field"><label for="name">Votre nom</label><input id="name" name="name" type="text"
+              autocomplete="name" placeholder="Prénom et nom" required></div>
+          <div class="field"><label for="email">Votre adresse e-mail</label><input id="email" name="email" type="email"
+              autocomplete="email" placeholder="vous@exemple.fr" required></div>
+          <div class="field"><label for="phone">Téléphone (facultatif)</label><input id="phone" name="phone" type="tel"
+              autocomplete="tel" placeholder="06 00 00 00 00"></div>
+          <div class="field"><label for="subject">Votre besoin</label><select id="subject" name="subject" required>
+              <option value="" disabled selected>Choisir un domaine</option>
+              <option>Immobilier</option>
+              <option>Famille & patrimoine</option>
+              <option>Droit des affaires</option>
+              <option>Autre demande</option>
+            </select></div>
+          <div class="field field-full"><label for="message">Votre message</label><textarea id="message" name="message"
+              placeholder="Quelques mots sur votre projet..." required></textarea></div>
+          <div class="form-footer">
+            <span class="form-note">En envoyant ce formulaire, vous acceptez d'être recontacté au sujet de votre
+              demande.</span>
+            <button class="button" type="submit">ENVOYER MA DEMANDE <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div>
+          <a class="brand" href="#accueil"><span class="brand-mark">B.</span><span><span class="brand-name">Étude
+                Beaumont</span><span class="brand-caption">Notaires & conseils</span></span></a>
+          <p class="footer-note">Un accompagnement notarial attentif et exigeant, pour donner à vos projets les
+            meilleures fondations.</p>
+        </div>
+        <div class="footer-links"><a href="#expertises">Nos expertises</a><a href="#etude">L'étude</a><a
+            href="#contact">Contact</a><a href="#mentions">Mentions légales</a></div>
+      </div>
+      <div class="footer-bottom" id="mentions"><span>© <span id="year"></span> Étude Beaumont · Tous droits
+          réservés</span><span>Site de démonstration — informations fictives</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Fermer le menu" : "Ouvrir le menu");
+      menuToggle.textContent = isOpen ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Ouvrir le menu");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+
+    document.querySelector("#contact-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      if (!form.reportValidity()) return;
+
+      const message = document.querySelector("#form-message");
+      message.textContent = "Merci pour votre demande. Ce formulaire de démonstration ne transmet pas encore vos informations ; contactez l'étude par téléphone pour être rappelé.";
+      message.classList.add("visible");
+      form.reset();
+    });
+  </script>
+</body>
+
+</html>
